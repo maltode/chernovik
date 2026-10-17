@@ -33,7 +33,8 @@
 :root{--bg:#0f0d0d;--ink:#f3ede6;--muted:#a1968e;--line:rgba(243,237,230,.14);--red:#e2352b;--draft-bg:#f3ede6;--draft-ink:#111}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html,body{overflow-x:clip}
+body{-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;cursor:pointer}
