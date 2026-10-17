@@ -188,16 +188,16 @@ footer p{margin-bottom:6px}footer b{font-family:Unbounded;color:var(--ink)}
 .og .nav,.og main>section:not(.kino),.og footer,.og .dock,.og .cta,.og .lead,.og main>.wrap{display:none!important}
 .og .kino{height:630px}.og .kino img{animation:none;transform:none}.og .kino h1{animation:none;color:#fff;background:none;-webkit-text-fill-color:#fff;font-size:96px}
 @media (max-width:900px){
-  .nav{background:rgba(7,9,12,.75);backdrop-filter:blur(14px)}
+  .nav{position:sticky;top:0;background:rgba(7,9,12,.85);backdrop-filter:blur(14px)}
   .nav .wrap{height:60px}
   .nav .kg.sm{height:40px;padding:0 16px}
   .nav ul{display:none}
   .kino{height:auto;min-height:0;flex-direction:column}
-  .kino img{position:relative;height:auto;aspect-ratio:4/3;animation:none;transform:none;margin-top:70px}
-  .kino:after{top:70px;height:calc(75vw);background:linear-gradient(0deg,var(--bg) 0%,transparent 60%)}
+  .kino img{position:relative;height:auto;aspect-ratio:4/3;animation:none;transform:none}
+  .kino:after{top:0;height:calc(75vw);background:linear-gradient(0deg,var(--bg) 0%,transparent 60%)}
   .kino .wrap{margin-top:-30px;padding-top:0;padding-bottom:20px}
   .stat{margin-top:10px}
-  .ill{top:auto;bottom:auto;right:30px;margin-top:80px}
+  .ill{top:12px;right:14px}
   .stat{grid-template-columns:1fr 1fr 1fr}
   .stat div{padding:12px 10px}
   .stat b{font-size:18px}
