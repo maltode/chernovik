@@ -11,6 +11,7 @@
 <meta property="og:description" content="Студия красоты · Казань · 4,8 ★ · 1 010 оценок в 2ГИС">
 <meta property="og:image" content="https://maltode.github.io/chernovik/sava-beauty/og.png">
 <meta name="theme-color" content="#fbf6f3">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preload" as="image" href="img/sava-hero.webp">
 <style>
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/cormorant-garamond-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
@@ -23,7 +24,7 @@
 @font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
 @font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
-:root{--bg:#fbf6f3;--ink:#3a2a2c;--muted:#8a7477;--line:rgba(58,42,44,.10);--edge:#e5d6d2;--card:#ffffff;--card-hi:#ffffff;--soft:#f6e6e3;--shadow:rgba(120,70,70,.35);--acc:#c98a86;--acc-hi:#e2b2ab;--acc-lo:#b46f6d;--acc-deep:#94585a;--acc-glow:rgba(180,111,109,.45);--acc-text:#a8605f;--on-acc:#ffffff;--star:#d9a35a;--band:#3a2a2c;--band-ink:#f6e6e3;--map-bg:#f3e9e5;--f-disp:'Cormorant Garamond',Georgia,serif;--f-text:'Manrope',system-ui,'Segoe UI',Arial,sans-serif;--w-disp:600;--ls-disp:-0.01em;--em-style:italic}
+:root{--bg:#fbf6f3;--ink:#3a2a2c;--muted:#8a7477;--line:rgba(58,42,44,.10);--edge:#e5d6d2;--card:#ffffff;--card-hi:#ffffff;--soft:#f6e6e3;--shadow:rgba(120,70,70,.35);--acc:#c98a86;--acc-hi:#e2b2ab;--acc-lo:#b46f6d;--acc-deep:#94585a;--acc-glow:rgba(180,111,109,.45);--acc-text:#a8605f;--on-acc:#ffffff;--star:#d9a35a;--band:#3a2a2c;--band-ink:#f6e6e3;--map-bg:#f3e9e5;--f-disp:'Cormorant Garamond',Georgia,serif;--f-text:'Manrope',system-ui,'Segoe UI',Arial,sans-serif;--w-disp:600;--ls-disp:-0.01em;--em-style:italic;--tt-disp:none}
 /* Витринный шаблон: общие стили. Цвета и шрифты каждого бизнеса задаются в :root на странице. */
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -32,7 +33,7 @@ img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit}
 .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
-h1,h2,h3,.disp{font-family:var(--f-disp);font-weight:var(--w-disp);letter-spacing:var(--ls-disp);line-height:1.04}
+h1,h2,h3,.disp{text-transform:var(--tt-disp,none);font-family:var(--f-disp);font-weight:var(--w-disp);letter-spacing:var(--ls-disp);line-height:1.04}
 
 /* плашка «черновик» */
 .draft{position:relative;z-index:30;background:var(--ink);color:var(--bg);font-size:12.5px;text-align:center;padding:7px 16px;line-height:1.4}
@@ -41,7 +42,7 @@ h1,h2,h3,.disp{font-family:var(--f-disp);font-weight:var(--w-disp);letter-spacin
 /* шапка */
 .nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:28px;height:68px}
-.logo{font-family:var(--f-disp);font-weight:var(--w-disp);font-size:26px;letter-spacing:var(--ls-disp);white-space:nowrap}
+.logo{text-transform:var(--tt-disp,none);font-family:var(--f-disp);font-weight:var(--w-disp);font-size:26px;letter-spacing:var(--ls-disp);white-space:nowrap}
 .nav ul{display:flex;gap:26px;list-style:none;margin-left:auto;font-size:15px;color:var(--muted)}
 .nav ul a:hover{color:var(--ink)}
 
@@ -61,7 +62,7 @@ h1,h2,h3,.disp{font-family:var(--f-disp);font-weight:var(--w-disp);letter-spacin
 
 /* первый экран */
 .hero{padding:56px 0 40px}
-.hero .wrap{display:grid;grid-template-columns:1fr 1.08fr;gap:48px;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:48px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-text);margin-bottom:22px}
 .eyebrow:before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
 .hero h1{font-size:clamp(52px,8.4vw,104px);margin-bottom:22px}
@@ -216,15 +217,15 @@ footer .logo{color:var(--ink);margin-bottom:6px}
 .dock .b3.lite{flex:0 0 54px;padding:0}
 
 /* появление при прокрутке */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.float,.marquee .track{animation:none}}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.float,.marquee .track{animation:none}}
 
 /* картинка-превью для Telegram */
 .og .nav,.og .marquee,.og main>*:not(.hero),.og footer,.og .dock,.og .cta{display:none}
 .og .hero{padding:40px 0 0}
 .og .draft{font-size:17px;padding:10px}
-.og .rv{opacity:1;transform:none}
+.og .rv{opacity:1!important;transform:none!important}
 
 @media (max-width:900px){
   .nav ul{display:none}
@@ -399,7 +400,7 @@ footer .logo{color:var(--ink);margin-bottom:6px}
 <script>
 (function(){
   // вид для картинки-превью
-  if (location.search.indexOf('og') > -1) document.documentElement.className = 'og';
+  if (location.search.indexOf('og') > -1) document.documentElement.classList.add('og');
   // плавное появление блоков при прокрутке
   var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
     es.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
