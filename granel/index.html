@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Гранель — черновик сайта</title>
+<meta name="description" content="Студия красоты · Казань · 5,0 ★ · 2 оценки в 2ГИС">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Черновик сайта для «Гранель»">
+<meta property="og:description" content="Студия красоты · Казань · 5,0 ★ · 2 оценки в 2ГИС">
+<meta property="og:image" content="https://maltode.github.io/chernovik/granel/og.png">
+<meta name="theme-color" content="#f3f8f7">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" as="image" href="img/granel-hero.webp">
+<style>
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/unbounded-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/unbounded-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/unbounded-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/unbounded-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/manrope-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/manrope-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+:root{--bg:#f3f8f7;--ink:#0f2a2c;--muted:#4f686b;--acc:#5fc4bd;--acc-deep:#1c6a67;--soft:#e2f1ef;--edge:#cfe3e0;--card:#ffffff;--line:rgba(15,42,44,.10);--draft-bg:#0f2a2c;--draft-ink:#e2f1ef}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+.draft{position:relative;z-index:50;font:500 12.5px/1.4 Manrope,system-ui,sans-serif;text-align:center;padding:7px 16px;background:var(--draft-bg,#111);color:var(--draft-ink,#fff)}
+.draft b{letter-spacing:.12em;text-transform:uppercase;margin-right:6px}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}*{animation:none!important}}
+.og .rv,.vse .rv{opacity:1!important;transform:none!important;transition:none!important}
+.hidden-x{display:none!important}
+
+
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 Manrope,system-ui,sans-serif}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;font-weight:600;line-height:1.1;letter-spacing:-.02em}
+h1,h2{font-size:clamp(36px,4.6vw,60px)}
+h3{font-size:24px}
+.mel{display:inline-block;font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acc-deep)}
+.muted{color:var(--muted)}
+/* срезанные углы */
+.cut{clip-path:polygon(var(--c) 0,calc(100% - var(--c)) 0,100% var(--c),100% calc(100% - var(--c)),calc(100% - var(--c)) 100%,var(--c) 100%,0 calc(100% - var(--c)),0 var(--c))}
+.gem{--c:16px;background:var(--edge);padding:1px}
+.gem>.in{--c:16px;background:var(--card);height:100%}
+/* кнопки */
+.kn{--c:12px;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 32px;font:600 16px Manrope,sans-serif;border:0;background:var(--acc-deep);color:#fff;transition:transform .3s ease-out,background .3s ease-out}
+.kn:hover{transform:translateY(-2px);background:var(--ink)}
+.kn svg{width:20px;height:20px}
+.kn.svet{background:var(--soft);color:var(--ink)}
+.kn.svet:hover{background:var(--edge)}
+.kn.sm{min-height:48px;padding:0 24px;font-size:14px}
+.kn.wide{width:100%}
+/* значок профессии */
+.ikm{--c:10px;width:56px;height:56px;display:grid;place-items:center;background:var(--f,var(--soft));color:var(--acc-deep)}
+.ikm svg{width:28px;height:28px}
+/* шапка: название текстом, без значка */
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:80px}
+.logo{font:600 24px Unbounded,sans-serif;letter-spacing:-.02em}
+.nav ul{display:flex;gap:32px;list-style:none;font-size:14px;font-weight:600;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+/* первый экран: текст сверху, широкая картинка, табло окон */
+.hero{padding:24px 0 96px}
+.verh{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:end;margin-bottom:40px}
+.hero h1{margin:16px 0}
+.hero .lead{font-size:24px;line-height:1.4;color:var(--muted);max-width:24em}
+.pravo{display:grid;gap:24px;justify-items:start}
+.metki{display:flex;flex-wrap:wrap;gap:8px}
+.metka{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;background:var(--card);border:1px solid var(--edge);font-size:14px;font-weight:600}
+.metka svg{width:16px;height:16px;color:var(--acc-deep)}
+#seychas:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--muted)}
+#seychas.on:before{background:#2fae6a;box-shadow:0 0 0 4px rgba(47,174,106,.18)}
+.cta{display:flex;flex-wrap:wrap;gap:16px}
+.kadr{position:relative}
+.kadr img{--c:40px;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;object-position:50% 60%}
+.kadr .podp{position:absolute;right:24px;top:16px;font-size:14px;color:#fff;background:rgba(15,42,44,.45);padding:0 8px;border-radius:4px}
+.okna-ten{position:relative;margin:-96px 48px 0;filter:drop-shadow(0 24px 32px rgba(15,42,44,.18))}
+.okna{--c:24px;background:var(--card);padding:24px 32px 32px}
+.okna-zag{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 16px;margin-bottom:16px}
+.okna-zag b{font:600 16px Unbounded,sans-serif}
+.okna-zag span{font-size:14px;color:var(--muted)}
+.okna-spisok{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.okno{--c:12px;display:grid;gap:8px;justify-items:start;text-align:left;padding:16px;border:0;background:var(--bg);transition:background .3s ease-out}
+.okno:hover{background:var(--soft)}
+.okno .ikm{width:40px;height:40px}.okno .ikm svg{width:20px;height:20px}
+.okno b{font-size:14px;line-height:1.3}
+.okno small{font-size:14px;color:var(--muted)}
+.okno .vr{font:600 16px Unbounded,sans-serif;color:var(--acc-deep)}
+/* секции */
+.sec{padding:96px 0}
+.zag{max-width:720px;margin-bottom:48px}
+.zag h2{margin:16px 0}
+.zag p{color:var(--muted)}
+/* мастера и запись */
+.zapis-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;align-items:start}
+.mastera{display:grid;gap:16px}
+.master{--c:16px;display:block;width:100%;text-align:left;background:var(--edge);padding:1px;border:0;transition:transform .3s ease-out}
+.master .in{--c:16px;display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:center;padding:16px 24px 16px 16px;background:var(--card)}
+.master:hover{transform:translateX(4px)}
+.master[aria-pressed=true]{background:var(--acc-deep)}
+.master[aria-pressed=true] .in{background:var(--soft)}
+.master b{display:block;font-size:16px}
+.master small{display:block;font-size:14px;color:var(--muted)}
+.rabota{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:14px;font-weight:600}
+.rabota svg{width:16px;height:16px;color:var(--acc-deep)}
+.panel{--c:24px;background:var(--edge);padding:1px;position:sticky;top:24px}
+.panel>.in{--c:24px;background:var(--card);padding:32px}
+.kto{display:flex;align-items:center;gap:16px;padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.kto b{display:block;font:600 24px/1.2 Unbounded,sans-serif}
+.pole{margin-bottom:24px}
+.pole label,.pole .lb{display:block;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:8px}
+.pole select{width:100%;min-height:56px;border:1px solid var(--edge);background:var(--bg);font:600 16px Manrope,sans-serif;color:var(--ink);padding:0 16px;border-radius:8px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.day{min-height:72px;border:1px solid var(--edge);background:var(--card);border-radius:8px;line-height:1.2;padding:8px 0}
+.day small{display:block;font-size:14px;color:var(--muted)}
+.day b{font:600 16px Unbounded,sans-serif}
+.day i{display:block;font-style:normal;font-size:14px;color:var(--muted)}
+.day.on{background:var(--acc-deep);border-color:var(--acc-deep);color:#fff}
+.day.on small{color:var(--soft)}
+.day[disabled]{cursor:default;background:transparent;border-style:dashed;color:var(--muted)}
+.day[disabled] b{font-weight:600;opacity:.6}
+.times{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.time{min-height:48px;border:1px solid var(--edge);background:var(--card);border-radius:8px;font-weight:600}
+.time.on{background:var(--acc-deep);border-color:var(--acc-deep);color:#fff}
+.time[disabled]{color:var(--muted);background:transparent;text-decoration:line-through;cursor:default;opacity:.6}
+.legenda{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;color:var(--muted);margin:-8px 0 24px}
+.legenda span{display:inline-flex;align-items:center;gap:8px}
+.lg{width:16px;height:16px;border-radius:4px;border:1px solid var(--edge);background:var(--card)}
+.lg.vyb{background:var(--acc-deep);border-color:var(--acc-deep)}
+.legenda s{font-weight:600}
+.legenda em{font-style:normal;font-weight:600;border:1px dashed var(--edge);border-radius:4px;padding:0 4px}
+.svodka{background:var(--bg);border-radius:8px;padding:16px 24px;display:grid;gap:8px;margin-bottom:24px;font-size:14px}
+.svodka div{display:flex;justify-content:space-between;gap:16px}
+.svodka span{color:var(--muted)}
+.demo{font-size:14px;color:var(--muted);margin-top:16px;text-align:center}
+#b-done{text-align:center;padding:16px 0}
+#b-done .ok{--c:20px;width:80px;height:80px;margin:0 auto 16px;display:grid;place-items:center;background:var(--acc-deep);color:#fff;animation:pop .5s ease-out}
+#b-done .ok svg{width:40px;height:40px}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+#b-done p{color:var(--muted);margin:8px 0}
+/* услуги */
+.vkladki{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.vkladki button{--c:10px;min-height:48px;padding:0 24px;border:0;background:var(--soft);font-weight:600}
+.vkladki button[aria-selected=true]{background:var(--ink);color:#fff}
+.prajs .in{padding:8px 32px}
+.stroka{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.stroka:last-child{border-bottom:0}
+.stroka .c{margin-left:auto;font-weight:600;white-space:nowrap}
+.stroka button{min-height:44px;padding:0 16px;border:1px solid var(--edge);background:var(--bg);border-radius:8px;font-size:14px;font-weight:600;color:var(--acc-deep)}
+.stroka button:hover{background:var(--soft)}
+.prim{font-size:14px;color:var(--muted);margin-top:16px}
+/* вопросы */
+.voprosy{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.vop{--c:16px;background:var(--card);box-shadow:inset 0 0 0 1px var(--edge);padding:24px 32px}
+.vop summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;font-weight:600}
+.vop summary::-webkit-details-marker{display:none}
+.vop summary:after{content:"+";font:600 24px/1 Unbounded,sans-serif;color:var(--acc-deep);transition:transform .3s ease-out}
+.vop[open] summary:after{transform:rotate(45deg)}
+.vop p{color:var(--muted);margin-top:8px}
+/* контакты */
+.kontakty{--c:24px;display:grid;grid-template-columns:1.2fr 1fr;background:var(--card)}
+.karta{position:relative;min-height:400px;background:var(--soft);overflow:hidden}
+.karta .streets{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:8px}
+.pin i{width:56px;height:56px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--acc-deep);display:grid;place-items:center;box-shadow:0 16px 24px -8px rgba(15,42,44,.45)}
+.pin i svg{width:24px;height:24px;color:#fff;transform:rotate(45deg)}
+.pin span{background:var(--ink);color:#fff;font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px;white-space:nowrap}
+.kontakty .tekst{padding:40px}
+.ryad{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.ryad span{color:var(--muted)}
+.ssylki{display:grid;gap:8px;margin-top:24px}
+/* найм — в самом конце */
+.najm{background:var(--ink);color:var(--soft)}
+.najm .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.najm .mel{color:var(--acc)}
+.najm h2{color:#fff;margin:16px 0}
+.najm p{color:#a9c4c2}
+.foto2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.foto2 img{--c:24px;width:100%;height:auto;aspect-ratio:1}
+.roli{display:flex;flex-wrap:wrap;gap:8px}
+.roli span{--c:10px;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 24px;background:rgba(255,255,255,.08);color:#fff;font-weight:600}
+.roli span:before{content:"";width:8px;height:8px;background:var(--acc);transform:rotate(45deg)}
+.najm .kn{background:var(--acc);color:var(--ink);margin-top:32px}
+.najm .kn:hover{background:#fff}
+.najm small{display:block;margin-top:16px;font-size:14px;color:#86a3a1}
+footer{padding:48px 0 128px;text-align:center;color:var(--muted);font-size:14px}
+footer p{margin-bottom:8px}footer b{font:600 24px Unbounded,sans-serif;color:var(--ink)}
+.dock{position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;display:none;gap:8px}
+.dock .kn{flex:1}.dock .kn.ic{flex:0 0 56px;padding:0}
+/* превью для Telegram: текст слева, картинка справа */
+.og .nav,.og main>section:not(.hero),.og footer,.og .dock,.og .cta,.og .metki,.og .okna-ten{display:none!important}
+.og .hero{padding:48px 0}.og .hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.og .verh{display:block;margin:0}.og .kadr img{aspect-ratio:4/3}
+@media (max-width:900px){
+  .wrap{padding:0 16px}
+  .nav ul,.nav .kn{display:none}
+  .hero{padding:8px 0 64px}
+  .verh{grid-template-columns:1fr;gap:24px;margin-bottom:24px}
+  .hero .lead{font-size:16px}
+  .cta .kn{flex:1 1 100%}
+  .pravo{justify-items:stretch}
+  .kadr img{--c:24px;aspect-ratio:4/3}
+  .okna-ten{margin:-32px 8px 0}
+  .okna{--c:16px;padding:16px}
+  .okna-spisok{grid-template-columns:1fr}
+  .okno{grid-template-columns:40px 1fr auto;align-items:center;gap:4px 16px;padding:8px 16px 8px 8px}
+  .okno .ikm{grid-row:span 2}
+  .okno .vr{grid-row:span 2;align-self:center}
+  .sec{padding:64px 0}
+  .zapis-grid{grid-template-columns:1fr}
+  .mastera{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;margin:0 -16px;padding:0 16px 8px;scrollbar-width:none}
+  .mastera::-webkit-scrollbar{display:none}
+  .master{flex:0 0 288px;min-width:0;scroll-snap-align:start}
+  .master .in{grid-template-columns:40px 1fr;padding:16px}
+  .master .ikm{width:40px;height:40px}.master .ikm svg{width:20px;height:20px}
+  .master:hover{transform:none}
+  .panel{position:static}
+  .panel>.in{padding:24px 16px}
+  .days{gap:4px}
+  .times{grid-template-columns:repeat(4,1fr)}
+  .prajs .in{padding:8px 16px}
+  .vop{padding:16px}
+  .stroka{flex-wrap:wrap}
+  .najm .wrap{grid-template-columns:1fr;gap:32px}
+  .voprosy{grid-template-columns:1fr}
+  .kontakty{grid-template-columns:1fr}
+  .karta{min-height:280px}
+  .kontakty .tekst{padding:24px 16px}
+  .dock{display:flex}
+}
+
+</style>
+</head>
+<body>
+<div class="draft"><b>Черновик</b> сайта · подготовлен для «Гранель» · не официальный сайт компании</div>
+<nav class="nav"><div class="wrap">
+  <a class="logo" href="#">Гранель</a>
+  <ul><li><a href="#zapis">Мастера</a></li><li><a href="#uslugi">Услуги</a></li><li><a href="#kontakty">Контакты</a></li><li><a href="#najm">Работа у нас</a></li></ul>
+  <a class="kn sm cut" href="#zapis">Записаться</a>
+</div></nav>
+<main>
+<section class="hero"><div class="wrap">
+  <div class="verh rv">
+    <div><span class="mel">Студия красоты · Казань · ЖК «Аквамарин»</span>
+      <h1>Гранель</h1>
+      <p class="lead">Маникюр, стрижки и окрашивание на Ярдем, 25. Каждый день с 9 до 21. Выберите своего мастера и запишитесь онлайн, без звонков.</p></div>
+    <div class="pravo">
+      <div class="metki"><span class="metka" id="seychas">Каждый день 9:00–21:00</span><span class="metka"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>улица Ярдем, 25</span></div>
+      <div class="cta"><a class="kn cut" href="#zapis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Выбрать мастера</a><a class="kn svet cut" href="#uslugi">Услуги и цены</a></div>
+    </div>
+  </div>
+  <div class="kadr rv"><img class="cut" src="img/granel-hero.webp" alt="Иллюстрация: студия красоты «Гранель»" width="1200" height="896"><span class="podp">иллюстрация</span></div>
+  <div class="okna-ten rv"><div class="okna cut">
+    <div class="okna-zag"><b>Ближайшие свободные окна</b><span>Нажмите на время, и запись откроется у этого мастера</span></div>
+    <div class="okna-spisok" id="okna"></div>
+  </div></div>
+</div></section>
+
+<section class="sec" id="zapis"><div class="wrap">
+  <div class="zag rv"><span class="mel">Онлайн-запись · демо</span><h2>Запишитесь к своему мастеру</h2>
+    <p>У каждого мастера свой график. Выберите мастера, и запись покажет только его рабочие дни и свободное время.</p></div>
+  <div class="zapis-grid">
+    <div class="mastera rv" id="mastera"><button type="button" class="master cut" data-m="nogti" aria-pressed="true"><span class="in cut"><span class="ikm cut" style="--f:#dcf1ee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3h4v4h-4z"/><path d="M9 7h6l1 3v9a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9z"/><path d="M8 13h8"/></svg></span><span><b>Мастер маникюра</b><small>Ногти · имя и фото добавим</small><span class="rabota"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Работает: пн–пт</span></span></span></button><button type="button" class="master cut" data-m="volosy" aria-pressed="false"><span class="in cut"><span class="ikm cut" style="--f:#e1ecf5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8 16L19 3M16 16L5 3"/></svg></span><span><b>Парикмахер-стилист</b><small>Волосы · имя и фото добавим</small><span class="rabota"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Работает: ср–вс</span></span></span></button><button type="button" class="master cut" data-m="kolor" aria-pressed="false"><span class="in cut"><span class="ikm cut" style="--f:#f4ecda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c4 5 6.5 8.5 6.5 11.5a6.5 6.5 0 0 1-13 0C5.5 11.5 8 8 12 3z"/><path d="M9 15a3 3 0 0 0 3 3"/></svg></span><span><b>Колорист</b><small>Окрашивание · имя и фото добавим</small><span class="rabota"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Работает: вт, чт, сб, вс</span></span></span></button><button type="button" class="master cut" data-m="brovi" aria-pressed="false"><span class="in cut"><span class="ikm cut" style="--f:#e6f2e7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9c3-3 7-4 11-3s5 2 7 3"/><path d="M4 15s3-3 8-3 8 3 8 3-3 3-8 3-8-3-8-3z"/><circle cx="12" cy="15" r="1.5"/></svg></span><span><b>Бровист</b><small>Брови · имя и фото добавим</small><span class="rabota"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Работает: пн, ср, пт, сб</span></span></span></button><button type="button" class="master cut" data-m="barber" aria-pressed="false"><span class="in cut"><span class="ikm cut" style="--f:#ebe7f4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 11c-2-3-6-3-8 0 1 2 5 3 8 0zM12 11c2-3 6-3 8 0-1 2-5 3-8 0z"/><path d="M12 14v4"/></svg></span><span><b>Барбер</b><small>Мужские стрижки · имя и фото добавим</small><span class="rabota"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Работает: пн, чт–вс</span></span></span></button></div>
+    <div class="panel cut rv"><div class="in cut">
+      <div id="b-form">
+        <div class="kto"><span id="b-ik"></span><span><small class="muted">Мастер</small><b id="b-rol">—</b></span></div>
+        <div class="pole"><label for="b-usl">Услуга</label><select id="b-usl"></select></div>
+        <div class="pole"><span class="lb">День</span><div class="days" id="b-days"></div></div>
+        <div class="pole"><span class="lb">Время</span><div class="times" id="b-times"></div></div>
+        <p class="legenda"><span><i class="lg vyb"></i>выбрано</span><span><i class="lg"></i>свободно</span><span><s>12:00</s> занято</span><span><em>вых.</em> выходной мастера</span></p>
+        <div class="svodka"><div><span>Когда</span><b id="b-kogda">—</b></div><div><span>Где</span><b>улица Ярдем, 25</b></div></div>
+        <button class="kn wide cut" id="b-go" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Записаться к мастеру</button>
+        <p class="demo">Это демонстрация: данные никуда не отправляются.</p>
+      </div>
+      <div id="b-done" class="hidden-x">
+        <div class="ok cut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><h3>Вы записаны!</h3><p id="b-itog"></p><p>Напомним за день и за час до визита.</p>
+        <p class="demo"><b>Это демонстрация.</b> В готовом сайте заявка сразу придёт вам в Telegram, а мастер увидит её в своём графике.</p>
+        <button class="kn svet sm cut" id="b-again" type="button">Записаться ещё раз</button>
+      </div>
+    </div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="uslugi" style="padding-top:0"><div class="wrap">
+  <div class="zag rv"><span class="mel">Услуги</span><h2>Что делаем</h2><p>Нажмите «Записаться» у услуги, и запись откроется сразу у нужного мастера.</p></div>
+  <div class="vkladki rv" role="tablist"><button type="button" class="cut" data-t="u0" aria-selected="true">Ногти</button><button type="button" class="cut" data-t="u1" aria-selected="false">Волосы</button><button type="button" class="cut" data-t="u2" aria-selected="false">Окрашивание</button><button type="button" class="cut" data-t="u3" aria-selected="false">Брови</button><button type="button" class="cut" data-t="u4" aria-selected="false">Барбер</button></div>
+  <div class="prajs gem cut rv"><div class="in cut"><div data-p="u0"><div class="stroka"><span>Аппаратный маникюр</span><span class="c"></span><button type="button" data-svc="Аппаратный маникюр" data-m="nogti">Записаться</button></div><div class="stroka"><span>Японский маникюр</span><span class="c"></span><button type="button" data-svc="Японский маникюр" data-m="nogti">Записаться</button></div><div class="stroka"><span>Покрытие гель-лаком</span><span class="c"></span><button type="button" data-svc="Покрытие гель-лаком" data-m="nogti">Записаться</button></div><div class="stroka"><span>Наращивание гелем</span><span class="c"></span><button type="button" data-svc="Наращивание гелем" data-m="nogti">Записаться</button></div><div class="stroka"><span>Мужской маникюр</span><span class="c"></span><button type="button" data-svc="Мужской маникюр" data-m="nogti">Записаться</button></div><div class="stroka"><span>Детский маникюр</span><span class="c"></span><button type="button" data-svc="Детский маникюр" data-m="nogti">Записаться</button></div></div><div data-p="u1" hidden><div class="stroka"><span>Женская стрижка</span><span class="c">от 1 500 ₽</span><button type="button" data-svc="Женская стрижка" data-m="volosy">Записаться</button></div><div class="stroka"><span>Укладка</span><span class="c"></span><button type="button" data-svc="Укладка" data-m="volosy">Записаться</button></div><div class="stroka"><span>Уход для волос</span><span class="c"></span><button type="button" data-svc="Уход для волос" data-m="volosy">Записаться</button></div></div><div data-p="u2" hidden><div class="stroka"><span>Окрашивание в один тон</span><span class="c"></span><button type="button" data-svc="Окрашивание в один тон" data-m="kolor">Записаться</button></div><div class="stroka"><span>Сложное окрашивание</span><span class="c"></span><button type="button" data-svc="Сложное окрашивание" data-m="kolor">Записаться</button></div><div class="stroka"><span>Тонирование</span><span class="c"></span><button type="button" data-svc="Тонирование" data-m="kolor">Записаться</button></div></div><div data-p="u3" hidden><div class="stroka"><span>Коррекция бровей</span><span class="c"></span><button type="button" data-svc="Коррекция бровей" data-m="brovi">Записаться</button></div><div class="stroka"><span>Окрашивание бровей</span><span class="c"></span><button type="button" data-svc="Окрашивание бровей" data-m="brovi">Записаться</button></div><div class="stroka"><span>Ламинирование бровей</span><span class="c"></span><button type="button" data-svc="Ламинирование бровей" data-m="brovi">Записаться</button></div></div><div data-p="u4" hidden><div class="stroka"><span>Мужская стрижка</span><span class="c">от 1 000 ₽</span><button type="button" data-svc="Мужская стрижка" data-m="barber">Записаться</button></div><div class="stroka"><span>Оформление бороды</span><span class="c"></span><button type="button" data-svc="Оформление бороды" data-m="barber">Записаться</button></div><div class="stroka"><span>Стрижка и борода</span><span class="c"></span><button type="button" data-svc="Стрижка и борода" data-m="barber">Записаться</button></div></div></div></div>
+  <p class="prim">Маникюр и цены на стрижки взяты из 2ГИС, остальные услуги примерные. В готовом сайте будет ваш прайс, имена и фото мастеров.</p>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="zag rv"><span class="mel">Вопросы</span><h2>Коротко о важном</h2></div>
+  <div class="voprosy rv"><details class="vop cut"><summary>Как записаться?</summary><p>Онлайн на этом сайте: выберите мастера, услугу и свободное время. Или напишите в MAX, или позвоните.</p></details><details class="vop cut"><summary>Где вы находитесь?</summary><p>Казань, улица Ярдем, 25, ЖК «Аквамарин».</p></details><details class="vop cut"><summary>Когда вы работаете?</summary><p>Каждый день с 9:00 до 21:00, без выходных.</p></details><details class="vop cut"><summary>Как можно оплатить?</summary><p>Картой, по QR-коду или наличными.</p></details></div>
+</div></section>
+
+<section class="sec" id="kontakty" style="padding-top:0"><div class="wrap">
+  <div class="kontakty cut rv">
+    <div class="karta"><svg class="streets" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" fill="none">
+<path d="M-20 300C120 260 200 330 330 280S520 180 640 210" stroke="var(--soft)" stroke-width="38"/>
+<g stroke="var(--card)" stroke-width="14" stroke-linecap="round"><path d="M-10 120H620M80 -10V420M260 -10V420M440 -10V420M-10 220L620 160"/></g>
+<g stroke="var(--card)" stroke-width="6" stroke-linecap="round" opacity=".8"><path d="M170 -10V420M350 -10V420M530 -10V420M-10 40H620M-10 360H620"/></g>
+<g fill="var(--edge)" opacity=".45"><rect x="95" y="135" width="60" height="40" rx="6"/><rect x="275" y="40" width="60" height="62" rx="6"/><rect x="455" y="235" width="60" height="44" rx="6"/><rect x="185" y="250" width="60" height="44" rx="6"/></g>
+</svg><div class="pin"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i><span>Гранель · улица Ярдем, 25</span></div></div>
+    <div class="tekst"><span class="mel">Контакты</span><h2>Ждём вас</h2>
+      <div class="ryad"><span>Адрес</span>Казань, улица Ярдем, 25</div>
+      <div class="ryad"><span>Где</span>ЖК «Аквамарин»</div>
+      <div class="ryad"><span>Ежедневно</span>09:00–21:00</div>
+      <div class="ssylki"><a class="kn svet wide cut" href="https://max.ru/u/f9LHodD0cOJ8TQbJUjzbzUKemuLk8NaF5ljvhM4GlmL1lo4z7_toeSN1G9k" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M8 15V9l4 4 4-4v6" stroke-linejoin="round" stroke-linecap="round"/></svg><span>Написать в MAX</span></a><a class="kn svet wide cut" href="tel:+79694239708"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>+7-969-423-97-08</span></a><a class="kn svet wide cut" href="https://2gis.ru/kazan/firm/70000001118707538" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Маршрут в 2ГИС</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec najm" id="najm"><div class="wrap">
+  <div class="rv"><span class="mel">Работа в «Гранели»</span><h2>Ищем мастеров в новую студию</h2>
+    <p>Светлая студия на Ярдем, 25, в ЖК «Аквамарин». Если вы мастер и ищете место, напишите нам.</p>
+    <a class="kn cut" href="https://max.ru/u/f9LHodD0cOJ8TQbJUjzbzUKemuLk8NaF5ljvhM4GlmL1lo4z7_toeSN1G9k" target="_blank" rel="noopener">Откликнуться</a>
+    <small>Этот блок можно убрать, когда команда соберётся.</small></div>
+  <div class="rv"><div class="foto2"><img class="cut" src="img/granel-2.webp" alt="" width="800" height="800" loading="lazy"><img class="cut" src="img/granel-3.webp" alt="" width="800" height="800" loading="lazy"></div>
+    <div class="roli"><span class="cut">Мастер маникюра</span><span class="cut">Бровист</span><span class="cut">Парикмахер</span><span class="cut">Колорист</span><span class="cut">Барбер</span><span class="cut">Администратор</span></div></div>
+</div></section>
+</main>
+<footer class=""><div class="wrap">
+  <p><b>Гранель</b></p>
+  <p>Это черновик сайта, подготовленный для «Гранель» по открытым данным 2ГИС: рейтинг, услуги, адрес и часы работы. Он не является официальным сайтом компании.</p>
+  <p>Картинки — иллюстрации, сделанные нейросетью. В готовой версии будут ваши фото, тексты и цены. Онлайн-запись работает как демонстрация.</p>
+</div></footer>
+
+<div class="dock"><a class="kn cut" href="#zapis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Записаться</a><a class="kn svet ic cut" href="tel:+79694239708" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a></div>
+<script>
+(function(){
+  var M = [{"id": "nogti", "rol": "Мастер маникюра", "dni": [1, 2, 3, 4, 5], "uslugi": ["Аппаратный маникюр", "Японский маникюр", "Покрытие гель-лаком", "Наращивание гелем", "Мужской маникюр", "Детский маникюр"]}, {"id": "volosy", "rol": "Парикмахер-стилист", "dni": [3, 4, 5, 6, 0], "uslugi": ["Женская стрижка", "Укладка", "Уход для волос"]}, {"id": "kolor", "rol": "Колорист", "dni": [2, 4, 6, 0], "uslugi": ["Окрашивание в один тон", "Сложное окрашивание", "Тонирование"]}, {"id": "brovi", "rol": "Бровист", "dni": [1, 3, 5, 6], "uslugi": ["Коррекция бровей", "Окрашивание бровей", "Ламинирование бровей"]}, {"id": "barber", "rol": "Барбер", "dni": [4, 5, 6, 0, 1], "uslugi": ["Мужская стрижка", "Оформление бороды", "Стрижка и борода"]}], IK = {"nogti": "<span class=\"ikm cut\" style=\"--f:#dcf1ee\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 3h4v4h-4z\"/><path d=\"M9 7h6l1 3v9a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9z\"/><path d=\"M8 13h8\"/></svg></span>", "volosy": "<span class=\"ikm cut\" style=\"--f:#e1ecf5\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"6\" cy=\"18\" r=\"3\"/><circle cx=\"18\" cy=\"18\" r=\"3\"/><path d=\"M8 16L19 3M16 16L5 3\"/></svg></span>", "kolor": "<span class=\"ikm cut\" style=\"--f:#f4ecda\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3c4 5 6.5 8.5 6.5 11.5a6.5 6.5 0 0 1-13 0C5.5 11.5 8 8 12 3z\"/><path d=\"M9 15a3 3 0 0 0 3 3\"/></svg></span>", "brovi": "<span class=\"ikm cut\" style=\"--f:#e6f2e7\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 9c3-3 7-4 11-3s5 2 7 3\"/><path d=\"M4 15s3-3 8-3 8 3 8 3-3 3-8 3-8-3-8-3z\"/><circle cx=\"12\" cy=\"15\" r=\"1.5\"/></svg></span>", "barber": "<span class=\"ikm cut\" style=\"--f:#ebe7f4\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 11c-2-3-6-3-8 0 1 2 5 3 8 0zM12 11c2-3 6-3 8 0-1 2-5 3-8 0z\"/><path d=\"M12 14v4\"/></svg></span>"};
+  var DN = ['вс','пн','вт','ср','чт','пт','сб'], MES = ['янв','фев','мар','апр','мая','июн','июл','авг','сен','окт','ноя','дек'];
+  var $ = function(id){ return document.getElementById(id); };
+  var usl = $('b-usl'), days = $('b-days'), times = $('b-times'), start = new Date(), vyb = {};
+  function hh(m){ return ('0' + Math.floor(m / 60)).slice(-2) + ':' + ('0' + m % 60).slice(-2); }
+  function den(i){ return new Date(start.getFullYear(), start.getMonth(), start.getDate() + i); }
+  // занятые окна: условно, но у каждого мастера свои
+  function zanyato(id, d, t){ var s = id + d.getDate() + t, x = 7; for (var i = 0; i < s.length; i++) x = (x * 31 + s.charCodeAt(i)) % 101; return x % 3 === 0 || (t < '13:00' && x % 5 < 3); }
+  function master(id){ for (var i = 0; i < M.length; i++) if (M[i].id === id) return M[i]; return M[0]; }
+  function obnovit(){
+    $('b-kogda').textContent = vyb.d && vyb.t ? DN[vyb.d.getDay()] + ', ' + vyb.d.getDate() + ' ' + MES[vyb.d.getMonth()] + ', ' + vyb.t : 'нет свободного времени';
+  }
+  function vybratVremya(t){
+    vyb.t = t;
+    [].forEach.call(times.children, function(x){ x.classList.toggle('on', x.dataset.v === t); });
+    obnovit();
+  }
+  function risovatVremya(){
+    var out = '';
+    for (var m = 600; m <= 1140; m += 60) {
+      var t = hh(m);
+      out += '<button type="button" class="time"' + (zanyato(vyb.m.id, vyb.d, t) ? ' disabled aria-label="' + t + ' занято"' : '') + ' data-v="' + t + '">' + t + '</button>';
+    }
+    times.innerHTML = out;
+    var f = times.querySelector('.time:not([disabled])');
+    vybratVremya(f ? f.dataset.v : '');
+  }
+  function vybratDen(i){
+    vyb.d = den(i);
+    [].forEach.call(days.children, function(b){ b.classList.toggle('on', +b.dataset.i === i); });
+    risovatVremya();
+  }
+  function vybratMastera(id, usluga){
+    vyb.m = master(id);
+    [].forEach.call(document.querySelectorAll('.master'), function(b){ b.setAttribute('aria-pressed', b.dataset.m === id); });
+    $('b-ik').innerHTML = IK[id]; $('b-rol').textContent = vyb.m.rol;
+    usl.innerHTML = vyb.m.uslugi.map(function(u){ return '<option>' + u + '</option>'; }).join('');
+    if (usluga) usl.value = usluga;
+    var html = '', first = null;
+    for (var i = 1; i <= 7; i++) {
+      var d = den(i), off = vyb.m.dni.indexOf(d.getDay()) < 0;
+      html += '<button type="button" class="day" data-i="' + i + '"' + (off ? ' disabled aria-label="выходной мастера"' : '') + '><small>' + DN[d.getDay()] + '</small><b>' + d.getDate() + '</b>' + (off ? '<i>вых.</i>' : '') + '</button>';
+      if (!off && first === null) first = i;
+    }
+    days.innerHTML = html;
+    vybratDen(first || 1);
+  }
+  // табло «ближайшие свободные окна»: первый рабочий день и первое свободное время у каждого мастера
+  $('okna').innerHTML = M.map(function(m){
+    for (var i = 1; i <= 7; i++) {
+      var d = den(i);
+      if (m.dni.indexOf(d.getDay()) < 0) continue;
+      for (var t = 600; t <= 1140; t += 60) {
+        if (!zanyato(m.id, d, hh(t))) return '<button type="button" class="okno cut" data-m="' + m.id + '" data-den="' + i + '" data-v="' + hh(t) + '">' + IK[m.id] +
+          '<span><b>' + m.rol + '</b><br><small>' + DN[d.getDay()] + ', ' + d.getDate() + ' ' + MES[d.getMonth()] + '</small></span><span class="vr">' + hh(t) + '</span></button>';
+      }
+    }
+    return '';
+  }).join('');
+  $('okna').addEventListener('click', function(ev){
+    var b = ev.target.closest('.okno'); if (!b) return;
+    vybratMastera(b.dataset.m); vybratDen(+b.dataset.den); vybratVremya(b.dataset.v);
+    $('zapis').scrollIntoView({behavior: 'smooth'});
+  });
+  $('mastera').addEventListener('click', function(ev){ var b = ev.target.closest('.master'); if (b) vybratMastera(b.dataset.m); });
+  days.addEventListener('click', function(ev){ var b = ev.target.closest('.day'); if (b && !b.disabled) vybratDen(+b.dataset.i); });
+  times.addEventListener('click', function(ev){ var b = ev.target.closest('.time'); if (b && !b.disabled) vybratVremya(b.dataset.v); });
+  [].forEach.call(document.querySelectorAll('[data-svc]'), function(b){
+    b.addEventListener('click', function(){ vybratMastera(b.dataset.m, b.dataset.svc); $('zapis').scrollIntoView({behavior: 'smooth'}); });
+  });
+  $('b-go').addEventListener('click', function(){
+    if (!vyb.t) return;
+    $('b-itog').textContent = vyb.m.rol + ' · ' + usl.value + ' · ' + $('b-kogda').textContent;
+    $('b-form').classList.add('hidden-x'); $('b-done').classList.remove('hidden-x');
+  });
+  $('b-again').addEventListener('click', function(){ $('b-form').classList.remove('hidden-x'); $('b-done').classList.add('hidden-x'); });
+  vybratMastera(M[0].id);
+})();
+</script>
+<script type="application/json" id="dannye">{"uslugi": ["Аппаратный маникюр", "Японский маникюр", "Покрытие гель-лаком", "Наращивание гелем", "Мужской маникюр", "Детский маникюр", "Женская стрижка", "Укладка", "Уход для волос", "Окрашивание в один тон", "Сложное окрашивание", "Тонирование", "Коррекция бровей", "Окрашивание бровей", "Ламинирование бровей", "Мужская стрижка", "Оформление бороды", "Стрижка и борода"], "chasy": {"1": [540, 1260], "2": [540, 1260], "3": [540, 1260], "4": [540, 1260], "5": [540, 1260], "6": [540, 1260], "0": [540, 1260]}, "status": {"1": [540, 1260], "2": [540, 1260], "3": [540, 1260], "4": [540, 1260], "5": [540, 1260], "6": [540, 1260], "0": [540, 1260]}, "imya": "Гранель"}</script>
+<script>
+(function(){
+  var $ = function(s){ return document.querySelector(s); }, $$ = function(s){ return [].slice.call(document.querySelectorAll(s)); };
+  if (location.search.indexOf('og') > -1) document.documentElement.classList.add('og');
+  // ?vse — показать все блоки сразу (для скриншотов-проверок)
+  if (location.search.indexOf('vse') > -1) document.documentElement.classList.add('vse');
+  // плавное появление
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
+  }, {threshold: .1}) : null;
+  $$('.rv').forEach(function(el){ io ? io.observe(el) : el.classList.add('in'); });
+  // вкладки
+  $$('[data-t]').forEach(function(b){
+    b.addEventListener('click', function(){
+      $$('[data-t]').forEach(function(x){ x.setAttribute('aria-selected', x === b); });
+      $$('[data-p]').forEach(function(p){ p.hidden = p.dataset.p !== b.dataset.t; });
+    });
+  });
+  var D = JSON.parse($('#dannye').textContent);
+  var DN = ['вс','пн','вт','ср','чт','пт','сб'], MES = ['янв','фев','мар','апр','мая','июн','июл','авг','сен','окт','ноя','дек'];
+  function hhmm(m){ return ('0' + Math.floor(m / 60) % 24).slice(-2) + ':' + ('0' + m % 60).slice(-2); }
+  // значок «открыто сейчас» по часам из 2ГИС (время Казани)
+  var st = $('#seychas');
+  if (st) {
+    var now = new Date(Date.now() + (new Date().getTimezoneOffset() + 180) * 60000), h = D.status[now.getDay()], m = now.getHours() * 60 + now.getMinutes();
+    if (h && h[1] - h[0] >= 1439) { st.textContent = 'Открыто круглосуточно'; st.classList.add('on'); }
+    else if (h && m >= h[0] && m < h[1]) { st.textContent = 'Открыто до ' + hhmm(h[1]); st.classList.add('on'); }
+    else { st.textContent = 'Сейчас закрыто'; }
+  }
+  // демо-запись
+  var usl = $('#usl'), days = $('#days'), times = $('#times');
+  if (!usl) return;
+  usl.innerHTML = D.uslugi.map(function(u){ return '<option>' + u + '</option>'; }).join('');
+  var vyb = {}, start = new Date(), first = null, html = '';
+  function zanyato(s){ var x = 0; for (var i = 0; i < s.length; i++) x = (x * 31 + s.charCodeAt(i)) % 97; return x % 4 === 0; }
+  for (var i = 1; i <= 7; i++) {
+    var d = new Date(start.getFullYear(), start.getMonth(), start.getDate() + i), off = !D.chasy[d.getDay()];
+    html += '<button type="button" class="day" data-i="' + i + '"' + (off ? ' disabled' : '') + '><small>' + DN[d.getDay()] + '</small><b>' + d.getDate() + '</b></button>';
+    if (!off && first === null) first = i;
+  }
+  days.innerHTML = html;
+  function obnovit(){
+    var t = $('#t-usl'); if (t) t.textContent = usl.value;
+    t = $('#t-den'); if (t && vyb.d) t.textContent = DN[vyb.d.getDay()] + ', ' + vyb.d.getDate() + ' ' + MES[vyb.d.getMonth()];
+    t = $('#t-vr'); if (t) t.textContent = vyb.t || '—';
+  }
+  function risovatVremya(){
+    var h = D.chasy[vyb.d.getDay()], out = '';
+    for (var m = h[0] + 60, n = 0; m <= h[1] - 60 && n < 8; m += 60, n++) {
+      var t = hhmm(m);
+      out += '<button type="button" class="time"' + (zanyato(vyb.d.getDate() + t) ? ' disabled' : '') + ' data-t="' + t + '">' + t + '</button>';
+    }
+    times.innerHTML = out;
+    var f = times.querySelector('.time:not([disabled])');
+    vyb.t = f ? f.dataset.t : '';
+    if (f) f.classList.add('on');
+    obnovit();
+  }
+  function vybratDen(i){
+    vyb.d = new Date(start.getFullYear(), start.getMonth(), start.getDate() + i);
+    [].forEach.call(days.children, function(b){ b.classList.toggle('on', +b.dataset.i === i); });
+    risovatVremya();
+  }
+  vybratDen(first);
+  usl.addEventListener('change', obnovit);
+  days.addEventListener('click', function(ev){ var b = ev.target.closest('.day'); if (b && !b.disabled) vybratDen(+b.dataset.i); });
+  times.addEventListener('click', function(ev){
+    var b = ev.target.closest('.time'); if (!b || b.disabled) return;
+    [].forEach.call(times.children, function(x){ x.classList.remove('on'); }); b.classList.add('on'); vyb.t = b.dataset.t; obnovit();
+  });
+  $('#go').addEventListener('click', function(){
+    var ex = $('#extra'), nom = $('#nomer');
+    $('#itog').textContent = (ex ? ex.value + ' · ' : '') + usl.value + ' — ' + DN[vyb.d.getDay()] + ', ' + vyb.d.getDate() + ' ' + MES[vyb.d.getMonth()] + ', ' + vyb.t;
+    if (nom) nom.textContent = String(1000 + Math.floor(Math.random() * 9000));
+    $('#form').classList.add('hidden-x'); $('#done').classList.remove('hidden-x');
+    document.body.classList.add('zapisan');
+  });
+  $('#again').addEventListener('click', function(){
+    $('#form').classList.remove('hidden-x'); $('#done').classList.add('hidden-x'); document.body.classList.remove('zapisan');
+  });
+  $$('[data-book]').forEach(function(b){
+    b.addEventListener('click', function(){ usl.value = b.dataset.book; obnovit(); $('#zapis').scrollIntoView({behavior: 'smooth'}); });
+  });
+  obnovit();
+})();
+</script>
+</body>
+</html>
