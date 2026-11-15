@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>FLASH, фотостудия в Динской · черновик сайта</title>
+<meta name="description" content="Две студии с почасовой арендой в станице Динская: дневной свет на Заводской, циклорама и студийный свет на Железнодорожной.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Черновик сайта для фотостудии FLASH">
+<meta property="og:description" content="Две студии в Динской, цены, правила и кнопка в ваш календарь брони.">
+<meta property="og:image" content="https://maltode.github.io/chernovik/flash/og.png">
+<meta name="theme-color" content="#1E1A18">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" as="image" href="img/flash-zv-hero.webp">
+<style>
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/unbounded-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/unbounded-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/unbounded-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/unbounded-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/manrope-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/manrope-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+:root{--bg:#1E1A18;--bg2:#141110;--sand:#E4D8C6;--wine:#7E141C;--red:#C3272F;--fg:#F3EEE6;--fg2:#B9AFA3;--ln:rgba(243,238,230,.18);--mark:#F0767B;--draft-bg:#F3EEE6;--draft-ink:#1B1918;--zerno:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E");--r:4px;--fs:14px;--fm:16px;--ft:24px;--fl:clamp(24px,3vw,40px);--fx:clamp(64px,21.5vw,290px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+.draft{position:relative;z-index:50;font:500 12.5px/1.4 Manrope,system-ui,sans-serif;text-align:center;padding:7px 16px;background:var(--draft-bg,#111);color:var(--draft-ink,#fff)}
+.draft b{letter-spacing:.12em;text-transform:uppercase;margin-right:6px}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}*{animation:none!important}}
+.og .rv,.vse .rv{opacity:1!important;transform:none!important;transition:none!important}
+.hidden-x{display:none!important}
+
+
+body{background:var(--bg) var(--zerno);color:var(--fg);font:400 var(--fm)/1.55 Manrope,system-ui,sans-serif;padding-bottom:88px}
+ul,ol{list-style:none}
+svg{width:20px;height:20px;flex:none}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
+h2{font:800 var(--fl)/1.1 Unbounded,sans-serif;letter-spacing:-.02em;text-wrap:balance}
+.kik{font-size:var(--fs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--fg2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:8px 24px;border:0;border-radius:var(--r);background:var(--red);color:#fff;font-weight:600;font-size:var(--fm);line-height:1.2;text-align:center;transition:transform .2s ease-out}
+.btn:active{transform:scale(.98)}
+.btn--bel{background:#fff;color:#1B1918}
+/* светлые и красные поверхности: свои цвета текста, линий и мелких акцентов */
+.pesok,.list,.kalk,dialog{--fg:#1B1918;--fg2:#574F47;--ln:rgba(27,25,24,.16);--mark:#A81E27;color:var(--fg)}
+.fon--kr .list,.krasn{--fg:#fff;--fg2:rgba(255,255,255,.88);--ln:rgba(255,255,255,.26);--mark:#FFD9D4;color:var(--fg)}
+
+/* шапка */
+.shapka{position:relative;z-index:6;padding:16px 0}
+.shapka .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font:800 var(--fm)/1 Unbounded,sans-serif;letter-spacing:.04em}
+.shapka nav{display:none;gap:32px;font-size:var(--fs);font-weight:600}
+.shapka nav a{padding:8px 0;border-bottom:2px solid transparent}
+.shapka nav a:hover{border-color:var(--mark)}
+.gde{font-size:var(--fs);color:var(--fg2)}
+.shapka .btn{display:none;min-height:48px}
+
+/* первый экран: тёмная стена, вывеска плавится, ниже два бумажных фона */
+.hero{position:relative;margin-top:-56px;padding:72px 0 80px;overflow:clip}
+.hero>.wrap,.svet>.wrap{position:relative;z-index:1}
+/* свет на стене: тёплое пятно сверху и полосы от окна */
+.hero::after{content:"";position:absolute;z-index:0;inset:0;pointer-events:none;background:radial-gradient(80% 48% at 24% 0,rgba(255,206,160,.2),transparent 72%)}
+.hero::before,.svet::before{content:"";position:absolute;z-index:0;pointer-events:none;left:-16%;top:104px;width:112%;height:400px;background:linear-gradient(90deg,rgba(255,232,204,.1) 0 30%,transparent 30% 35%,rgba(255,232,204,.1) 35% 65%,transparent 65% 70%,rgba(255,232,204,.1) 70% 100%);transform:skew(-20deg,-7deg);filter:blur(8px);-webkit-mask:linear-gradient(110deg,#000 20%,transparent 80%);mask:linear-gradient(110deg,#000 20%,transparent 80%)}
+.svet{position:relative;overflow:clip}
+.svet::before{left:auto;right:-24%;top:72px;width:80%;height:280px;transform:skew(20deg,7deg);-webkit-mask:linear-gradient(250deg,#000 20%,transparent 80%);mask:linear-gradient(250deg,#000 20%,transparent 80%)}
+/* вывеска: в нижнем поле (padding) стекают капли, фильтр сглаживает их с буквами */
+.znak{position:relative;font:800 var(--fx)/.82 Unbounded,sans-serif;letter-spacing:-.05em;margin:16px 0 16px -.04em;padding-bottom:.4em;white-space:nowrap;filter:url(#plav-s)}
+.znak-t{display:block}
+.prov{position:absolute;top:.755em;height:.07em;border-radius:50%;background:currentColor}
+.kap{position:absolute;top:.73em;height:var(--hm);border-radius:999px;background:currentColor;transform-origin:50% 0}
+.kap::after{content:"";position:absolute;left:-22%;right:-22%;bottom:-.012em;aspect-ratio:1;border-radius:50%;background:inherit}
+.js .kap{transform:scaleY(.12);transition:transform 2.6s cubic-bezier(.3,.5,.2,1) var(--d)}
+.js .znak.in .kap{transform:scaleY(1)}
+.og .kap,.vse .kap{transform:none!important;transition:none!important}
+.lampa{display:inline-flex;align-items:center;gap:16px;font-size:var(--fs);font-weight:600;margin-bottom:16px}
+.lampa i{width:8px;height:8px;border-radius:50%;background:var(--mark);box-shadow:0 0 0 4px rgba(240,118,123,.25);margin-left:4px}
+.lead{max-width:46ch}
+.fakty{display:grid;gap:8px;margin:24px 0 56px;font-size:var(--fs);font-weight:600}
+.fakty li{display:flex;gap:8px;align-items:center}
+.fakty svg{color:var(--mark)}
+.fony{display:grid;gap:80px}
+.shagi{counter-reset:sh;display:grid;margin-top:88px}
+.shagi li{counter-increment:sh;display:grid;grid-template-columns:48px 1fr;align-items:baseline;padding:16px 0;border-top:1px solid var(--ln)}
+.shagi li::before{content:counter(sh,decimal-leading-zero);font:800 var(--fs)/1 Unbounded,sans-serif;color:var(--mark)}
+.shagi .kik{padding-bottom:16px}
+/* карточка студии: рулон бумажного фона во всю ширину, из него выходит лист и ложится на пол */
+.fon{position:relative;display:flex;flex-direction:column;--list:#fff}
+.fon--kr{--list:var(--red)}
+.fon::before{content:"";position:absolute;z-index:-1;inset:-40px -24px -72px;background:radial-gradient(closest-side,rgba(255,226,196,.18),transparent)}
+.fon::after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:-48px;height:32px;background:radial-gradient(50% 50% at 50% 50%,rgba(0,0,0,.7),transparent)}
+.rulon{position:relative;z-index:3;height:24px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.4),rgba(255,255,255,0) 45%,rgba(0,0,0,.3)),var(--list);box-shadow:0 2px 4px rgba(0,0,0,.4)}
+.list{position:relative;flex:1;display:flex;flex-direction:column;margin:-8px 8px 0;padding:32px 16px 24px;background:var(--list);box-shadow:inset 0 24px 16px -16px rgba(0,0,0,.35)}
+.list::after{content:"";position:absolute;left:-8px;right:-8px;top:100%;height:32px;background:linear-gradient(rgba(0,0,0,.14),rgba(0,0,0,.04)),var(--list);clip-path:polygon(8px 0,calc(100% - 8px) 0,100% 100%,0 100%)}
+.kar{position:relative}
+.kar-lenta{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.kar-lenta::-webkit-scrollbar{display:none}
+.kar-lenta img{flex:0 0 100%;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;scroll-snap-align:start;background:var(--sand)}
+.kar-kn{position:absolute;top:calc(50% - 40px);display:grid;place-items:center;width:48px;height:48px;border:0;border-radius:50%;background:rgba(255,255,255,.94);color:#1B1918;box-shadow:0 2px 8px rgba(0,0,0,.24);transition:opacity .2s}
+.kar-nazad{left:8px}.kar-vpered{right:8px}
+.kar-kn:disabled{opacity:0;pointer-events:none}
+.kar-niz{display:flex;justify-content:space-between;gap:8px;margin-top:8px;font-size:var(--fs);font-weight:600;color:var(--fg2)}
+.kar-schet{flex:none;font-variant-numeric:tabular-nums}
+.list .kik{margin-top:16px}
+.adr{font:600 var(--ft)/1.15 Manrope,sans-serif;margin-top:8px}
+.chto{font-size:var(--fs);color:var(--fg2);margin-top:8px}
+.cena{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 8px;margin:24px 0 16px}
+.cena b{font:800 var(--ft)/1 Unbounded,sans-serif}
+.cena small{flex-basis:100%;font-size:var(--fs);color:var(--fg2);margin-top:8px}
+.list .btn{width:100%}
+.list .cena{margin-top:auto;padding-top:24px}
+.fon--kr .btn{background:#fff;color:#1B1918}
+.js .fon .list{clip-path:inset(0 -16px 100% -16px);transition:clip-path 1s cubic-bezier(.2,.7,.2,1)}
+.js .fon.in .list{clip-path:inset(0 -16px -40px -16px)}
+.js .fon+.fon .list{transition-delay:.15s}
+.og .fon .list,.vse .fon .list{clip-path:none!important;transition:none!important}
+.vsp{position:absolute;inset:0;z-index:5;background:#fff;opacity:0;pointer-events:none}
+.vsp.on{animation:vsp .45s ease-out}
+@keyframes vsp{0%{opacity:.7}100%{opacity:0}}
+
+/* разделы */
+.sek{padding:64px 0}
+.gol{display:grid;gap:16px;margin-bottom:32px;max-width:62ch}
+.lenta{display:grid;grid-template-columns:1fr 1fr;gap:32px 16px;padding-bottom:32px}
+.kadr:nth-child(2n){position:relative;top:32px}
+.kadr img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;background:rgba(255,255,255,.08)}
+.kadr figcaption{display:flex;gap:8px;align-items:baseline;margin-top:8px;font-size:var(--fs);font-weight:600}
+.kadr figcaption span{color:var(--mark);font-variant-numeric:tabular-nums}
+.vzale{display:grid;gap:32px;margin-top:32px}
+.spis li{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--ln)}
+.spis li:last-child{border-bottom:1px solid var(--ln)}
+.spis svg{color:var(--mark);margin-top:2px}
+.vzale-cena .btn{width:100%}
+.vzale-cena .cena{margin-top:0}
+
+/* вторая студия: красный блок, как её красный бумажный фон */
+.krasn{background:var(--wine) var(--zerno)}
+.noch-setka{display:grid;gap:32px}
+.kadr2{position:relative}
+.gl{position:relative;overflow:hidden}
+.gl img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.pusk{position:absolute;left:16px;bottom:16px;z-index:6;display:flex;align-items:center;gap:16px}
+.pusk .btn{min-height:48px;padding:8px 16px}
+.pusk span{font-size:var(--fs);font-weight:600;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6);font-variant-numeric:tabular-nums}
+.spec{display:grid;gap:32px;margin:32px 0}
+.spec h3{font-size:var(--fs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mark);margin-bottom:8px}
+.spec li{padding:8px 0;border-top:1px solid var(--ln)}
+.noch-cena .btn{width:100%}
+.otkuda{font-size:var(--fs);color:var(--fg2);margin-top:16px}
+
+/* калькулятор */
+.pesok{background:var(--sand) var(--zerno)}
+.schet-setka{display:grid;gap:32px}
+.schet .gol{margin-bottom:0}
+.kalk{display:grid;gap:24px;padding:24px 16px;background:#fff;box-shadow:0 24px 48px -32px rgba(27,25,24,.4)}
+.seg{border:0;display:grid;gap:8px}
+.seg legend,.pole{margin-bottom:8px}
+.seg label{position:relative;cursor:pointer}
+.seg input,.tumbler input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer}
+.seg label>span{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:8px 16px;border:2px solid var(--ln);border-radius:var(--r);font-weight:600}
+.seg small,.tumbler small{display:block;font-size:var(--fs);font-weight:400;color:var(--fg2)}
+.seg input:checked+span{border-color:#1B1918;background:#1B1918;color:#fff}
+.seg input:checked+span small{color:rgba(255,255,255,.82)}
+.seg input:focus-visible+span,.tumbler input:focus-visible~.tum{outline:3px solid var(--mark);outline-offset:3px}
+.ryad{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.ryad .kik{margin:0}
+.step{display:flex;align-items:center;gap:8px}
+.step button{display:grid;place-items:center;width:48px;height:48px;border:2px solid var(--fg);border-radius:50%;background:none;color:var(--fg)}
+.step button:disabled{opacity:.3;cursor:default}
+.step output{min-width:72px;text-align:center;font:800 var(--ft)/1 Unbounded,sans-serif}
+.tumbler{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;font-weight:600;cursor:pointer}
+.tum{position:relative;flex:none;width:56px;height:32px;border-radius:16px;background:#8F877C;transition:background .2s}
+.tum::after{content:"";position:absolute;left:4px;top:4px;width:24px;height:24px;border-radius:50%;background:#fff;transition:transform .2s ease-out}
+.tumbler input:checked~.tum{background:var(--red)}
+.tumbler input:checked~.tum::after{transform:translateX(24px)}
+.itog{display:grid;gap:8px;padding-top:24px;border-top:2px dashed var(--ln)}
+.summa{font:800 var(--fl)/1 Unbounded,sans-serif}
+.razbor{font-size:var(--fs);color:var(--fg2)}
+.kalk .btn{width:100%}
+
+/* новый год и сезоны */
+.ng{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ng img{width:100%;height:100%;object-fit:cover;background:rgba(255,255,255,.08)}
+.ng .bol{grid-column:1/-1;aspect-ratio:1/1}
+.ng img:not(.bol){aspect-ratio:9/16}
+.sezony{display:grid;margin-top:16px}
+.sezony li{display:grid;gap:4px;padding:16px 0;border-top:1px solid var(--ln)}
+.sezony b{font-weight:600}
+.sezony span,.podp{font-size:var(--fs);color:var(--fg2)}
+.podp{margin-top:32px}
+
+/* правила */
+.pravila{counter-reset:p;display:grid}
+.pravila li{counter-increment:p;display:grid;grid-template-columns:48px 1fr;align-items:baseline;padding:16px 0;border-top:1px solid var(--ln)}
+.pravila li::before{content:counter(p,decimal-leading-zero);font:800 var(--fs)/1 Unbounded,sans-serif;color:var(--mark)}
+
+/* бронь и связь */
+.bron{display:grid;gap:8px}
+.bron a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:88px;padding:16px;background:#fff;color:#1B1918;border-radius:var(--r);font:600 var(--ft)/1.15 Manrope,sans-serif;transition:transform .2s ease-out}
+.bron a:hover{transform:translateX(8px)}
+.bron a+a{background:var(--red);color:#fff}
+.bron small{display:block;font-size:var(--fs);font-weight:400;margin-top:8px;opacity:.88}
+.bron svg{width:32px;height:32px}
+.kont{display:grid;margin-top:32px}
+.kont a{display:flex;align-items:center;gap:16px;min-height:56px;border-top:1px solid var(--ln);font-weight:600}
+.kont svg{color:var(--mark)}
+
+/* подвал */
+.podval{background:var(--bg2);color:var(--fg2);padding:48px 0 32px;font-size:var(--fs)}
+.podval .wrap{display:grid;gap:32px}
+.podval b{color:var(--fg)}
+.podval p{max-width:70ch}
+.podval h3{font-size:var(--fs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mark);margin-bottom:8px}
+.podval li{padding:8px 0;border-top:1px solid var(--ln);max-width:70ch}
+
+/* кнопка внизу экрана на телефоне и выбор студии */
+.niz{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:8px 16px calc(8px + env(safe-area-inset-bottom));background:rgba(30,26,24,.94);border-top:1px solid var(--ln)}
+.niz .btn{width:100%}
+.og .niz{display:none}
+dialog{position:fixed;inset:auto 0 0 0;width:100%;max-width:480px;margin:0 auto;border:0;background:#F3EEE6}
+dialog::backdrop{background:rgba(0,0,0,.7)}
+.vybor{display:grid;gap:16px;padding:24px 16px calc(24px + env(safe-area-inset-bottom))}
+.vybor-gol{display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600}
+.vybor-gol button{display:grid;place-items:center;width:48px;height:48px;border:0;background:none;color:inherit}
+.vybor .bron a:first-child{box-shadow:inset 0 0 0 2px var(--ln)}
+.vybor p{font-size:var(--fs);color:var(--fg2)}
+
+@media (min-width:520px){.znak{filter:url(#plav-m)}}
+@media (min-width:640px){
+  .spec{grid-template-columns:1fr 1fr}
+  .kalk{padding:32px}
+  .seg{grid-template-columns:1fr 1fr}
+  .seg label>span{display:grid;gap:4px;justify-content:start;min-height:72px}
+  dialog{inset:0;margin:auto;height:fit-content}
+}
+@media (min-width:900px){
+  body{padding-bottom:0}
+  .wrap{width:min(1200px,100% - 96px)}
+  .shapka{padding:24px 0}
+  .shapka nav{display:flex}
+  .shapka .btn{display:inline-flex}
+  .gde,.niz{display:none}
+  .hero{margin-top:-96px;padding:112px 0 128px}
+  .znak{margin-bottom:0;filter:url(#plav-l)}
+  .kap{height:var(--hd)}
+  .hero::before{left:-8%;top:192px;width:44%;height:560px}
+  .hero-niz{display:grid;grid-template-columns:4fr 8fr;grid-template-areas:"txt fony" "shagi fony";gap:48px;align-items:start}
+  .hero-txt{grid-area:txt;padding-top:8px}
+  .shagi{grid-area:shagi;align-self:end;margin:0 0 32px}
+  .fakty{margin-bottom:0}
+  /* карточки стоят под короткими каплями правых букв: рулон начинается ниже самой длинной из них */
+  .fony{grid-area:fony;grid-template-columns:1fr 1fr;gap:24px;margin-top:calc(var(--fx)*-.22);position:relative;z-index:2}
+  .sek{padding:104px 0}
+  .gol{margin-bottom:48px}
+  .lenta{grid-template-columns:repeat(3,1fr);gap:56px 24px;padding:0 0 48px}
+  .kadr:nth-child(2n){top:auto}
+  .kadr:nth-child(3n+2){position:relative;top:48px}
+  .vzale{grid-template-columns:7fr 5fr;gap:64px;align-items:end;margin-top:48px}
+  .noch-setka{grid-template-columns:5fr 7fr;gap:96px;align-items:start}
+  .noch-cena{display:flex;align-items:center;gap:32px}
+  .noch-cena .cena{margin:0}
+  .noch-cena .btn{width:auto}
+  .schet-setka{grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+  .ng{grid-template-columns:2fr 1fr 1fr 1fr}
+  .ng .bol{grid-column:auto}
+  .ng img:not(.bol){aspect-ratio:auto}
+  .sezony{grid-template-columns:repeat(3,1fr);gap:24px}
+  .pravila{grid-template-columns:1fr 1fr;column-gap:64px}
+  .svyaz-setka{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:start}
+  .kont{margin-top:0}
+  .podval .wrap{grid-template-columns:1fr 1fr;gap:64px}
+}
+@media (min-width:1150px){.znak{filter:url(#plav-xl)}}
+@media (prefers-reduced-motion:reduce){.js .fon .list{clip-path:none;transition:none}.js .kap{transform:none;transition:none}}
+
+</style>
+</head>
+<body>
+<div class="draft"><b>Черновик</b> сайта · подготовлен для фотостудии FLASH · не официальный сайт студии</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="plav-s" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="2.2"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 12 -5"/></filter><filter id="plav-m" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="3.6"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 14 -6"/></filter><filter id="plav-l" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="5.4"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -7.5"/></filter><filter id="plav-xl" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="7.5"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -8.5"/></filter></defs></svg>
+
+<header class="shapka"><div class="wrap">
+  <a class="logo" href="#top">FLASH</a>
+  <nav aria-label="Разделы">
+    <a href="#zavodskaya">Заводская</a>
+    <a href="#zheleznodorozhnaya">Железнодорожная</a>
+    <a href="#cena">Цена</a>
+    <a href="#pravila">Правила</a>
+    <a href="#svyaz">Контакты</a>
+  </nav>
+  <span class="gde">ст. Динская</span>
+  <button class="btn" type="button" data-vybor>Выбрать время</button>
+</div></header>
+
+<main>
+<section class="hero" id="top"><div class="wrap">
+  <p class="kik">Фотостудия · станица Динская</p>
+  <h1 class="znak" aria-label="FLASH"><span class="znak-t" aria-hidden="true">FLASH</span><span class="kapli" aria-hidden="true"><i class="prov" style="left:0.075em;width:0.210em"></i><i class="prov" style="left:0.805em;width:0.890em"></i><i class="prov" style="left:2.190em;width:0.230em"></i><i class="prov" style="left:2.605em;width:0.345em"></i><i class="prov" style="left:3.225em;width:0.210em"></i><i class="prov" style="left:3.810em;width:0.210em"></i><i class="kap" style="left:0.087em;width:0.085em;--hm:0.3em;--hd:0.3em;--d:0s"></i><i class="kap" style="left:0.207em;width:0.065em;--hm:0.13em;--hd:0.13em;--d:0.5s"></i><i class="kap" style="left:0.825em;width:0.07em;--hm:0.16em;--hd:0.16em;--d:0.9s"></i><i class="kap" style="left:0.935em;width:0.09em;--hm:0.26em;--hd:0.26em;--d:0.2s"></i><i class="kap" style="left:1.268em;width:0.065em;--hm:0.11em;--hd:0.11em;--d:1.2s"></i><i class="kap" style="left:1.560em;width:0.08em;--hm:0.22em;--hd:0.1em;--d:0.6s"></i><i class="kap" style="left:2.225em;width:0.07em;--hm:0.12em;--hd:0.07em;--d:1.0s"></i><i class="kap" style="left:2.328em;width:0.085em;--hm:0.25em;--hd:0.13em;--d:0.3s"></i><i class="kap" style="left:2.675em;width:0.09em;--hm:0.19em;--hd:0.11em;--d:0.7s"></i><i class="kap" style="left:2.847em;width:0.065em;--hm:0.1em;--hd:0.06em;--d:1.3s"></i><i class="kap" style="left:3.248em;width:0.085em;--hm:0.27em;--hd:0.13em;--d:0.1s"></i><i class="kap" style="left:3.367em;width:0.065em;--hm:0.12em;--hd:0.06em;--d:1.1s"></i><i class="kap" style="left:3.837em;width:0.065em;--hm:0.14em;--hd:0.08em;--d:0.8s"></i><i class="kap" style="left:3.930em;width:0.08em;--hm:0.23em;--hd:0.12em;--d:0.4s"></i></span></h1>
+  <div class="hero-niz">
+    <div class="hero-txt">
+      <p class="lampa"><i></i>Вторая студия открыта с 15 ноября</p>
+      <p class="lead">Две студии с почасовой арендой. На Заводской много дневного света и готовые зоны, на Железнодорожной циклорама и студийный свет.</p>
+      <ul class="fakty">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Каждый день с 9:00 до 21:00</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>В цену входит весь зал, без доплат</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>Штатный фотограф: 5 000 ₽ за час</li>
+      </ul>
+    </div>
+    <div class="fony" id="studii">
+      <div class="fon">
+        <div class="rulon"></div>
+        <article class="list">
+          <div class="kar" data-kar><div class="kar-lenta" tabindex="0" role="group" aria-label="Фото студии, листайте в сторону"><img src="img/flash-zv-hero.webp" width="600" height="800" alt="Студия FLASH на Заводской: светлый диван, белые шторы и бумажный фон" data-podp="Диван и бумажные фоны"><img src="img/flash-zv-okno.webp" width="600" height="800" alt="Постель с белым текстилем у больших окон" data-podp="У окна" loading="lazy"><img src="img/flash-zv-fon.webp" width="600" height="800" alt="Белый бумажный фон, раскатанный на пол" data-podp="Белый фон" loading="lazy"><img src="img/flash-zv-divan.webp" width="600" height="800" alt="Светлый диван на фоне чёрной шторы" data-podp="Зона с диваном" loading="lazy"><img src="img/flash-zv-zerkalo.webp" width="600" height="800" alt="Большое напольное зеркало у белых штор" data-podp="Большое зеркало" loading="lazy"><img src="img/flash-zv-deti.webp" width="600" height="800" alt="Детская зона с шатром и флажками" data-podp="Детская зона" loading="lazy"><img src="img/flash-zv-okna.webp" width="600" height="800" alt="Кресла у панорамных окон" data-podp="Окна в пол" loading="lazy"></div><button type="button" class="kar-kn kar-nazad" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button type="button" class="kar-kn kar-vpered" aria-label="Следующее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button><p class="kar-niz"><span class="kar-podp">Диван и бумажные фоны</span><span class="kar-schet">1 / 7</span></p></div>
+          <p class="kik">Студия 1</p>
+          <h2 class="adr">Заводская, 1/1</h2>
+          <p class="chto">Дневной свет, окна в пол, белые шторы</p>
+          <p class="cena"><b>1 000 ₽</b> / час <small>в любой день, до конца года</small></p>
+          <a class="btn" href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener">Выбрать время<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+        </article>
+      </div>
+      <div class="fon fon--kr">
+        <div class="rulon"></div>
+        <article class="list">
+          <div class="kar" data-kar><div class="kar-lenta" tabindex="0" role="group" aria-label="Фото студии, листайте в сторону"><img src="img/flash-zh-hero.webp" width="900" height="1200" alt="Студия FLASH на Железнодорожной: циклорама, световые стойки и софтбокс" data-podp="Циклорама и свет"><img src="img/flash-zh-svet.webp" width="600" height="800" alt="Вешалка с одеждой и световые стойки у белой стены" data-podp="Стойки и вешалка" loading="lazy"></div><button type="button" class="kar-kn kar-nazad" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button type="button" class="kar-kn kar-vpered" aria-label="Следующее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button><p class="kar-niz"><span class="kar-podp">Циклорама и свет</span><span class="kar-schet">1 / 2</span></p></div>
+          <p class="kik">Студия 2 · новая</p>
+          <h2 class="adr">Железнодорожная, 265</h2>
+          <p class="chto">Циклорама, импульсный и постоянный свет</p>
+          <p class="cena"><b>1 500 ₽</b> / час <small>в цену входит весь зал</small></p>
+          <a class="btn" href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener">Выбрать время<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+        </article>
+      </div>
+    </div>
+    <div class="shagi">
+      <p class="kik">Как забронировать</p>
+      <ol>
+        <li>Выберите студию</li>
+        <li>Отметьте свободные часы в календаре</li>
+        <li>Приходите ко времени, администратор встретит</li>
+      </ol>
+    </div>
+  </div>
+</div><div class="vsp" id="vsp1" aria-hidden="true"></div></section>
+
+<section class="sek svet" id="zavodskaya"><div class="wrap">
+  <div class="gol rv">
+    <p class="kik">01 · Заводская, 1/1</p>
+    <h2>Студия с дневным светом</h2>
+    <p>Окна в пол, белые шторы и несколько готовых зон в одном зале. Декор можно двигать и убирать на время съёмки.</p>
+  </div>
+  <div class="lenta">
+    <figure class="kadr rv"><img src="img/flash-zv-divan.webp" width="600" height="800" loading="lazy" alt="Светлый диван на фоне чёрной шторы"><figcaption><span>01</span>Зона с диваном</figcaption></figure>
+    <figure class="kadr rv"><img src="img/flash-zv-fon.webp" width="600" height="800" loading="lazy" alt="Белый бумажный фон, раскатанный на пол"><figcaption><span>02</span>Белый фон</figcaption></figure>
+    <figure class="kadr rv"><img src="img/flash-zv-okno.webp" width="600" height="800" loading="lazy" alt="Постель с белым текстилем у больших окон"><figcaption><span>03</span>У окна</figcaption></figure>
+    <figure class="kadr rv"><img src="img/flash-zv-zerkalo.webp" width="600" height="800" loading="lazy" alt="Большое напольное зеркало у белых штор"><figcaption><span>04</span>Большое зеркало</figcaption></figure>
+    <figure class="kadr rv"><img src="img/flash-zv-deti.webp" width="600" height="800" loading="lazy" alt="Детская зона с шатром и флажками"><figcaption><span>05</span>Детская зона</figcaption></figure>
+    <figure class="kadr rv"><img src="img/flash-zv-okna.webp" width="600" height="800" loading="lazy" alt="Кресла у панорамных окон"><figcaption><span>06</span>Окна в пол</figcaption></figure>
+  </div>
+  <div class="vzale rv">
+    <ul class="spis">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Виниловые и шторные фоны</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Белый фон премиум-класса</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Зона с диваном и детская фотозона</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Большое зеркало</li>
+    </ul>
+    <div class="vzale-cena">
+      <p class="cena"><b>1 000 ₽</b> / час <small>в любой день, до конца года</small></p>
+      <a class="btn" href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener">Выбрать время на Заводской<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    </div>
+  </div>
+</div></section>
+
+<section class="sek krasn" id="zheleznodorozhnaya"><div class="wrap noch-setka">
+  <div class="kadr2 rv">
+    <div class="gl">
+      <img src="img/flash-zh-svet.webp" width="600" height="800" loading="lazy" alt="Зал на Железнодорожной: вешалка с одеждой и световые стойки у белой стены">
+      <div class="vsp" id="vsp2" aria-hidden="true"></div>
+      <div class="pusk"><button class="btn btn--bel" type="button" id="pusk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Дать вспышку</button><span id="kadrov" aria-live="polite"></span></div>
+    </div>
+  </div>
+  <div>
+    <div class="gol rv">
+      <p class="kik">02 · Железнодорожная, 265</p>
+      <h2>Циклорама и студийный свет</h2>
+      <p>Основную площадь занимает циклорама. Реквизит ставите как нужно и собираете свою картинку.</p>
+    </div>
+    <div class="spec rv">
+      <div>
+        <h3>Свет</h3>
+        <ul>
+          <li>2 постоянных источника, один с RGB-линейкой</li>
+          <li>2 импульсных источника</li>
+          <li>2 софтбокса 60×90</li>
+          <li>Стрипбокс 30×120</li>
+          <li>2 рефлектора, 2 флага, журавль</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Реквизит</h3>
+        <ul>
+          <li>Диван и стулья</li>
+          <li>Большой матрас и цветные матрасики</li>
+          <li>Зеркало на колёсах</li>
+          <li>Стойка с поликарбонатом на колёсах</li>
+          <li>Цветные фотофоны</li>
+        </ul>
+      </div>
+    </div>
+    <div class="noch-cena rv">
+      <p class="cena"><b>1 500 ₽</b> / час <small>в цену входит весь зал</small></p>
+      <a class="btn btn--bel" href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener" aria-label="Выбрать время в студии на Железнодорожной">Выбрать время<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    </div>
+    <p class="otkuda">Список света и реквизита из анонса студии от 7 октября.</p>
+  </div>
+</div></section>
+
+<section class="sek pesok schet" id="cena"><div class="wrap schet-setka">
+  <div class="gol rv">
+    <p class="kik">Цена</p>
+    <h2>Сколько выйдет съёмка</h2>
+    <p>Выберите студию и время. Сумма видна сразу, без переписки. Свободные часы покажет календарь студии.</p>
+  </div>
+  <div class="kalk rv">
+    <fieldset class="seg">
+      <legend class="kik">Студия</legend>
+      <label><input type="radio" name="st" value="zv" checked><span>Заводская<small>1 000 ₽ / час</small></span></label>
+      <label><input type="radio" name="st" value="zh"><span>Железнодорожная<small>1 500 ₽ / час</small></span></label>
+    </fieldset>
+    <div class="ryad">
+      <p class="kik" id="l-ch">Часы</p>
+      <div class="step">
+        <button type="button" id="minus" aria-label="Меньше на час"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+        <output id="ch" aria-labelledby="l-ch">2 ч</output>
+        <button type="button" id="plus" aria-label="Больше на час"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+      </div>
+    </div>
+    <label class="tumbler"><span>Штатный фотограф<small>5 000 ₽ / час</small></span><input type="checkbox" id="foto"><span class="tum"></span></label>
+    <div class="itog" aria-live="polite">
+      <p class="kik">Итого</p>
+      <p class="summa" id="summa">2 000 ₽</p>
+      <p class="razbor" id="razbor">Аренда: 2 ч × 1 000 ₽</p>
+    </div>
+    <a class="btn" id="kalk-go" href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener">Выбрать время в календаре<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+  </div>
+</div></section>
+
+<section class="sek" id="sezon"><div class="wrap">
+  <div class="gol rv">
+    <p class="kik">Сейчас в студии</p>
+    <h2>Новогодние декорации уже стоят</h2>
+    <p>На Заводской новогодний сезон идёт до 15 января, на Железнодорожной до 20 января.</p>
+  </div>
+  <div class="ng rv">
+    <img class="bol" src="img/flash-ng-1.webp" width="800" height="800" loading="lazy" alt="Постель под гирляндой, ель в огоньках и зеркало">
+    <img src="img/flash-ng-2.webp" width="449" height="800" loading="lazy" alt="Старинный шкаф с макраме, ель и флажки">
+    <img src="img/flash-ng-3.webp" width="449" height="800" loading="lazy" alt="Ель с белыми цветами и полосатой подушкой">
+    <img src="img/flash-ng-4.webp" width="449" height="800" loading="lazy" alt="Белые шторы с еловой гирляндой">
+  </div>
+  <p class="podp rv">Дальше по сезону. Так было в 2026 году:</p>
+  <ul class="sezony rv">
+    <li><b>1–14 февраля</b><span>фотозоны ко Дню влюблённых</span></li>
+    <li><b>До апреля</b><span>весенняя зона</span></li>
+    <li><b>Май и июнь</b><span>локация с живыми пионами</span></li>
+  </ul>
+</div></section>
+
+<section class="sek pesok" id="pravila"><div class="wrap">
+  <div class="gol rv">
+    <p class="kik">Перед съёмкой</p>
+    <h2>Что важно знать</h2>
+  </div>
+  <ol class="pravila rv">
+    <li>Запись каждый день с 9:00 до 21:00.</li>
+    <li>Администратор в студии только в забронированные часы.</li>
+    <li>В цену входит весь зал. Доплат нет.</li>
+    <li>На белом фоне подошву заклеиваем скотчем. Скотч есть в студии.</li>
+    <li>Свечи зажигать нельзя.</li>
+    <li>В аренду есть кастомные пиджаки 42/44 за 250 ₽ в час и два платья для малышек.</li>
+  </ol>
+</div></section>
+
+<section class="sek" id="svyaz"><div class="wrap">
+  <div class="gol rv">
+    <p class="kik">Бронь и связь</p>
+    <h2>Выберите студию и время</h2>
+  </div>
+  <div class="svyaz-setka">
+    <div class="bron rv">
+      <a href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener"><span>Заводская, 1/1<small>дневной свет · 1 000 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+      <a href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener"><span>Железнодорожная, 265<small>циклорама · 1 500 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    </div>
+    <ul class="kont rv">
+      <li><a href="https://t.me/angelina_vestnik" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>Telegram: @angelina_vestnik</a></li>
+      <li><a href="tel:+79189529950"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>8 918 952-99-50</a></li>
+      <li><a href="https://t.me/flash_din" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>Канал студии: @flash_din</a></li>
+      <li><a href="https://yandex.ru/maps/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D1%80%D0%B0%D0%B9%2C%20%D1%81%D1%82%D0%B0%D0%BD%D0%B8%D1%86%D0%B0%20%D0%94%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%97%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%201/1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Заводская, 1/1 на карте</a></li>
+      <li><a href="https://yandex.ru/maps/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D1%80%D0%B0%D0%B9%2C%20%D1%81%D1%82%D0%B0%D0%BD%D0%B8%D1%86%D0%B0%20%D0%94%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%20265" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Железнодорожная, 265 на карте</a></li>
+    </ul>
+  </div>
+</div></section>
+</main>
+
+<footer class="podval"><div class="wrap">
+  <div>
+    <p><b>FLASH</b></p>
+    <p>Это черновик сайта для фотостудии FLASH. Он собран по открытым данным: Telegram-канал @flash_din и страница бронирования студии. Официальным сайтом студии он не является.</p>
+    <p>Фото взяты из канала студии. Кнопки «Выбрать время» открывают действующий календарь студии, сам черновик заявки не принимает.</p>
+  </div>
+  <div>
+    <h3>Что сверим перед запуском</h3>
+    <ul>
+      <li>Цена: в канале 1 000 и 1 500 ₽ за час, в календаре от 1 050 и от 1 550 ₽.</li>
+      <li>В описании канала бронь ведёт на @amg_angelinaa, этот аккаунт не открывается. В постах указан @angelina_vestnik.</li>
+      <li>Правила и аренда одежды собраны из постов 2025 года.</li>
+      <li>Фото заменим на ваши, в полном размере.</li>
+    </ul>
+  </div>
+</div></footer>
+
+<div class="niz"><button class="btn" type="button" data-vybor>Выбрать время</button></div>
+
+<dialog id="vybor" aria-labelledby="vybor-t"><div class="vybor">
+  <div class="vybor-gol"><span id="vybor-t">В какую студию?</span><button type="button" id="zakryt" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div>
+  <div class="bron">
+    <a href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener"><span>Заводская, 1/1<small>дневной свет · 1 000 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    <a href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener"><span>Железнодорожная, 265<small>циклорама · 1 500 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+  </div>
+  <p>Откроется календарь студии со свободными часами.</p>
+</div></dialog>
+
+<script type="application/json" id="dannye">{"zv": {"cena": 1000, "bron": "https://pro.ugoloc.ru/flash_zv"}, "zh": {"cena": 1500, "bron": "https://pro.ugoloc.ru/flash_zh"}, "fotograf": 5000}</script>
+<script>
+(function(){
+  var d = document, $ = function(s){ return d.querySelector(s); }, $$ = function(s){ return [].slice.call(d.querySelectorAll(s)); };
+  var q = location.search, snimok = /og|vse/.test(q);
+  if (q.indexOf('og') > -1) d.documentElement.classList.add('og');
+  if (q.indexOf('vse') > -1) d.documentElement.classList.add('vse');
+  var tiho = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // блоки появляются при прокрутке, бумажные фоны раскатываются
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
+  }, {threshold: .1}) : null;
+  $$('.rv, .fon, .znak').forEach(function(el){ io ? io.observe(el) : el.classList.add('in'); });
+
+  // вспышка: один раз, когда первый фон раскатался (по событию, а не по таймеру), и по кнопке во второй студии
+  function vspyshka(el){ if (!el || tiho) return; el.classList.remove('on'); void el.offsetWidth; el.classList.add('on'); }
+  $$('.vsp').forEach(function(el){ el.addEventListener('animationend', function(){ el.classList.remove('on'); }); });
+  var perv = $('.fon .list');
+  if (!snimok && perv) perv.addEventListener('transitionend', function raz(ev){
+    if (ev.propertyName !== 'clip-path') return;
+    perv.removeEventListener('transitionend', raz); vspyshka($('#vsp1'));
+  });
+  var kadr = 0;
+  $('#pusk').addEventListener('click', function(){
+    kadr++; vspyshka($('#vsp2'));
+    $('#kadrov').textContent = 'Кадр ' + (kadr < 10 ? '0' : '') + kadr;
+  });
+
+  // листание фото в карточках студий
+  $$('[data-kar]').forEach(function(k){
+    var l = k.querySelector('.kar-lenta'), foto = l.children, n = foto.length, i = 0, zhdu = false;
+    var naz = k.querySelector('.kar-nazad'), vp = k.querySelector('.kar-vpered');
+    function pokazat(){
+      k.querySelector('.kar-podp').textContent = foto[i].dataset.podp;
+      k.querySelector('.kar-schet').textContent = (i + 1) + ' / ' + n;
+      naz.disabled = i === 0; vp.disabled = i === n - 1;
+    }
+    function kFoto(j){
+      if (j < 0 || j >= n) return;
+      i = j; pokazat();
+      l.scrollTo({left: j * l.clientWidth, behavior: tiho ? 'auto' : 'smooth'});
+    }
+    // палец листает сам (scroll-snap), здесь только подпись и счётчик под текущее фото
+    function sverit(){
+      var j = Math.round(l.scrollLeft / l.clientWidth);
+      if (j !== i && j >= 0 && j < n) { i = j; pokazat(); }
+    }
+    l.addEventListener('scroll', function(){
+      if (zhdu) return; zhdu = true;
+      setTimeout(function(){ zhdu = false; sverit(); }, 120);
+    }, {passive: true});
+    l.addEventListener('scrollend', sverit);
+    naz.addEventListener('click', function(){ kFoto(i - 1); });
+    vp.addEventListener('click', function(){ kFoto(i + 1); });
+    pokazat();
+  });
+
+  // калькулятор: всё считается в браузере, ничего никуда не отправляется
+  var D = JSON.parse($('#dannye').textContent), chasov = 2, MAKS = 8;
+  function rub(x){ return String(x).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0') + '\u00a0₽'; }
+  function schitat(){
+    var st = D[$('input[name=st]:checked').value], foto = $('#foto').checked;
+    $('#ch').textContent = chasov + ' ч';
+    $('#minus').disabled = chasov <= 1; $('#plus').disabled = chasov >= MAKS;
+    $('#summa').textContent = rub(st.cena * chasov + (foto ? D.fotograf * chasov : 0));
+    $('#razbor').textContent = 'Аренда: ' + chasov + ' ч × ' + rub(st.cena) + (foto ? '. Фотограф: ' + chasov + ' ч × ' + rub(D.fotograf) : '');
+    $('#kalk-go').href = st.bron;
+  }
+  $('#minus').addEventListener('click', function(){ if (chasov > 1) { chasov--; schitat(); } });
+  $('#plus').addEventListener('click', function(){ if (chasov < MAKS) { chasov++; schitat(); } });
+  $$('input[name=st]').concat([$('#foto')]).forEach(function(el){ el.addEventListener('change', schitat); });
+  schitat();
+
+  // выбор студии по кнопке «Выбрать время»
+  var okno = $('#vybor');
+  $$('[data-vybor]').forEach(function(b){ b.addEventListener('click', function(){ okno.showModal ? okno.showModal() : (location.hash = '#svyaz'); }); });
+  $('#zakryt').addEventListener('click', function(){ okno.close(); });
+  okno.addEventListener('click', function(ev){ if (ev.target === okno) okno.close(); });
+})();
+</script>
+</body>
+</html>
