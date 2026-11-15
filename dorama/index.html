@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Дорама · черновик сайта</title>
+<meta name="description" content="Паназиатская кухня в ЖК «Знак», Ижевск: меню с ценами и заказ на доставку или самовывоз. Черновик сайта.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Черновик сайта для «Дорамы»">
+<meta property="og:description" content="Меню, корзина и заказ, который приходит в Telegram">
+<meta property="og:image" content="https://maltode.github.io/chernovik/dorama/og.png">
+<meta name="theme-color" content="#0F1F20">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" as="image" href="img/dorama-tomyam.webp">
+<style>
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/unbounded-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/unbounded-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/unbounded-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/unbounded-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/manrope-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/manrope-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+:root{ --bg:#0F1F20;--surface:#16292A;--surface2:#213E3E;--kat:#173433;--tab:#F2B6C9;--white:#FFFFFF;--ink:#F4ECE6;--muted:#A9BEBB;--rama:#2F5050;--line:rgba(244,236,230,.12);--tochki:rgba(244,236,230,.3);--acc:#F2A7C0;--acc-d:#F7C3D4;--on-acc:#0F1F20;--yel:#F2D17C;--yel-d:#F7DF9E;--on-yel:#0F1F20;--noch:#0A1718;--podval:#071213;--err:#FF9AA6;--ok:#7BD3A0;--sub:#FFFFFF;--sub-ten:#000000;--ten:rgba(4,10,11,.7);--tg-bg:#0E1621;--tg-msg:#182533;--tg-ink:#F5F5F5;--tg-link:#6AB3F3;--tg-muted:#8FA3B0;--tg-btn:rgba(255,255,255,.1);--draft-bg:#071213;--draft-ink:#F4ECE6;--fs:14px;--fm:16px;--ft:24px;--fl:clamp(32px,6vw,72px) }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+.draft{position:relative;z-index:50;font:500 12.5px/1.4 Manrope,system-ui,sans-serif;text-align:center;padding:7px 16px;background:var(--draft-bg,#111);color:var(--draft-ink,#fff)}
+.draft b{letter-spacing:.12em;text-transform:uppercase;margin-right:6px}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}*{animation:none!important}}
+.og .rv,.vse .rv{opacity:1!important;transform:none!important;transition:none!important}
+.hidden-x{display:none!important}
+
+
+body{background:var(--bg) url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2220%22%20viewBox%3D%220%200%2040%2020%22%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22-10%22%20r%3D%2219.4%22%20fill%3D%22%230F1F20%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22-10%22%20r%3D%2219.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22-10%22%20r%3D%2213.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22-10%22%20r%3D%227.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2219.4%22%20fill%3D%22%230F1F20%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2219.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2213.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%227.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%220%22%20r%3D%2219.4%22%20fill%3D%22%230F1F20%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%220%22%20r%3D%2219.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%220%22%20r%3D%2213.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%220%22%20r%3D%227.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2210%22%20r%3D%2219.4%22%20fill%3D%22%230F1F20%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2210%22%20r%3D%2219.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2210%22%20r%3D%2213.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2210%22%20r%3D%227.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2220%22%20r%3D%2219.4%22%20fill%3D%22%230F1F20%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2220%22%20r%3D%2219.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2220%22%20r%3D%2213.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2220%22%20r%3D%227.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2220%22%20r%3D%2219.4%22%20fill%3D%22%230F1F20%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2220%22%20r%3D%2219.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2220%22%20r%3D%2213.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2220%22%20r%3D%227.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2230%22%20r%3D%2219.4%22%20fill%3D%22%230F1F20%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2230%22%20r%3D%2219.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2230%22%20r%3D%2213.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2230%22%20r%3D%227.4%22%20fill%3D%22none%22%20stroke%3D%22%23173233%22%20stroke-width%3D%221.2%22/%3E%3C/svg%3E") repeat 0 0/56px 28px;color:var(--ink);font:400 var(--fm)/1.6 Manrope,system-ui,sans-serif}
+ul,ol{list-style:none}
+svg{width:20px;height:20px;flex:none}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+html.zamok{overflow:hidden}
+h1,h2,h3,h4{font-family:Unbounded,system-ui,sans-serif;font-weight:800;line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+h1,h2{font-size:var(--fl)}
+h3{font-size:var(--ft)}
+h1 em{font-style:normal;color:var(--acc)}
+.kik{font-size:var(--fs);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:8px 32px;border:0;border-radius:999px;background:var(--acc);color:var(--on-acc);font-weight:800;font-size:var(--fm);line-height:1.2;text-align:center;transition:transform .3s ease-out,background-color .3s ease-out}
+.btn:hover{background:var(--acc-d)}
+.btn:active{transform:scale(.98)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.btn--vtor{background:var(--surface);color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn--vtor:hover{background:var(--surface2)}
+.btn--zhel{background:var(--yel);color:var(--on-yel)}
+.btn--zhel:hover{background:var(--yel-d)}
+.btn--kontur-svet{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn--kontur-svet:hover{background:var(--ink);color:var(--bg)}
+.btn--shir{width:100%}
+.zaglushka{background:var(--yel);color:var(--on-yel);padding:0 4px;border-radius:4px;font-weight:600}
+
+/* шапка */
+.shapka{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:2px solid var(--rama)}
+.shapka .wrap{display:flex;align-items:center;gap:16px;min-height:72px}
+.logo{display:flex;align-items:center;gap:8px;font:800 var(--fm)/1 Unbounded,sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.logo img{width:48px;height:48px;border-radius:50%;background:var(--white);border:2px solid var(--rama)}
+.shapka nav{display:none;gap:24px;margin-left:auto;font-weight:600}
+.shapka nav a{padding:8px 0;border-bottom:2px solid transparent;transition:border-color .3s ease-out}
+.shapka nav a:hover{border-color:var(--ink)}
+.tel-mal{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:800}
+.tel-mal span{display:none}
+.knopka-korz{position:relative;display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;border:0;background:var(--acc);color:var(--on-acc)}
+.schet{position:absolute;top:-4px;right:-4px;min-width:24px;height:24px;padding:0 4px;border-radius:12px;background:var(--yel);color:var(--on-yel);font-size:var(--fs);font-weight:800;line-height:24px;text-align:center;box-shadow:0 0 0 2px var(--bg)}
+@media (min-width:560px){.tel-mal span{display:inline}}
+@media (min-width:960px){.shapka nav{display:flex}.tel-mal{margin-left:0}}
+
+/* первый экран: три кадра из серии с субтитрами */
+.hero{padding:48px 0 64px}
+.hero h1{margin-top:16px;max-width:14ch}
+.lid{margin-top:24px;max-width:56ch}
+.hero-knopki{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px}
+.fakty{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:24px;font-weight:600;font-size:var(--fs)}
+.fakty li{display:flex;align-items:center;gap:8px;min-height:32px}
+.tochka{display:inline-block;width:8px;height:8px;margin-right:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 2px var(--surface)}
+.tochka--net{background:var(--muted)}
+.kadry{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+.kadr{position:relative;margin:0;aspect-ratio:3/4;border:2px solid var(--rama);border-radius:8px;overflow:hidden;background:var(--surface)}
+.kadr:first-child{grid-column:1/-1;aspect-ratio:4/3}
+.kadr img{width:100%;height:100%;object-fit:cover}
+.kadr figcaption{position:absolute;left:8px;right:8px;bottom:16px;text-align:center;color:var(--sub);font-weight:800;font-size:var(--fm);line-height:1.3;text-shadow:1px 1px 0 var(--sub-ten),-1px -1px 0 var(--sub-ten),1px -1px 0 var(--sub-ten),-1px 1px 0 var(--sub-ten),0 2px 0 var(--sub-ten),2px 0 0 var(--sub-ten),0 -2px 0 var(--sub-ten),-2px 0 0 var(--sub-ten),0 4px 16px var(--sub-ten)}
+@media (min-width:900px){
+  .lid{font-size:var(--ft);line-height:1.5}
+  .kadry{grid-template-columns:repeat(3,1fr)}
+  .kadr,.kadr:first-child{grid-column:auto;aspect-ratio:4/5}
+  .kadr figcaption{font-size:var(--ft);bottom:24px}
+}
+
+/* разделы */
+.razdel{padding:64px 0}
+.razdel-shapka{max-width:65ch}
+.razdel-shapka p{margin-top:16px}
+.pometka{margin-top:8px;font-size:var(--fs);color:var(--muted)}
+
+/* Вечер с дорамой: четыре готовых набора над меню, компактно */
+.vecher{margin-top:32px;scroll-margin-top:96px}
+.vecher-shapka{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+.vecher-shapka p{font-size:var(--fs);color:var(--muted)}
+.serii{display:grid;gap:16px;margin-top:16px}
+.ser{display:grid;grid-template-columns:88px minmax(0,1fr);gap:0 16px;padding:16px;border:2px solid var(--rama);border-radius:16px;background:var(--surface)}
+.ser img{width:88px;height:88px;border-radius:12px;object-fit:cover}
+.ser-tekst{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ser small{font-size:var(--fs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}
+.ser b{font-weight:800;line-height:1.3}
+.ser-sostav{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:var(--fs);line-height:1.45;color:var(--muted)}
+.ser-smotr{display:none;gap:8px;align-items:flex-start;font-size:var(--fs);line-height:1.45}
+.ser-smotr svg{width:16px;height:16px;margin-top:2px;color:var(--acc)}
+.ser-niz{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px}
+.ser-summa{display:flex;flex-direction:column}
+.ser-summa b{font-size:var(--fm)}
+.ser-summa span{font-size:var(--fs);color:var(--muted)}
+.ser .btn{min-height:44px;padding:8px 24px}
+.ser .btn.ok{background:var(--yel);color:var(--on-yel)}
+@media (min-width:600px){.serii{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1100px){
+  .serii{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .ser{display:flex;flex-direction:column;padding:0;overflow:hidden}
+  .ser img{width:100%;height:auto;aspect-ratio:4/3;border-radius:0}
+  .ser-tekst{flex:1;padding:16px 16px 0}
+  .ser-sostav{display:block}
+  .ser-smotr{display:flex;margin-top:4px}
+  .ser-niz{padding:16px}
+}
+
+/* меню */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips a{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:2px solid var(--rama);border-radius:999px;background:var(--surface);font-weight:600;font-size:var(--fs);transition:background-color .3s ease-out}
+.chips a:hover{background:var(--surface2)}
+.menu-setka{display:grid;gap:32px;margin-top:16px}
+.kat{position:relative;margin-top:64px;padding:24px 16px 8px;border:2px solid var(--rama);border-radius:0 16px 16px 16px;background:var(--kat);scroll-margin-top:120px}
+.kat-tab{position:absolute;left:-2px;bottom:100%;padding:8px 16px;border:2px solid var(--rama);border-bottom:0;border-radius:12px 12px 0 0;background:var(--tab)}
+.kat-tab h3{color:var(--on-acc);font-size:var(--fm);text-transform:uppercase;letter-spacing:.04em}
+.kat-foto{display:block;width:100%;height:136px;margin-bottom:16px;object-fit:cover;border:2px solid var(--rama);border-radius:12px;background:var(--surface)}
+.kat-opis{max-width:52ch;margin-bottom:8px;font-size:var(--fs);color:var(--muted)}
+.gr{padding-top:24px}
+.blok:first-child > .gr:first-child{padding-top:0}
+.gr h4{font-size:var(--fm);text-transform:uppercase}
+.gr p{font-size:var(--fs);color:var(--muted)}
+.poz{display:grid;grid-template-columns:minmax(0,1fr) auto 44px;gap:4px 8px;align-items:start;padding:16px 0;border-bottom:1px solid var(--line)}
+.blok:last-child > .poz:last-child{border-bottom:0}
+.poz-imya{display:flex;align-items:baseline;gap:8px;font-weight:600;line-height:1.35}
+.poz-imya::after{content:"";flex:1 1 16px;min-width:16px;border-bottom:2px dotted var(--tochki)}
+.poz-cena{font-weight:800;white-space:nowrap;line-height:1.35}
+.poz-plus{grid-column:3;grid-row:1/span 2;position:relative;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:50%;background:var(--acc);color:var(--on-acc);transition:transform .3s ease-out,background-color .3s ease-out}
+.poz-plus:hover{background:var(--acc-d)}
+.poz-plus.tolk{animation:tolk .4s ease-out}
+@keyframes tolk{40%{transform:scale(.86)}}
+.poz-plus .n{position:absolute;top:-8px;right:-8px;min-width:24px;height:24px;padding:0 4px;border-radius:12px;background:var(--yel);color:var(--on-yel);font-size:var(--fs);font-weight:800;line-height:24px;box-shadow:0 0 0 2px var(--bg)}
+.poz-niz{grid-column:1/3;display:grid;gap:8px;justify-items:start}
+.poz-opis,.poz-ves{font-size:var(--fs);color:var(--muted)}
+.poz-vybor{display:flex;flex-wrap:wrap;gap:8px}
+.poz--skoro{grid-template-columns:minmax(0,1fr) auto}
+.poz--skoro .poz-niz{grid-column:1/-1}
+.poz-cena--net{font-weight:600;font-size:var(--fs);color:var(--muted)}
+.kat-knopka{margin:16px 0 8px}
+.seg{display:inline-flex;flex-wrap:wrap;border:2px solid var(--rama);border-radius:999px;background:var(--surface2);overflow:hidden}
+.seg button{min-height:40px;padding:4px 16px;border:0;background:transparent;font-size:var(--fs);font-weight:600;transition:background-color .3s ease-out}
+.seg button + button{box-shadow:inset 2px 0 0 var(--rama)}
+.seg button[aria-pressed="true"]{background:var(--acc);color:var(--on-acc)}
+.seg--shir{display:grid;grid-template-columns:1fr 1fr;width:100%;margin-top:16px}
+.seg--shir button{min-height:48px}
+.vybor{min-height:44px;max-width:100%;padding:8px 40px 8px 16px;border:2px solid var(--rama);border-radius:999px;background:var(--surface2) url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23F4ECE6%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22/%3E%3C/svg%3E") no-repeat right 16px center/16px;appearance:none;-webkit-appearance:none;font:600 var(--fs)/1.2 Manrope,system-ui,sans-serif;color:var(--ink)}
+.korzina-bok{display:none}
+@media (min-width:600px){
+  .kat{padding:32px 24px 8px}
+  .kat--foto{padding-top:72px}
+  .kat-foto{position:absolute;right:24px;top:0;width:128px;height:128px;margin:0;border-radius:50%;transform:translateY(-55%)}
+  .kat--foto .kat-opis{max-width:calc(100% - 152px)}
+}
+@media (min-width:1000px){
+  .menu-setka{grid-template-columns:minmax(0,1fr) 340px;align-items:start}
+  .korzina-bok{display:block;position:sticky;top:96px;margin-top:64px;padding:24px;border:2px solid var(--rama);border-radius:16px;background:var(--surface)}
+}
+@media (min-width:1240px){
+  .kat-pozicii{columns:2;column-gap:32px}
+  .blok{break-inside:avoid}
+  .blok > .gr:first-child{padding-top:0;margin-top:16px}
+  .blok:first-child > .gr:first-child{margin-top:0}
+}
+
+/* корзина и итоги (общие для боковой панели и окна) */
+.k-spisok{margin-top:8px}
+.k-poz{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.k-poz b{display:block;font-weight:600;line-height:1.35}
+.k-poz small{display:block;font-size:var(--fs);color:var(--muted)}
+.k-sum{font-weight:800;white-space:nowrap;text-align:right}
+.stepper{grid-column:1/-1;display:inline-flex;align-items:center;justify-self:start;border:2px solid var(--rama);border-radius:999px;background:var(--surface2)}
+.stepper button{display:inline-flex;align-items:center;justify-content:center;width:44px;height:40px;border:0;background:transparent;border-radius:999px}
+.stepper button:hover{background:var(--rama)}
+.stepper span{min-width:24px;text-align:center;font-weight:800}
+.itogi{display:grid;gap:8px;margin-top:16px}
+.itogi div{display:flex;justify-content:space-between;gap:16px;font-size:var(--fs)}
+.itogi dd{font-weight:600;white-space:nowrap}
+.itogi .itogi-vse{padding-top:8px;border-top:2px solid var(--rama);font-size:var(--ft);font-weight:800;line-height:1.2}
+.itogi .itogi-vse dd{font-weight:800}
+.pusto{padding:16px 0;color:var(--muted)}
+.pusto b{color:var(--ink)}
+.korzina-bok .btn{margin-top:16px}
+.korzina-bok h3{font-size:var(--ft)}
+
+/* доставка */
+.usloviya{margin-top:32px;border-top:2px solid var(--rama)}
+.usloviya div{display:grid;gap:8px;padding:24px 0;border-bottom:2px solid var(--rama)}
+.usloviya dt{font:800 var(--ft)/1.1 Unbounded,system-ui,sans-serif}
+.usloviya dd{max-width:60ch}
+@media (min-width:800px){.usloviya div{grid-template-columns:280px minmax(0,1fr);gap:32px;align-items:baseline}}
+
+/* премьера: билет */
+.bilet{position:relative;display:grid;gap:16px;padding:32px 24px;border:2px solid var(--rama);border-radius:16px;background:var(--yel);color:var(--on-yel)}
+.bilet::before,.bilet::after{content:"";position:absolute;top:50%;width:32px;height:32px;margin-top:-16px;border:2px solid var(--rama);border-radius:50%;background:var(--bg)}
+.bilet::before{left:-18px;clip-path:inset(0 0 0 50%)}
+.bilet::after{right:-18px;clip-path:inset(0 50% 0 0)}
+.bilet-tekst{max-width:56ch}
+.bilet .btn{justify-self:start;background:var(--on-yel);color:var(--yel)}
+.bilet .btn:hover{background:var(--surface)}
+@media (min-width:800px){
+  .bilet{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);grid-template-rows:auto auto auto;padding:48px;gap:16px 48px;align-items:start}
+  .bilet .kik{grid-column:1;grid-row:1}
+  .bilet h2{grid-column:1;grid-row:2/4}
+  .bilet-tekst{grid-column:2;grid-row:1/3;align-self:end}
+  .bilet .btn{grid-column:2;grid-row:3}
+}
+
+/* контакты и подвал */
+.kontakty{background:var(--noch);color:var(--ink)}
+.kontakty dl{display:grid;gap:16px;margin-top:32px}
+.kontakty dt{font-size:var(--fs);color:var(--muted)}
+.kontakty dd{font-weight:600}
+.kontakty dd a{border-bottom:1px solid var(--muted)}
+.kontakty .knopki{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px}
+@media (min-width:800px){.kontakty dl{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 32px}}
+footer{padding:32px 0 112px;background:var(--podval);color:var(--muted);font-size:var(--fs)}
+footer p + p{margin-top:8px}
+footer b{color:var(--ink)}
+@media (min-width:1000px){footer{padding-bottom:32px}}
+
+/* нижняя полоса на телефоне */
+.lipkaya{position:fixed;left:0;right:0;bottom:0;z-index:45;padding:8px 16px calc(8px + env(safe-area-inset-bottom));background:var(--bg);border-top:2px solid var(--rama);transform:translateY(110%);transition:transform .3s ease-out}
+.lipkaya.vid{transform:none}
+.lipkaya .btn{justify-content:space-between}
+@media (min-width:1000px){.lipkaya{display:none}}
+
+/* окно заказа */
+.oform{position:fixed;inset:0;z-index:60;display:none;background:var(--ten)}
+.oform.otkryt{display:flex;align-items:flex-end;justify-content:center}
+.oform-panel{width:100%;max-height:92vh;overflow:auto;overscroll-behavior:contain;padding:24px 16px calc(24px + env(safe-area-inset-bottom));border-top:2px solid var(--rama);border-radius:16px 16px 0 0;background:var(--surface)}
+.oform-shapka{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.oform-z{font-size:var(--ft)}
+.zakryt{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:2px solid var(--rama);border-radius:50%;background:var(--surface2)}
+.nazad{display:inline-flex;align-items:center;gap:4px;min-height:44px;margin-top:8px;padding:0;border:0;background:none;font-weight:600}
+.pole{display:grid;gap:8px;margin-top:16px;border:0}
+.pole label,.pole legend{font-size:var(--fs);font-weight:600}
+.pole legend{margin-bottom:8px}
+.pole small{font-weight:400;color:var(--muted)}
+.pole input:not([type=radio]),.pole textarea{width:100%;min-height:48px;padding:8px 16px;border:2px solid var(--rama);border-radius:12px;background:var(--bg);font:400 var(--fm)/1.4 Manrope,system-ui,sans-serif;color:var(--ink)}
+.pole textarea{resize:vertical}
+.pole [aria-invalid="true"]{border-color:var(--err);box-shadow:0 0 0 2px var(--err)}
+.oshibka{color:var(--err);font-size:var(--fs);font-weight:600}
+.pole-pod{font-size:var(--fs);color:var(--muted)}
+.radio{display:flex;align-items:center;gap:8px;min-height:44px;font-size:var(--fm)!important;font-weight:400!important}
+.radio input{width:20px;height:20px;accent-color:var(--acc)}
+#forma .btn{margin-top:24px}
+#k-dalee{margin-top:16px}
+.ura{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;margin-top:16px;border:2px solid var(--rama);border-radius:50%;background:var(--yel);color:var(--on-yel)}
+.ura svg{width:28px;height:28px}
+.ura-z{margin-top:16px;font:800 var(--ft)/1.2 Unbounded,system-ui,sans-serif}
+#gotovo-telo > p{margin-top:8px}
+.tg-pod{margin-top:24px!important}
+.tg{margin-top:8px;padding:16px;border-radius:16px;background:var(--tg-bg);color:var(--tg-ink)}
+.tg-shapka{display:flex;align-items:center;gap:8px;font-size:var(--fs)}
+.tg-shapka img{width:40px;height:40px;border-radius:50%;background:var(--white)}
+.tg-shapka b{display:block}
+.tg-shapka small{color:var(--tg-muted)}
+.tg-msg{position:relative;margin-top:8px;padding:8px 16px 24px;border-radius:4px 16px 16px 16px;background:var(--tg-msg);font-size:var(--fs);line-height:1.5}
+.tg-vremya{position:absolute;right:16px;bottom:4px;color:var(--tg-muted);font-size:var(--fs)}
+.tg-ssylka{color:var(--tg-link);text-decoration:underline}
+.tg-knopki{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:4px}
+.tg-knopki span{padding:8px;border-radius:8px;background:var(--tg-btn);color:var(--tg-ink);text-align:center;font-size:var(--fs);font-weight:600}
+#gotovo-telo .btn{margin-top:24px}
+@media (min-width:700px){
+  .oform.otkryt{align-items:center}
+  .oform-panel{max-width:560px;max-height:90vh;padding:32px;border:2px solid var(--rama);border-radius:16px}
+}
+@media (prefers-reduced-motion:reduce){.btn,.lipkaya,.poz-plus{transition:none}}
+
+</style>
+</head>
+<body>
+<div class="draft"><b>Черновик</b> сайта · подготовлен для «Дорамы» · не официальный сайт</div>
+
+<header class="shapka"><div class="wrap">
+  <a class="logo" href="#top"><img src="img/dorama-logo.webp" width="320" height="320" alt="">Дорама</a>
+  <nav aria-label="Разделы"><a href="#menu">Меню</a><a href="#vecher">Вечер с дорамой</a><a href="#dostavka">Доставка</a><a href="#kontakty">Контакты</a></nav>
+  <a class="tel-mal" href="tel:+79018640444" aria-label="Позвонить: +7 901 864-04-44"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg><span>+7 901 864-04-44</span></a>
+  <button type="button" class="knopka-korz" data-korzina aria-label="Открыть корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 11-1 9"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4"/><path d="M4.5 15.5h15"/><path d="m5 11 4-7"/><path d="m9 11 1 9"/></svg><span class="schet" hidden>0</span></button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <p class="kik">Доставка и самовывоз · Ижевск</p>
+  <h1>Паназиатская кухня <em>у вас дома</em></h1>
+  <p class="lid">Том ям, рамён, вок, карри и криспи из «Дорамы». Соберите заказ на сайте: он сразу придёт на кухню, а мы привезём горячим или отложим к самовывозу.</p>
+  <div class="hero-knopki"><a class="btn" href="#menu">Собрать заказ</a><a class="btn btn--vtor" href="#vecher">Вечер с дорамой</a></div>
+  <ul class="fakty">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Строителя Шишкина, 11/4</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Каждый день 10:00–21:00</span></li>
+    <li id="status"></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>Самовывоз со скидкой 10 %</span></li>
+  </ul>
+  <div class="kadry">
+    <figure class="kadr"><img src="img/dorama-tomyam.webp" width="600" height="800" alt="Том ям в «Дораме»" fetchpriority="high"><figcaption>Что закажем на вечер?</figcaption></figure>
+    <figure class="kadr"><img src="img/dorama-krispi.webp" width="600" height="800" alt="Криспи с соусом и кунжутом"><figcaption>Том ям. И криспи.</figcaption></figure>
+    <figure class="kadr"><img src="img/dorama-vok.webp" width="600" height="800" alt="Вок с ростками и овощами"><figcaption>И вок. Серию же досмотрим.</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="razdel" id="menu"><div class="wrap">
+  <div class="razdel-shapka rv">
+    <h2>Меню</h2>
+    <p>Цены из меню от 17 марта 2026 года, перед запуском сверим их с вами.</p>
+  </div>
+  <nav class="chips" aria-label="Разделы меню"><a href="#m-supy">Супы</a><a href="#m-vok">WOK и карри</a><a href="#m-krispi">Криспи и суши-бургеры</a><a href="#m-zakuski">Закуски и дамплинги</a><a href="#m-goryachee">Горячее и новинки</a><a href="#m-pizza">Пицца и сеты</a><a href="#m-napitki">Напитки</a></nav>
+  <div class="vecher" id="vecher">
+    <div class="vecher-shapka"><h3>Вечер с дорамой</h3><p>Готовые наборы из меню и что посмотреть под них. Одно нажатие, и всё в корзине.</p></div>
+    <ol class="serii"><li class="ser"><img src="img/dorama-krispi2.webp" width="800" height="533" alt="" loading="lazy"><div class="ser-tekst"><small>Серия 1</small><b>Кино вдвоём</b><p class="ser-sostav">Том Ям с морепродуктами (400 мл), WOK с уткой, Криспи с креветками, Лимонад манго-имбирь × 2</p><p class="ser-smotr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg><span>Под ужин: «Деловое предложение»</span></p></div><div class="ser-niz"><p class="ser-summa"><b>1 737 ₽</b><span>на двоих</span></p><button type="button" class="btn" data-seriya="0" aria-label="Положить в корзину набор «Кино вдвоём»">В корзину</button></div></li><li class="ser"><img src="img/dorama-tempura.webp" width="600" height="800" alt="" loading="lazy"><div class="ser-tekst"><small>Серия 2</small><b>Собрались компанией</b><p class="ser-sostav">WOK с курицей × 2, Карри с курицей, Карри с говядиной, Гёдза с курицей × 2, Креветки темпура</p><p class="ser-smotr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg><span>Под ужин: «Алиса в Пограничье»</span></p></div><div class="ser-niz"><p class="ser-summa"><b>3 163 ₽</b><span>на четверых</span></p><button type="button" class="btn" data-seriya="1" aria-label="Положить в корзину набор «Собрались компанией»">В корзину</button></div></li><li class="ser"><img src="img/dorama-fobo.webp" width="600" height="800" alt="" loading="lazy"><div class="ser-tekst"><small>Серия 3</small><b>Обед в офис</b><p class="ser-sostav">Фо-бо (400 мл), Пян-се с мясом и капустой, Чай (450 мл)</p><p class="ser-smotr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg><span>Под обед: «Что случилось с секретарём Ким?»</span></p></div><div class="ser-niz"><p class="ser-summa"><b>758 ₽</b><span>на одного</span></p><button type="button" class="btn" data-seriya="2" aria-label="Положить в корзину набор «Обед в офис»">В корзину</button></div></li><li class="ser"><img src="img/dorama-tomyam2.webp" width="533" height="800" alt="" loading="lazy"><div class="ser-tekst"><small>Серия 4</small><b>Утро после праздника</b><p class="ser-sostav">Том Ям с морепродуктами (600 мл), Лимонад манго-имбирь, Креветки темпура</p><p class="ser-smotr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg><span>Под завтрак: «Истинная красота»</span></p></div><div class="ser-niz"><p class="ser-summa"><b>1 338 ₽</b><span>на одного</span></p><button type="button" class="btn" data-seriya="3" aria-label="Положить в корзину набор «Утро после праздника»">В корзину</button></div></li></ol>
+  </div>
+  <div class="menu-setka">
+    <div class="menu-kolonka"><section class="kat kat--foto" id="m-supy" aria-labelledby="h-supy"><div class="kat-tab"><h3 id="h-supy">Супы</h3></div><img class="kat-foto" src="img/dorama-fobo.webp" width="600" height="800" alt="Фо-бо" loading="lazy"><p class="kat-opis">Почти все супы есть в двух объёмах: 400 и 600 мл.</p><div class="kat-pozicii"><div class="blok"><div class="poz" data-id="tom-more"><div class="poz-imya">Том Ям с морепродуктами</div><span class="poz-cena">589 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Том Ям с морепродуктами"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Креветки, кальмар, вакаме, кокосовое молоко</p><div class="poz-vybor"><div class="seg" role="group" aria-label="Объём"><button type="button" data-vi="0" aria-pressed="true">400 мл</button><button type="button" data-vi="1" aria-pressed="false">600 мл</button></div></div></div></div></div><div class="blok"><div class="poz" data-id="tom-utka"><div class="poz-imya">Том Ям с уткой</div><span class="poz-cena">569 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Том Ям с уткой"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Утиное филе и яблоко</p><div class="poz-vybor"><div class="seg" role="group" aria-label="Объём"><button type="button" data-vi="0" aria-pressed="true">400 мл</button><button type="button" data-vi="1" aria-pressed="false">600 мл</button></div></div></div></div></div><div class="blok"><div class="poz" data-id="tom-kur"><div class="poz-imya">Том Ям с курицей</div><span class="poz-cena">489 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Том Ям с курицей"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><div class="poz-vybor"><div class="seg" role="group" aria-label="Объём"><button type="button" data-vi="0" aria-pressed="true">400 мл</button><button type="button" data-vi="1" aria-pressed="false">600 мл</button></div></div></div></div></div><div class="blok"><div class="poz" data-id="tom-gyoza"><div class="poz-imya">Том Ям с гёдза с креветками</div><span class="poz-cena">649 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Том Ям с гёдза с креветками"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Пельмешки впитывают вкус бульона</p><p class="poz-ves">600 мл</p></div></div></div><div class="blok"><div class="poz" data-id="bun-tom"><div class="poz-imya">Бун Том</div><span class="poz-cena">599 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Бун Том"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><div class="poz-vybor"><div class="seg" role="group" aria-label="Объём"><button type="button" data-vi="0" aria-pressed="true">400 мл</button><button type="button" data-vi="1" aria-pressed="false">600 мл</button></div></div></div></div></div><div class="blok"><div class="poz" data-id="tom-kha"><div class="poz-imya">Том Кха</div><span class="poz-cena">469 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Том Кха"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><div class="poz-vybor"><div class="seg" role="group" aria-label="Объём"><button type="button" data-vi="0" aria-pressed="true">400 мл</button><button type="button" data-vi="1" aria-pressed="false">600 мл</button></div></div></div></div></div><div class="blok"><div class="poz" data-id="fo-bo"><div class="poz-imya">Фо-бо</div><span class="poz-cena">469 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Фо-бо"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Говяжий бульон, говядина, рисовая лапша, красный лук, кинза, мята. Шрирача и рисовый уксус отдельно</p><div class="poz-vybor"><div class="seg" role="group" aria-label="Объём"><button type="button" data-vi="0" aria-pressed="true">400 мл</button><button type="button" data-vi="1" aria-pressed="false">600 мл</button></div></div></div></div></div><div class="blok"><div class="poz" data-id="fo-tom"><div class="poz-imya">Фо-том</div><span class="poz-cena">509 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Фо-том"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><div class="poz-vybor"><div class="seg" role="group" aria-label="Объём"><button type="button" data-vi="0" aria-pressed="true">400 мл</button><button type="button" data-vi="1" aria-pressed="false">600 мл</button></div></div></div></div></div><div class="blok"><div class="poz" data-id="fo-ga"><div class="poz-imya">Фо-га</div><span class="poz-cena">409 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Фо-га"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><div class="poz-vybor"><div class="seg" role="group" aria-label="Объём"><button type="button" data-vi="0" aria-pressed="true">400 мл</button><button type="button" data-vi="1" aria-pressed="false">600 мл</button></div></div></div></div></div><div class="blok"><div class="poz" data-id="ramen"><div class="poz-imya">Рамён-ламянь</div><span class="poz-cena">459 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Рамён-ламянь"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><div class="poz-vybor"><div class="seg" role="group" aria-label="Объём"><button type="button" data-vi="0" aria-pressed="true">400 мл</button><button type="button" data-vi="1" aria-pressed="false">600 мл</button></div><select class="vybor" aria-label="Мясо: Рамён-ламянь"><option value="0">с говядиной</option><option value="1">с уткой</option><option value="2">со свининой</option></select></div></div></div></div></div></section><section class="kat kat--foto" id="m-vok" aria-labelledby="h-vok"><div class="kat-tab"><h3 id="h-vok">WOK и карри</h3></div><img class="kat-foto" src="img/dorama-vok2.webp" width="600" height="800" alt="Вок с ростками" loading="lazy"><div class="kat-pozicii"><div class="blok"><div class="gr"><h4>WOK</h4><p>Лапша, обжаренная на сильном огне: ярко и сочно</p></div><div class="poz" data-id="vok-svin"><div class="poz-imya">WOK со свининой</div><span class="poz-cena">429 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: WOK со свининой"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="vok-kur"><div class="poz-imya">WOK с курицей</div><span class="poz-cena">429 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: WOK с курицей"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="vok-utka"><div class="poz-imya">WOK с уткой</div><span class="poz-cena">509 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: WOK с уткой"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="vok-krev"><div class="poz-imya">WOK с креветками</div><span class="poz-cena">569 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: WOK с креветками"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="vok-gov"><div class="poz-imya">WOK с говядиной</div><span class="poz-cena">569 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: WOK с говядиной"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="vok-grib"><div class="poz-imya">WOK с грибами</div><span class="poz-cena">419 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: WOK с грибами"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div></div><div class="blok"><div class="gr"><h4>Карри</h4><p>Густой соус и специи, с рисом</p></div><div class="poz" data-id="karri-svin"><div class="poz-imya">Карри со свининой</div><span class="poz-cena">449 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Карри со свининой"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="karri-kur"><div class="poz-imya">Карри с курицей</div><span class="poz-cena">449 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Карри с курицей"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="karri-gov"><div class="poz-imya">Карри с говядиной</div><span class="poz-cena">569 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Карри с говядиной"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="karri-utka"><div class="poz-imya">Карри с уткой</div><span class="poz-cena">519 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Карри с уткой"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="karri-krev"><div class="poz-imya">Карри с креветками</div><span class="poz-cena">569 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Карри с креветками"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="karri-grib"><div class="poz-imya">Карри с грибами</div><span class="poz-cena">419 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Карри с грибами"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div></div></div></section><section class="kat kat--foto" id="m-krispi" aria-labelledby="h-krispi"><div class="kat-tab"><h3 id="h-krispi">Криспи и суши-бургеры</h3></div><img class="kat-foto" src="img/dorama-burger.webp" width="800" height="799" alt="Суши-бургер" loading="lazy"><div class="kat-pozicii"><div class="blok"><div class="gr"><h4>Криспи</h4><p>Тёплый рис в хрустящей панировке панко</p></div><div class="poz" data-id="kr-krev"><div class="poz-imya">Криспи с креветками</div><span class="poz-cena">399 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Криспи с креветками"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Креветки, творожный сыр, чука, манго-чили</p></div></div><div class="poz" data-id="kr-los"><div class="poz-imya">Криспи с лососем слабой соли</div><span class="poz-cena">399 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Криспи с лососем слабой соли"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Лосось, творожный сыр, терияки</p></div></div><div class="poz" data-id="kr-tun"><div class="poz-imya">Криспи с тунцом</div><span class="poz-cena">369 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Криспи с тунцом"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Тунец, манго-чили, сливочный сыр</p></div></div><div class="poz" data-id="kr-kur"><div class="poz-imya">Криспи с курицей</div><span class="poz-cena">329 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Криспи с курицей"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Куриное филе, творожный сыр, терияки, ананас</p></div></div></div><div class="blok"><div class="gr"><h4>Суши-бургеры</h4><p>Хрустящие рисовые «булочки» вместо хлеба</p></div><div class="poz" data-id="sb-los"><div class="poz-imya">С лососем слабой соли</div><span class="poz-cena">589 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С лососем слабой соли"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Лосось, кимчи, чука, творожный сыр, терияки</p></div></div><div class="poz" data-id="sb-krev"><div class="poz-imya">С креветками</div><span class="poz-cena">589 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С креветками"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Креветки, кимчи, чука, сыр, сладкий чили</p></div></div><div class="poz" data-id="sb-tun"><div class="poz-imya">С тунцом</div><span class="poz-cena">549 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С тунцом"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Тунец, кремовый сыр, огурчики кимчи, чука, манго-чили</p></div></div><div class="poz" data-id="sb-kur"><div class="poz-imya">С курицей</div><span class="poz-cena">439 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С курицей"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Куриное филе, ананас, чука, сыр, сладкий чили</p></div></div><div class="poz" data-id="sb-ovosh"><div class="poz-imya">Овощной</div><span class="poz-cena">419 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Овощной"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Шампиньоны, томаты, пекинская капуста, кимчи, чука, сыр, терияки</p></div></div></div></div></section><section class="kat kat--foto" id="m-zakuski" aria-labelledby="h-zakuski"><div class="kat-tab"><h3 id="h-zakuski">Закуски и дамплинги</h3></div><img class="kat-foto" src="img/dorama-dampling.webp" width="600" height="800" alt="Дамплинги на пару" loading="lazy"><div class="kat-pozicii"><div class="blok"><div class="poz" data-id="gy-krev"><div class="poz-imya">Гёдза с креветками</div><span class="poz-cena">459 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Гёдза с креветками"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-ves">5 шт</p></div></div></div><div class="blok"><div class="poz" data-id="gy-kur"><div class="poz-imya">Гёдза с курицей</div><span class="poz-cena">399 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Гёдза с курицей"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-ves">5 шт</p></div></div></div><div class="blok"><div class="poz" data-id="gy-gov"><div class="poz-imya">Гёдза с говядиной</div><span class="poz-cena">459 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Гёдза с говядиной"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-ves">5 шт</p></div></div></div><div class="blok"><div class="poz" data-id="tempura"><div class="poz-imya">Креветки темпура</div><span class="poz-cena">489 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Креветки темпура"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Хондаши, панко, соус на выбор</p><p class="poz-ves">5 шт</p><div class="poz-vybor"><select class="vybor" aria-label="Соус: Креветки темпура"><option value="0">соус сладкий чили</option><option value="1">соус терияки</option><option value="2">соус орехово-кунжутный</option><option value="3">соус манго-чили</option></select></div></div></div></div><div class="blok"><div class="poz" data-id="batat"><div class="poz-imya">Батат фри с соусом</div><span class="poz-cena">359 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Батат фри с соусом"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-ves">120 г, соус 30 г</p></div></div></div><div class="blok"><div class="poz" data-id="fri"><div class="poz-imya">Картофель фри с соусом</div><span class="poz-cena">219 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Картофель фри с соусом"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div></div><div class="blok"><div class="poz" data-id="nagget"><div class="poz-imya">Наггетсы куриные</div><span class="poz-cena">289 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Наггетсы куриные"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div></div><div class="blok"><div class="gr"><h4>Дамплинги</h4><p>На пару, 160 г и соус 30 г</p></div><div class="poz" data-id="dm-krev"><div class="poz-imya">С креветкой</div><span class="poz-cena">459 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С креветкой"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="dm-kur"><div class="poz-imya">С курицей</div><span class="poz-cena">399 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С курицей"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="dm-gov"><div class="poz-imya">С говядиной</div><span class="poz-cena">459 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С говядиной"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div></div><div class="blok"><div class="gr"><h4>Пян-се</h4><p>120 г и соус 20 мл</p></div><div class="poz" data-id="ps-myaso"><div class="poz-imya">С мясом и капустой</div><span class="poz-cena">189 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С мясом и капустой"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div><div class="poz" data-id="ps-kur"><div class="poz-imya">С курицей и грибами</div><span class="poz-cena">189 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С курицей и грибами"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div></div></div></section><section class="kat" id="m-goryachee" aria-labelledby="h-goryachee"><div class="kat-tab"><h3 id="h-goryachee">Горячее и новинки</h3></div><div class="kat-pozicii"><div class="blok"><div class="poz" data-id="oyakodon"><div class="poz-imya">Оякодон с курицей</div><span class="poz-cena">599 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Оякодон с курицей"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Японская классика: мясо, рис и соус</p></div></div></div><div class="blok"><div class="poz" data-id="katsudon"><div class="poz-imya">Кацудон со свининой</div><span class="poz-cena">599 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Кацудон со свининой"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Японская классика: мясо, рис и соус</p></div></div></div><div class="blok"><div class="gr"><h4>Булочки пан</h4><p>Мягкая булочка, сочная начинка</p></div><div class="poz" data-id="pan-ga"><div class="poz-imya">Булочки Пан-Га</div><span class="poz-cena">399 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Булочки Пан-Га"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Копчёная курица, кимчи, сладко-пряный соус</p></div></div><div class="poz" data-id="pan-tom"><div class="poz-imya">Булочки Пан-Том</div><span class="poz-cena">449 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Булочки Пан-Том"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Креветки, овощи, ананас, соус чили или терияки</p></div></div><div class="poz" data-id="pan-bo"><div class="poz-imya">Булочки Пан-Бо</div><span class="poz-cena">399 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Булочки Пан-Бо"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Томлёная говядина, орехово-кунжутный соус, кимчи</p></div></div></div><div class="blok"><div class="gr"><h4>Салаты</h4></div><div class="poz" data-id="sal-kur"><div class="poz-imya">С копчёной курицей и томатами</div><span class="poz-cena">418 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С копчёной курицей и томатами"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Курица, томаты, начос, орехово-кунжутный соус</p></div></div><div class="poz" data-id="sal-krev"><div class="poz-imya">С креветками и грейпфрутом</div><span class="poz-cena">598 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: С креветками и грейпфрутом"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-opis">Креветки, грейпфрут, листья, малиновая заправка, кунжут</p></div></div></div></div></section><section class="kat" id="m-pizza" aria-labelledby="h-pizza"><div class="kat-tab"><h3 id="h-pizza">Пицца и сеты</h3></div><p class="kat-opis">Новое в «Дораме» после переезда. Цены добавим, когда пришлёте.</p><div class="kat-pozicii"><div class="blok"><div class="poz poz--skoro"><div class="poz-imya">Римская пицца</div><span class="poz-cena poz-cena--net">цена уточняется</span><div class="poz-niz"><p class="poz-opis">Прямоугольная, чтобы удобно делить</p></div></div></div><div class="blok"><div class="poz poz--skoro"><div class="poz-imya">Новогодний стол на 10 человек</div><span class="poz-cena poz-cena--net">цена уточняется</span><div class="poz-niz"><p class="poz-opis">WOK, карри, гёдза, креветки темпура, огурцы кимчи</p></div></div></div><div class="blok"><div class="poz poz--skoro"><div class="poz-imya">Новогодние сеты на 4 и на 6 человек</div><span class="poz-cena poz-cena--net">цена уточняется</span></div></div><div class="blok"><div class="poz poz--skoro"><div class="poz-imya">Сет «Вчера было весело»</div><span class="poz-cena poz-cena--net">цена уточняется</span><div class="poz-niz"><p class="poz-opis">Том ям с морепродуктами и лимонад манго-имбирь, можно добавить креветки темпура</p></div></div></div><div class="blok"><div class="poz poz--skoro"><div class="poz-imya">Комбо на обед и боксы на выпускные</div><span class="poz-cena poz-cena--net">цена уточняется</span><div class="poz-niz"><p class="poz-opis">Домой, в офис, на школьный праздник</p></div></div></div></div><a class="btn btn--vtor btn--shir kat-knopka" href="tel:+79018640444"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg> Спросить цену по телефону</a></section><section class="kat" id="m-napitki" aria-labelledby="h-napitki"><div class="kat-tab"><h3 id="h-napitki">Напитки</h3></div><div class="kat-pozicii"><div class="blok"><div class="poz" data-id="limonad"><div class="poz-imya">Лимонад манго-имбирь</div><span class="poz-cena">120 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Лимонад манго-имбирь"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-ves">300 мл</p></div></div></div><div class="blok"><div class="poz" data-id="napitki"><div class="poz-imya">Напитки в ассортименте</div><span class="poz-cena">150 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Напитки в ассортименте"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div></div><div class="blok"><div class="poz" data-id="sok"><div class="poz-imya">Сок в ассортименте</div><span class="poz-cena">120 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Сок в ассортименте"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-ves">300 мл</p></div></div></div><div class="blok"><div class="poz" data-id="chaj"><div class="poz-imya">Чай</div><span class="poz-cena">100 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Чай"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><div class="poz-vybor"><div class="seg" role="group" aria-label="Объём"><button type="button" data-vi="0" aria-pressed="true">450 мл</button><button type="button" data-vi="1" aria-pressed="false">900 мл</button></div><select class="vybor" aria-label="Чай: Чай"><option value="0">чёрный с шиповником и яблоком</option><option value="1">зелёный</option><option value="2">зелёный с жасмином</option><option value="3">травяной</option></select></div></div></div></div><div class="blok"><div class="poz" data-id="kofe"><div class="poz-imya">Кофе американо</div><span class="poz-cena">120 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Кофе американо"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button></div></div><div class="blok"><div class="poz" data-id="slivki"><div class="poz-imya">Сливки к кофе</div><span class="poz-cena">30 ₽</span><button type="button" class="poz-plus" aria-label="Добавить в корзину: Сливки к кофе"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg><span class="n" hidden></span></button><div class="poz-niz"><p class="poz-ves">20 г</p></div></div></div></div></section></div>
+    <aside class="korzina-bok" aria-label="Корзина">
+      <h3>Ваш заказ</h3>
+      <div id="korz-bok-telo"></div>
+      <button type="button" class="btn btn--shir" data-oformit disabled>Оформить заказ</button>
+    </aside>
+  </div>
+</div></section>
+
+<section class="razdel" id="dostavka"><div class="wrap">
+  <div class="razdel-shapka rv"><h2>Доставка и самовывоз</h2></div>
+  <dl class="usloviya rv">
+    <div><dt>Доставка</dt><dd>По Ижевску, привезём горячим. Стоимость доставки и минимальная сумма заказа: <span class="zaglushka">[уточним]</span></dd></div>
+    <div><dt>Самовывоз</dt><dd>ЖК «Знак», улица Строителя Шишкина, 11/4. Скидка 10 % на весь заказ.</dd></div>
+    <div><dt>Когда</dt><dd>Каждый день с 10:00 до 21:00. Если заказать ночью, сайт примет заказ на утро, а кухня начнёт готовить к открытию.</dd></div>
+    <div><dt>Оплата</dt><dd><span class="zaglushka">[уточним]</span></dd></div>
+  </dl>
+</div></section>
+
+<section class="razdel" id="premiera"><div class="wrap">
+  <div class="bilet rv">
+    <p class="kik">Премьера</p>
+    <h2>28 ноября, 13:00</h2>
+    <p class="bilet-tekst">Официальное открытие новой «Дорамы» в ЖК «Знак»: вкусные сеты, подарки, розыгрыш призов и фотосессия с ростовой куклой. Приходите знакомиться!</p>
+    <a class="btn" href="https://yandex.ru/maps/?text=%D0%98%D0%B6%D0%B5%D0%B2%D1%81%D0%BA%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8F%20%D0%A8%D0%B8%D1%88%D0%BA%D0%B8%D0%BD%D0%B0%2C%2011/4" target="_blank" rel="noopener">Как добраться <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+  </div>
+</div></section>
+
+<section class="razdel kontakty" id="kontakty"><div class="wrap">
+  <h2>Контакты</h2>
+  <dl>
+    <div><dt>Адрес</dt><dd>Ижевск, ЖК «Знак», улица Строителя Шишкина, 11/4</dd></div>
+    <div><dt>Заказы по телефону</dt><dd><a href="tel:+79018640444">+7 901 864-04-44</a> и <a href="tel:+73412243026">+7 (3412) 24-30-26</a></dd></div>
+    <div><dt>Часы работы</dt><dd>Каждый день 10:00–21:00</dd></div>
+    <div><dt>ВКонтакте</dt><dd><a href="https://vk.ru/dorama_izh" target="_blank" rel="noopener">vk.ru/dorama_izh</a></dd></div>
+    <div><dt>Telegram</dt><dd><a href="https://t.me/doramaizh" target="_blank" rel="noopener">t.me/doramaizh</a></dd></div>
+  </dl>
+  <div class="knopki">
+    <a class="btn btn--zhel" href="tel:+79018640444"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg> Позвонить: +7 901 864-04-44</a>
+    <a class="btn btn--kontur-svet" href="https://yandex.ru/maps/?text=%D0%98%D0%B6%D0%B5%D0%B2%D1%81%D0%BA%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8F%20%D0%A8%D0%B8%D1%88%D0%BA%D0%B8%D0%BD%D0%B0%2C%2011/4" target="_blank" rel="noopener">Маршрут в Яндекс Картах <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p><b>Дорама</b> · паназиатская кухня, Ижевск</p>
+  <p>Это черновик сайта, подготовленный для «Дорамы» по открытым данным: группа ВКонтакте и Telegram-канал. Он не является официальным сайтом.</p>
+  <p>Меню и цены взяты с картинки меню от 17.03.2026, описания и фото блюд из постов канала. Пицца, сеты, условия доставки и оплата будут ваши. Заказ работает как демонстрация и никуда не отправляется.</p>
+</div></footer>
+
+<div class="lipkaya" id="lipkaya"><button type="button" class="btn btn--shir" data-korzina><span id="lip-text"></span><span>Корзина</span></button></div>
+
+<div class="oform" id="oform" aria-hidden="true">
+  <div class="oform-panel" role="dialog" aria-modal="true" aria-labelledby="oform-z">
+    <div class="oform-shapka"><h2 class="oform-z" id="oform-z">Ваш заказ</h2><button type="button" class="zakryt" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div>
+    <section data-shag="korzina">
+      <div id="korz-list"></div>
+      <button type="button" class="btn btn--shir" id="k-dalee">Оформить заказ</button>
+    </section>
+    <section data-shag="dannye" hidden>
+      <button type="button" class="nazad" data-k-nazad><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> Корзина</button>
+      <form id="forma" novalidate>
+        <div id="f-sposob"></div>
+        <div class="pole"><label for="f-imya">Имя</label><input id="f-imya" name="imya" autocomplete="given-name"><p class="oshibka" id="e-imya" hidden></p></div>
+        <div class="pole"><label for="f-tel">Телефон</label><input id="f-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00"><p class="oshibka" id="e-tel" hidden></p></div>
+        <div class="pole" id="p-adres"><label for="f-adres">Адрес</label><input id="f-adres" name="adres" autocomplete="street-address" placeholder="Улица и дом"><input id="f-kv" name="kv" aria-label="Подъезд, этаж, квартира" placeholder="Подъезд, этаж, квартира"><p class="oshibka" id="e-adres" hidden></p></div>
+        <fieldset class="pole"><legend>Когда</legend>
+          <label class="radio"><input type="radio" name="kogda" value="skoro" checked><span id="t-skoro">Как можно скорее</span></label>
+          <label class="radio"><input type="radio" name="kogda" value="vremya"><span>Ко времени</span></label>
+          <select id="f-vremya" class="vybor" aria-label="Время" hidden></select>
+          <p class="pole-pod" id="t-status"></p>
+        </fieldset>
+        <div class="pole"><label for="f-kom">Комментарий <small>(необязательно)</small></label><textarea id="f-kom" name="kom" rows="2" placeholder="Например: без кинзы, позвонить за 10 минут"></textarea></div>
+        <div id="f-itogi"></div>
+        <p class="pole-pod">Оплата: <span class="zaglushka">[уточним с вами]</span></p>
+        <button type="submit" class="btn btn--shir" id="f-otpr">Отправить заказ</button>
+      </form>
+    </section>
+    <section data-shag="gotovo" hidden><div id="gotovo-telo"></div></section>
+  </div>
+</div>
+
+<script type="application/json" id="dannye">{"menu": [{"id": "supy", "t": "Супы", "foto": ["dorama-fobo", "Фо-бо"], "opis": "Почти все супы есть в двух объёмах: 400 и 600 мл.", "items": [{"id": "tom-more", "n": "Том Ям с морепродуктами", "kn": "Том Ям с морепродуктами", "d": "Креветки, кальмар, вакаме, кокосовое молоко", "v": [["400 мл", 589], ["600 мл", 729]], "w": "", "o": null}, {"id": "tom-utka", "n": "Том Ям с уткой", "kn": "Том Ям с уткой", "d": "Утиное филе и яблоко", "v": [["400 мл", 569], ["600 мл", 669]], "w": "", "o": null}, {"id": "tom-kur", "n": "Том Ям с курицей", "kn": "Том Ям с курицей", "d": "", "v": [["400 мл", 489], ["600 мл", 589]], "w": "", "o": null}, {"id": "tom-gyoza", "n": "Том Ям с гёдза с креветками", "kn": "Том Ям с гёдза с креветками", "d": "Пельмешки впитывают вкус бульона", "v": [["600 мл", 649]], "w": "", "o": null}, {"id": "bun-tom", "n": "Бун Том", "kn": "Бун Том", "d": "", "v": [["400 мл", 599], ["600 мл", 739]], "w": "", "o": null}, {"id": "tom-kha", "n": "Том Кха", "kn": "Том Кха", "d": "", "v": [["400 мл", 469], ["600 мл", 589]], "w": "", "o": null}, {"id": "fo-bo", "n": "Фо-бо", "kn": "Фо-бо", "d": "Говяжий бульон, говядина, рисовая лапша, красный лук, кинза, мята. Шрирача и рисовый уксус отдельно", "v": [["400 мл", 469], ["600 мл", 568]], "w": "", "o": null}, {"id": "fo-tom", "n": "Фо-том", "kn": "Фо-том", "d": "", "v": [["400 мл", 509], ["600 мл", 589]], "w": "", "o": null}, {"id": "fo-ga", "n": "Фо-га", "kn": "Фо-га", "d": "", "v": [["400 мл", 409], ["600 мл", 489]], "w": "", "o": null}, {"id": "ramen", "n": "Рамён-ламянь", "kn": "Рамён-ламянь", "d": "", "v": [["400 мл", 459], ["600 мл", 539]], "w": "", "o": {"t": "Мясо", "s": ["с говядиной", "с уткой", "со свининой"]}}]}, {"id": "vok", "t": "WOK и карри", "foto": ["dorama-vok2", "Вок с ростками"], "items": [{"h": "WOK", "d": "Лапша, обжаренная на сильном огне: ярко и сочно"}, {"id": "vok-svin", "n": "WOK со свининой", "kn": "WOK со свининой", "d": "", "v": [["", 429]], "w": "", "o": null}, {"id": "vok-kur", "n": "WOK с курицей", "kn": "WOK с курицей", "d": "", "v": [["", 429]], "w": "", "o": null}, {"id": "vok-utka", "n": "WOK с уткой", "kn": "WOK с уткой", "d": "", "v": [["", 509]], "w": "", "o": null}, {"id": "vok-krev", "n": "WOK с креветками", "kn": "WOK с креветками", "d": "", "v": [["", 569]], "w": "", "o": null}, {"id": "vok-gov", "n": "WOK с говядиной", "kn": "WOK с говядиной", "d": "", "v": [["", 569]], "w": "", "o": null}, {"id": "vok-grib", "n": "WOK с грибами", "kn": "WOK с грибами", "d": "", "v": [["", 419]], "w": "", "o": null}, {"h": "Карри", "d": "Густой соус и специи, с рисом"}, {"id": "karri-svin", "n": "Карри со свининой", "kn": "Карри со свининой", "d": "", "v": [["", 449]], "w": "", "o": null}, {"id": "karri-kur", "n": "Карри с курицей", "kn": "Карри с курицей", "d": "", "v": [["", 449]], "w": "", "o": null}, {"id": "karri-gov", "n": "Карри с говядиной", "kn": "Карри с говядиной", "d": "", "v": [["", 569]], "w": "", "o": null}, {"id": "karri-utka", "n": "Карри с уткой", "kn": "Карри с уткой", "d": "", "v": [["", 519]], "w": "", "o": null}, {"id": "karri-krev", "n": "Карри с креветками", "kn": "Карри с креветками", "d": "", "v": [["", 569]], "w": "", "o": null}, {"id": "karri-grib", "n": "Карри с грибами", "kn": "Карри с грибами", "d": "", "v": [["", 419]], "w": "", "o": null}]}, {"id": "krispi", "t": "Криспи и суши-бургеры", "foto": ["dorama-burger", "Суши-бургер"], "items": [{"h": "Криспи", "d": "Тёплый рис в хрустящей панировке панко"}, {"id": "kr-krev", "n": "Криспи с креветками", "kn": "Криспи с креветками", "d": "Креветки, творожный сыр, чука, манго-чили", "v": [["", 399]], "w": "", "o": null}, {"id": "kr-los", "n": "Криспи с лососем слабой соли", "kn": "Криспи с лососем слабой соли", "d": "Лосось, творожный сыр, терияки", "v": [["", 399]], "w": "", "o": null}, {"id": "kr-tun", "n": "Криспи с тунцом", "kn": "Криспи с тунцом", "d": "Тунец, манго-чили, сливочный сыр", "v": [["", 369]], "w": "", "o": null}, {"id": "kr-kur", "n": "Криспи с курицей", "kn": "Криспи с курицей", "d": "Куриное филе, творожный сыр, терияки, ананас", "v": [["", 329]], "w": "", "o": null}, {"h": "Суши-бургеры", "d": "Хрустящие рисовые «булочки» вместо хлеба"}, {"id": "sb-los", "n": "С лососем слабой соли", "kn": "Суши-бургер с лососем слабой соли", "d": "Лосось, кимчи, чука, творожный сыр, терияки", "v": [["", 589]], "w": "", "o": null}, {"id": "sb-krev", "n": "С креветками", "kn": "Суши-бургер с креветками", "d": "Креветки, кимчи, чука, сыр, сладкий чили", "v": [["", 589]], "w": "", "o": null}, {"id": "sb-tun", "n": "С тунцом", "kn": "Суши-бургер с тунцом", "d": "Тунец, кремовый сыр, огурчики кимчи, чука, манго-чили", "v": [["", 549]], "w": "", "o": null}, {"id": "sb-kur", "n": "С курицей", "kn": "Суши-бургер с курицей", "d": "Куриное филе, ананас, чука, сыр, сладкий чили", "v": [["", 439]], "w": "", "o": null}, {"id": "sb-ovosh", "n": "Овощной", "kn": "Суши-бургер овощной", "d": "Шампиньоны, томаты, пекинская капуста, кимчи, чука, сыр, терияки", "v": [["", 419]], "w": "", "o": null}]}, {"id": "zakuski", "t": "Закуски и дамплинги", "foto": ["dorama-dampling", "Дамплинги на пару"], "items": [{"id": "gy-krev", "n": "Гёдза с креветками", "kn": "Гёдза с креветками", "d": "", "v": [["", 459]], "w": "5 шт", "o": null}, {"id": "gy-kur", "n": "Гёдза с курицей", "kn": "Гёдза с курицей", "d": "", "v": [["", 399]], "w": "5 шт", "o": null}, {"id": "gy-gov", "n": "Гёдза с говядиной", "kn": "Гёдза с говядиной", "d": "", "v": [["", 459]], "w": "5 шт", "o": null}, {"id": "tempura", "n": "Креветки темпура", "kn": "Креветки темпура", "d": "Хондаши, панко, соус на выбор", "v": [["", 489]], "w": "5 шт", "o": {"t": "Соус", "s": ["соус сладкий чили", "соус терияки", "соус орехово-кунжутный", "соус манго-чили"]}}, {"id": "batat", "n": "Батат фри с соусом", "kn": "Батат фри с соусом", "d": "", "v": [["", 359]], "w": "120 г, соус 30 г", "o": null}, {"id": "fri", "n": "Картофель фри с соусом", "kn": "Картофель фри с соусом", "d": "", "v": [["", 219]], "w": "", "o": null}, {"id": "nagget", "n": "Наггетсы куриные", "kn": "Наггетсы куриные", "d": "", "v": [["", 289]], "w": "", "o": null}, {"h": "Дамплинги", "d": "На пару, 160 г и соус 30 г"}, {"id": "dm-krev", "n": "С креветкой", "kn": "Дамплинги с креветкой", "d": "", "v": [["", 459]], "w": "", "o": null}, {"id": "dm-kur", "n": "С курицей", "kn": "Дамплинги с курицей", "d": "", "v": [["", 399]], "w": "", "o": null}, {"id": "dm-gov", "n": "С говядиной", "kn": "Дамплинги с говядиной", "d": "", "v": [["", 459]], "w": "", "o": null}, {"h": "Пян-се", "d": "120 г и соус 20 мл"}, {"id": "ps-myaso", "n": "С мясом и капустой", "kn": "Пян-се с мясом и капустой", "d": "", "v": [["", 189]], "w": "", "o": null}, {"id": "ps-kur", "n": "С курицей и грибами", "kn": "Пян-се с курицей и грибами", "d": "", "v": [["", 189]], "w": "", "o": null}]}, {"id": "goryachee", "t": "Горячее и новинки", "items": [{"id": "oyakodon", "n": "Оякодон с курицей", "kn": "Оякодон с курицей", "d": "Японская классика: мясо, рис и соус", "v": [["", 599]], "w": "", "o": null}, {"id": "katsudon", "n": "Кацудон со свининой", "kn": "Кацудон со свининой", "d": "Японская классика: мясо, рис и соус", "v": [["", 599]], "w": "", "o": null}, {"h": "Булочки пан", "d": "Мягкая булочка, сочная начинка"}, {"id": "pan-ga", "n": "Булочки Пан-Га", "kn": "Булочки Пан-Га", "d": "Копчёная курица, кимчи, сладко-пряный соус", "v": [["", 399]], "w": "", "o": null}, {"id": "pan-tom", "n": "Булочки Пан-Том", "kn": "Булочки Пан-Том", "d": "Креветки, овощи, ананас, соус чили или терияки", "v": [["", 449]], "w": "", "o": null}, {"id": "pan-bo", "n": "Булочки Пан-Бо", "kn": "Булочки Пан-Бо", "d": "Томлёная говядина, орехово-кунжутный соус, кимчи", "v": [["", 399]], "w": "", "o": null}, {"h": "Салаты", "d": ""}, {"id": "sal-kur", "n": "С копчёной курицей и томатами", "kn": "Салат с копчёной курицей и томатами", "d": "Курица, томаты, начос, орехово-кунжутный соус", "v": [["", 418]], "w": "", "o": null}, {"id": "sal-krev", "n": "С креветками и грейпфрутом", "kn": "Салат с креветками и грейпфрутом", "d": "Креветки, грейпфрут, листья, малиновая заправка, кунжут", "v": [["", 598]], "w": "", "o": null}]}, {"id": "pizza", "t": "Пицца и сеты", "opis": "Новое в «Дораме» после переезда. Цены добавим, когда пришлёте.", "items": [{"skoro": true, "n": "Римская пицца", "d": "Прямоугольная, чтобы удобно делить"}, {"skoro": true, "n": "Новогодний стол на 10 человек", "d": "WOK, карри, гёдза, креветки темпура, огурцы кимчи"}, {"skoro": true, "n": "Новогодние сеты на 4 и на 6 человек", "d": ""}, {"skoro": true, "n": "Сет «Вчера было весело»", "d": "Том ям с морепродуктами и лимонад манго-имбирь, можно добавить креветки темпура"}, {"skoro": true, "n": "Комбо на обед и боксы на выпускные", "d": "Домой, в офис, на школьный праздник"}], "niz": "pizza"}, {"id": "napitki", "t": "Напитки", "items": [{"id": "limonad", "n": "Лимонад манго-имбирь", "kn": "Лимонад манго-имбирь", "d": "", "v": [["", 120]], "w": "300 мл", "o": null}, {"id": "napitki", "n": "Напитки в ассортименте", "kn": "Напитки в ассортименте", "d": "", "v": [["", 150]], "w": "", "o": null}, {"id": "sok", "n": "Сок в ассортименте", "kn": "Сок в ассортименте", "d": "", "v": [["", 120]], "w": "300 мл", "o": null}, {"id": "chaj", "n": "Чай", "kn": "Чай", "d": "", "v": [["450 мл", 100], ["900 мл", 200]], "w": "", "o": {"t": "Чай", "s": ["чёрный с шиповником и яблоком", "зелёный", "зелёный с жасмином", "травяной"]}}, {"id": "kofe", "n": "Кофе американо", "kn": "Кофе американо", "d": "", "v": [["", 120]], "w": "", "o": null}, {"id": "slivki", "n": "Сливки к кофе", "kn": "Сливки к кофе", "d": "", "v": [["", 30]], "w": "20 г", "o": null}]}], "serii": [{"n": 1, "t": "Кино вдвоём", "kto": "на двоих", "foto": "dorama-krispi2", "sostav": [["tom-more", 0, 1], ["vok-utka", 0, 1], ["kr-krev", 0, 1], ["limonad", 0, 2]], "kogda": "Под ужин", "smotr": "«Деловое предложение»", "pro": "Лёгкая и смешная романтическая комедия."}, {"n": 2, "t": "Собрались компанией", "kto": "на четверых", "foto": "dorama-tempura", "sostav": [["vok-kur", 0, 2], ["karri-kur", 0, 1], ["karri-gov", 0, 1], ["gy-kur", 0, 2], ["tempura", 0, 1]], "kogda": "Под ужин", "smotr": "«Алиса в Пограничье»", "pro": "Триллер, который держит до самого финала."}, {"n": 3, "t": "Обед в офис", "kto": "на одного", "foto": "dorama-fobo", "sostav": [["fo-bo", 0, 1], ["ps-myaso", 0, 1], ["chaj", 0, 1]], "kogda": "Под обед", "smotr": "«Что случилось с секретарём Ким?»", "pro": "Про офис и начальника, с юмором."}, {"n": 4, "t": "Утро после праздника", "kto": "на одного", "foto": "dorama-tomyam2", "sostav": [["tom-more", 1, 1], ["limonad", 0, 1], ["tempura", 0, 1]], "kogda": "Под завтрак", "smotr": "«Истинная красота»", "pro": "Лёгкая и тёплая, когда хочется спокойного утра.", "pometka": "Как ваш сет «Вчера было весело». Сумма здесь по ценам блюд, цену сета поставим вашу."}], "ik": {"plus": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/><\/svg>", "minus": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><\/svg>", "check": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/><\/svg>", "tv": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"20\" height=\"15\" x=\"2\" y=\"7\" rx=\"2\" ry=\"2\"/><polyline points=\"17 2 12 7 7 2\"/><\/svg>"}}</script>
+<script>
+(function(){
+  var html = document.documentElement;
+  // ?og — снимок для превью ссылки, ?vse — все блоки сразу (для скриншотов-проверок)
+  if (location.search.indexOf('og') > -1) html.classList.add('og');
+  if (location.search.indexOf('vse') > -1) html.classList.add('vse');
+  var D = JSON.parse(document.getElementById('dannye').textContent);
+  function $(s, r){ return (r || document).querySelector(s); }
+  function $$(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function rubl(n){ return n.toLocaleString('ru-RU') + ' ₽'; }
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+  // появление блоков при прокрутке
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
+  }, {rootMargin: '0px 0px -10% 0px'}) : null;
+  $$('.rv').forEach(function(el){ io ? io.observe(el) : el.classList.add('in'); });
+
+  // время в Ижевске (UTC+4), часы работы 10:00–21:00
+  var OTKR = 600, ZAKR = 1260;
+  function izh(){ var d = new Date(Date.now() + 4 * 3600e3); return d.getUTCHours() * 60 + d.getUTCMinutes(); }
+  function otkryto(){ var t = izh(); return t >= OTKR && t < ZAKR; }
+  function hhmm(t){ var h = Math.floor(t / 60) % 24, m = t % 60; return h + ':' + (m < 10 ? '0' : '') + m; }
+  var st = $('#status');
+  st.innerHTML = otkryto() ? '<i class="tochka"></i>Сейчас открыто' : '<i class="tochka tochka--net"></i>Сейчас закрыто, заказы примем на утро';
+
+  // позиции и корзина
+  var POZ = {};
+  D.menu.forEach(function(k){ k.items.forEach(function(it){ if (it.id) POZ[it.id] = it; }); });
+  var korz = {}, sposob = 'dostavka', vybV = {}, vybO = {};
+  function kl(id, vi, oi){ return id + '|' + vi + '|' + (oi == null ? '' : oi); }
+  function dobavit(id, vi, oi, q){
+    var it = POZ[id]; if (!it) return;
+    oi = it.o ? (oi == null ? 0 : oi) : null;
+    var k = kl(id, vi || 0, oi);
+    if (!korz[k]) korz[k] = {id: id, vi: vi || 0, oi: oi, q: 0};
+    korz[k].q += q || 1;
+    obnovit();
+  }
+  function izmenit(k, d){ if (!korz[k]) return; korz[k].q += d; if (korz[k].q <= 0) delete korz[k]; obnovit(); }
+  function cena(r){ return POZ[r.id].v[r.vi][1]; }
+  function podpis(r){
+    var it = POZ[r.id], ch = [];
+    if (it.o && r.oi != null) ch.push(it.o.s[r.oi]);
+    if (it.v.length > 1) ch.push(it.v[r.vi][0]);
+    return ch.join(', ');
+  }
+  function summy(){
+    var s = 0, n = 0;
+    Object.keys(korz).forEach(function(k){ s += cena(korz[k]) * korz[k].q; n += korz[k].q; });
+    var sk = sposob === 'samovyvoz' ? Math.round(s * 0.1) : 0;
+    return {s: s, n: n, sk: sk, itog: s - sk};
+  }
+  function bluda(n){ var a = n % 10, b = n % 100; return n + ' ' + (a === 1 && b !== 11 ? 'блюдо' : (a >= 2 && a <= 4 && (b < 12 || b > 14)) ? 'блюда' : 'блюд'); }
+
+  function sposobHTML(){
+    return '<div class="seg seg--shir" role="group" aria-label="Как получить заказ">' +
+      '<button type="button" data-sposob="dostavka" aria-pressed="' + (sposob === 'dostavka') + '">Доставка</button>' +
+      '<button type="button" data-sposob="samovyvoz" aria-pressed="' + (sposob === 'samovyvoz') + '">Самовывоз −10 %</button></div>';
+  }
+  function itogiHTML(s){
+    var h = '<dl class="itogi"><div><dt>' + bluda(s.n) + '</dt><dd>' + rubl(s.s) + '</dd></div>';
+    if (s.sk) h += '<div><dt>Скидка за самовывоз</dt><dd>−' + rubl(s.sk) + '</dd></div>';
+    if (sposob === 'dostavka') h += '<div><dt>Доставка</dt><dd><span class="zaglushka">[уточним]</span></dd></div>';
+    return h + '<div class="itogi-vse"><dt>Итого</dt><dd>' + rubl(s.itog) + '</dd></div></dl>';
+  }
+  function korzinaHTML(){
+    var ks = Object.keys(korz);
+    if (!ks.length) return '<div class="pusto"><p><b>Пока пусто.</b></p><p>Добавьте блюда из меню или начните с серии из «Вечера с дорамой».</p></div>';
+    var rows = ks.map(function(k){
+      var r = korz[k], p = podpis(r);
+      return '<li class="k-poz"><div><b>' + esc(POZ[r.id].kn) + '</b>' + (p ? '<small>' + esc(p) + '</small>' : '') + '</div>' +
+        '<span class="k-sum">' + rubl(cena(r) * r.q) + '</span>' +
+        '<div class="stepper"><button type="button" data-k="' + esc(k) + '" data-d="-1" aria-label="Убрать одну порцию">' + D.ik.minus + '</button>' +
+        '<span>' + r.q + '</span><button type="button" data-k="' + esc(k) + '" data-d="1" aria-label="Добавить порцию">' + D.ik.plus + '</button></div></li>';
+    }).join('');
+    return '<ul class="k-spisok">' + rows + '</ul>' + sposobHTML() + itogiHTML(summy());
+  }
+
+  // строки меню: объём, выбор, «плюс»
+  $$('.poz[data-id]').forEach(function(row){
+    var id = row.getAttribute('data-id'), it = POZ[id], cenaEl = $('.poz-cena', row);
+    $$('.seg button', row).forEach(function(b){
+      b.addEventListener('click', function(){
+        var vi = +b.getAttribute('data-vi'); vybV[id] = vi;
+        $$('.seg button', row).forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        cenaEl.textContent = rubl(it.v[vi][1]);
+      });
+    });
+    var sel = $('select', row);
+    if (sel) sel.addEventListener('change', function(){ vybO[id] = +sel.value; });
+    $('.poz-plus', row).addEventListener('click', function(e){
+      dobavit(id, vybV[id] || 0, it.o ? (vybO[id] || 0) : null, 1);
+      var b = e.currentTarget; b.classList.remove('tolk'); void b.offsetWidth; b.classList.add('tolk');
+    });
+  });
+
+  // окно заказа
+  var oform = $('#oform'), shag = 'korzina', vozvrat = null;
+  function pokazatShag(sh){
+    shag = sh;
+    $$('[data-shag]', oform).forEach(function(x){ x.hidden = x.getAttribute('data-shag') !== sh; });
+    $('#oform-z').textContent = sh === 'korzina' ? 'Ваш заказ' : sh === 'dannye' ? 'Оформление' : 'Заказ принят';
+    if (sh === 'korzina') { $('#korz-list').innerHTML = korzinaHTML(); $('#k-dalee').disabled = !summy().n; }
+    if (sh === 'dannye') { vremyaZapolnit(); formaObnovit(); }
+    $('.oform-panel', oform).scrollTop = 0;
+  }
+  function otkryt(sh){
+    vozvrat = document.activeElement;
+    oform.classList.add('otkryt'); oform.setAttribute('aria-hidden', 'false'); html.classList.add('zamok');
+    pokazatShag(sh);
+    setTimeout(function(){ $('.zakryt', oform).focus(); }, 30);
+  }
+  function zakryt(){
+    oform.classList.remove('otkryt'); oform.setAttribute('aria-hidden', 'true'); html.classList.remove('zamok');
+    if (shag === 'gotovo') pokazatShag('korzina');
+    if (vozvrat && vozvrat.focus) vozvrat.focus();
+  }
+  $('.zakryt', oform).addEventListener('click', zakryt);
+  oform.addEventListener('click', function(e){ if (e.target === oform) zakryt(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && oform.classList.contains('otkryt')) zakryt(); });
+  $$('[data-korzina]').forEach(function(b){ b.addEventListener('click', function(){ otkryt('korzina'); }); });
+  $$('[data-oformit]').forEach(function(b){ b.addEventListener('click', function(){ otkryt('dannye'); }); });
+  $('#k-dalee').addEventListener('click', function(){ pokazatShag('dannye'); });
+  $('[data-k-nazad]').addEventListener('click', function(){ pokazatShag('korzina'); });
+
+  // общие нажатия: шаги количества, способ получения, закрыть
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('[data-k]');
+    if (b) {
+      var k = b.getAttribute('data-k'), d = b.getAttribute('data-d'), vnutri = !!b.closest('#oform');
+      izmenit(k, +d);
+      var nov = document.querySelector((vnutri ? '#oform ' : '#korz-bok-telo ') + '[data-k="' + k + '"][data-d="' + d + '"]');
+      if (nov) nov.focus();
+      return;
+    }
+    var sp = e.target.closest('[data-sposob]');
+    if (sp) { sposob = sp.getAttribute('data-sposob'); obnovit(); return; }
+    if (e.target.closest('[data-zakryt]') && oform.classList.contains('otkryt')) zakryt();
+  });
+
+  // форма
+  var forma = $('#forma');
+  function formaObnovit(){
+    var s = summy();
+    $('#f-sposob').innerHTML = sposobHTML();
+    $('#p-adres').hidden = sposob !== 'dostavka';
+    $('#f-itogi').innerHTML = itogiHTML(s);
+    $('#f-otpr').textContent = 'Отправить заказ · ' + rubl(s.itog);
+    $('#f-otpr').disabled = !s.n;
+  }
+  function vremyaZapolnit(){
+    var t = izh(), otk = otkryto(), sel = $('#f-vremya'), opts = [];
+    var blizh = Math.ceil((t + 60) / 30) * 30;
+    var zavtra = otk ? blizh > ZAKR : t >= ZAKR;
+    var start = otk && !zavtra ? blizh : OTKR + 30;
+    for (var x = start; x <= ZAKR; x += 30) opts.push('<option>' + (zavtra ? 'завтра' : 'сегодня') + ' к ' + hhmm(x) + '</option>');
+    sel.innerHTML = opts.join('');
+    $('#t-skoro').textContent = otk ? 'Как можно скорее' : 'Утром, как откроемся (с 10:00)';
+    $('#t-status').textContent = otk ? 'Кухня открыта до 21:00.' : 'Сейчас кухня закрыта. Заказ примем, а готовить начнём к открытию.';
+  }
+  $$('input[name=kogda]').forEach(function(r){
+    r.addEventListener('change', function(){ $('#f-vremya').hidden = !$('input[name=kogda][value=vremya]').checked; });
+  });
+  function oshibka(id, txt){
+    var p = $('#e-' + id), inp = $('#f-' + id);
+    p.textContent = txt || ''; p.hidden = !txt;
+    if (inp) inp.setAttribute('aria-invalid', txt ? 'true' : 'false');
+    return !txt;
+  }
+  forma.addEventListener('submit', function(e){
+    e.preventDefault();
+    var imya = $('#f-imya').value.trim(), cifry = $('#f-tel').value.replace(/\D/g, ''), adres = $('#f-adres').value.trim();
+    var ok = oshibka('imya', imya.length < 2 ? 'Напишите, как к вам обращаться' : '');
+    ok = oshibka('tel', cifry.length < 10 || cifry.length > 11 ? 'Проверьте номер: в нём должно быть 10 или 11 цифр' : '') && ok;
+    ok = oshibka('adres', sposob === 'dostavka' && adres.length < 5 ? 'Укажите улицу и дом' : '') && ok;
+    if (!ok) { var pervaya = $('[aria-invalid="true"]', forma); if (pervaya) pervaya.focus(); return; }
+    gotovo({imya: imya, tel: $('#f-tel').value.trim(), adres: adres, kv: $('#f-kv').value.trim(), kom: $('#f-kom').value.trim()});
+  });
+  function gotovo(d){
+    var s = summy(), nomer = 100 + Math.floor(Math.random() * 900);
+    var kogda = $('input[name=kogda][value=vremya]').checked ? $('#f-vremya').value : (otkryto() ? 'как можно скорее' : 'утром, к открытию');
+    var strok = Object.keys(korz).map(function(k){
+      var r = korz[k], p = podpis(r);
+      return esc(POZ[r.id].kn) + (p ? ', ' + esc(p) : '') + ' × ' + r.q + ' = ' + rubl(cena(r) * r.q);
+    });
+    var dost = sposob === 'dostavka';
+    var tg = '<b>Новый заказ №' + nomer + '</b><br>' + (dost ? 'Доставка' : 'Самовывоз') + ', ' + esc(kogda) + '<br><br>' +
+      esc(d.imya) + ', <span class="tg-ssylka">' + esc(d.tel) + '</span><br>' +
+      (dost ? esc(d.adres) + (d.kv ? ', ' + esc(d.kv) : '') + '<br>' : '') + '<br>' +
+      strok.join('<br>') + '<br><br>Блюда: ' + rubl(s.s) + '<br>' +
+      (s.sk ? 'Скидка за самовывоз: −' + rubl(s.sk) + '<br>' : '') +
+      '<b>К оплате: ' + rubl(s.itog) + (dost ? ' + доставка' : '') + '</b>' +
+      (d.kom ? '<br>Комментарий: ' + esc(d.kom) : '');
+    $('#gotovo-telo').innerHTML =
+      '<div class="ura">' + D.ik.check + '</div>' +
+      '<p class="ura-z">Заказ №' + nomer + ' отправлен в «Дораму»</p>' +
+      '<p>' + (dost ? 'Привезём ' : 'Заказ будет готов ') + esc(kogda) + '. Если нужно что-то уточнить, позвоним по номеру ' + esc(d.tel) + '.</p>' +
+      '<p class="kik tg-pod">Так заказ увидит «Дорама» в Telegram</p>' +
+      '<div class="tg"><div class="tg-shapka"><img src="img/dorama-logo.webp" width="40" height="40" alt=""><div><b>Дорама · заказы</b><small>бот</small></div></div>' +
+      '<div class="tg-msg">' + tg + '<span class="tg-vremya">' + hhmm(izh()) + '</span></div>' +
+      '<div class="tg-knopki"><span>Принять</span><span>Позвонить</span></div></div>' +
+      '<p class="pometka">Это демонстрация: заказ никуда не отправился.</p>' +
+      '<button type="button" class="btn btn--shir" data-zakryt>Вернуться на сайт</button>';
+    korz = {}; obnovit();
+    pokazatShag('gotovo');
+  }
+
+  // Вечер с дорамой: набор целиком в корзину
+  $$('[data-seriya]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var sr = D.serii[+b.getAttribute('data-seriya')];
+      sr.sostav.forEach(function(x){ dobavit(x[0], x[1], null, x[2]); });
+      b.classList.add('ok'); b.innerHTML = D.ik.check + ' В корзине';
+      clearTimeout(b._t);
+      b._t = setTimeout(function(){ b.classList.remove('ok'); b.textContent = 'В корзину'; }, 1800);
+    });
+  });
+
+  function obnovit(){
+    var s = summy(), poId = {};
+    Object.keys(korz).forEach(function(k){ poId[korz[k].id] = (poId[korz[k].id] || 0) + korz[k].q; });
+    $$('.poz[data-id]').forEach(function(row){
+      var n = poId[row.getAttribute('data-id')] || 0, z = $('.poz-plus .n', row);
+      z.hidden = !n; z.textContent = n;
+    });
+    $$('.schet').forEach(function(z){ z.textContent = s.n; z.hidden = !s.n; });
+    $('#korz-bok-telo').innerHTML = korzinaHTML();
+    $$('[data-oformit]').forEach(function(b){ b.disabled = !s.n; });
+    $('#lipkaya').classList.toggle('vid', s.n > 0);
+    $('#lip-text').textContent = bluda(s.n) + ' · ' + rubl(s.itog);
+    if (oform.classList.contains('otkryt')) {
+      if (shag === 'korzina') { $('#korz-list').innerHTML = korzinaHTML(); $('#k-dalee').disabled = !s.n; }
+      if (shag === 'dannye') formaObnovit();
+    }
+  }
+
+  obnovit();
+})();
+</script>
+</body>
+</html>
