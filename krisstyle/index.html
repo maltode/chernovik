@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>KrisStyle · латина, зумба и стретчинг в Новосибирске · черновик сайта</title>
+<meta name="description" content="Танцевальное пространство KrisStyle на Красном проспекте, 200: латина соло, зумба и стретчинг у Кристины. Запись на пробное занятие без звонка. Черновик сайта.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Черновик сайта для KrisStyle">
+<meta property="og:description" content="Латина, зумба и стретчинг: подбор направления и запись на пробное в пару нажатий">
+<meta property="og:image" content="https://maltode.github.io/chernovik/krisstyle/og.png">
+<meta name="theme-color" content="#141012">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" as="image" href="img/ks-latina.webp">
+<style>
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/playfair-display-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/playfair-display-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:700;font-display:swap;src:url(../fonts/playfair-display-cyrillic-700-italic.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:700;font-display:swap;src:url(../fonts/playfair-display-latin-700-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/manrope-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/manrope-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+:root{ --bg:#141012;--surface:#1D171A;--surface2:#282024;--ink:#F6EEF0;--muted:#B9AAB0;--line:rgba(246,238,240,.14);--acc:#FF6B8B;--acc-d:#FF8AA3;--on-acc:#141012;--latina:#FF6B8B;--zumba:#FFC54D;--stretch:#7ED3C3;--err:#FF8A80;--ok:#6CC08A;--night:#0E0B0C;--night-muted:#A99BA1;--draft-bg:#0E0B0C;--draft-ink:#F6EEF0;--foto:#EDEAEA;--r:4px;--fs:14px;--fm:16px;--ft:24px;--fl:clamp(40px,7vw,88px) }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+.draft{position:relative;z-index:50;font:500 12.5px/1.4 Manrope,system-ui,sans-serif;text-align:center;padding:7px 16px;background:var(--draft-bg,#111);color:var(--draft-ink,#fff)}
+.draft b{letter-spacing:.12em;text-transform:uppercase;margin-right:6px}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}*{animation:none!important}}
+.og .rv,.vse .rv{opacity:1!important;transform:none!important;transition:none!important}
+.hidden-x{display:none!important}
+
+
+body{background:var(--bg);color:var(--ink);font:400 var(--fm)/1.6 Manrope,system-ui,sans-serif}
+ul,ol{list-style:none}
+svg{width:20px;height:20px;flex:none}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--acc);outline-offset:4px}
+h1,h2,h3{font-family:Manrope,system-ui,sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.03em;text-wrap:balance}
+h1,h2{font-size:var(--fl)}
+h1 em,h2 em{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;letter-spacing:-.01em;color:var(--acc)}
+h3{font-size:var(--ft);letter-spacing:-.02em}
+.kik{font-size:var(--fs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:8px 32px;border:0;border-radius:999px;background:var(--acc);color:var(--on-acc);font-weight:800;font-size:var(--fm);line-height:1.2;text-align:center;transition:transform .3s ease-out,background-color .3s ease-out,color .3s ease-out}
+.btn:hover{background:var(--acc-d)}
+.btn:active{transform:scale(.98)}
+.btn--mal{min-height:48px;padding:8px 24px}
+.btn--kontur{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--muted)}
+.btn--kontur:hover{background:var(--ink);color:var(--bg)}
+.btn--shir{width:100%}
+.ssylka{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0;border:0;border-bottom:1px solid var(--acc);background:none;font-weight:600;font-size:var(--fm)}
+.zaglushka{display:inline-block;padding:0 8px;border:1px dashed var(--muted);border-radius:var(--r);font-weight:600}
+.prim{font-size:var(--fs);color:var(--muted);margin-top:24px;max-width:65ch}
+
+/* номер раздела: счёт 5, 6, 7, 8 */
+.schet{display:flex;align-items:baseline;gap:16px}
+.schet i{font:italic 700 var(--fl)/.8 'Playfair Display',Georgia,serif;color:var(--acc)}
+.zag{margin-bottom:40px}
+.zag h2{margin-top:16px}
+.pod{margin-top:16px;color:var(--muted);max-width:52ch}
+
+/* шапка */
+.shapka{padding:16px 0;border-bottom:1px solid var(--line)}
+.shapka .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.imya{font:italic 700 var(--ft)/1 'Playfair Display',Georgia,serif;white-space:nowrap}
+.imya b{font-style:normal;font-family:Manrope,system-ui,sans-serif;font-weight:800;letter-spacing:-.03em}
+.shapka nav{display:none;gap:32px;font-size:var(--fs);font-weight:600}
+.shapka nav a{padding:8px 0;border-bottom:1px solid transparent;transition:border-color .3s ease-out}
+.shapka nav a:hover{border-color:var(--acc)}
+
+/* первый экран: заголовок во всю ширину и три фото-направления */
+.hero{padding:40px 0 56px}
+.hero h1{margin:16px 0 32px;max-width:15ch}
+.status.on::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok);margin-right:8px;vertical-align:1px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-items:start}
+.tri button{display:grid;gap:8px;padding:0;border:0;background:none;text-align:left}
+.tri img{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;border-radius:var(--r);background:var(--foto);transition:transform .3s ease-out}
+.tri button:hover img{transform:translateY(-4px)}
+.tri b{display:flex;align-items:center;gap:8px;font-size:var(--fs);font-weight:800;line-height:1.2}
+.tri b::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--c)}
+.tri button:nth-child(2){margin-top:24px}
+.tri button:nth-child(3){margin-top:8px}
+.hero-niz{display:grid;gap:24px;margin-top:32px}
+.lead{max-width:44ch;color:var(--muted)}
+.hero-knopki{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px}
+.hero-knopki .btn{width:100%}
+.fakty{display:grid;gap:16px;margin-top:32px;font-size:var(--fs);font-weight:600}
+.fakty li{display:flex;gap:8px;align-items:center}
+.fakty svg{color:var(--acc)}
+
+/* подбор */
+.podbor{padding:80px 0;background:var(--surface);border-block:1px solid var(--line)}
+.podbor-setka{display:grid;gap:40px}
+.vopros+.vopros{margin-top:32px}
+.vopros p{font-weight:800;margin-bottom:16px}
+.varianty{display:flex;flex-wrap:wrap;gap:8px}
+.var{min-height:48px;padding:8px 24px;border:1px solid var(--line);border-radius:999px;background:var(--bg);font-weight:600;font-size:var(--fs);text-align:left;transition:background-color .3s ease-out,border-color .3s ease-out}
+.var:hover{border-color:var(--muted)}
+.var[aria-checked="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.var .t{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c);margin-right:8px;vertical-align:1px}
+.itog{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start;padding:24px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);border-top:2px solid var(--c,var(--acc))}
+.itog img{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;border-radius:var(--r);background:var(--foto)}
+.itog h3{margin:8px 0 16px}
+.itog .blizh{margin-top:16px;font-weight:600}
+.itog .btn{margin-top:24px}
+.itog.itog-pusto{grid-template-columns:1fr;color:var(--muted)}
+.itog-pusto b{color:var(--ink)}
+
+/* направления: крупный список, как программа вечера */
+.napravleniya{padding:80px 0}
+.np{border-top:1px solid var(--line)}
+.np-r{display:grid;gap:16px;padding:32px 0;border-bottom:1px solid var(--line)}
+.np-r h3{display:flex;align-items:baseline;gap:16px;font-size:var(--fl);line-height:1}
+.np-r h3::before{content:"";flex:none;width:16px;height:16px;border-radius:50%;background:var(--c);transform:translateY(-8px)}
+.np-r p{color:var(--muted);max-width:52ch}
+.np-r .komu{color:var(--ink);font-weight:600}
+.np-r .ssylka{justify-self:start;border-color:var(--c)}
+
+/* расписание */
+.raspisanie{padding:80px 0;background:var(--surface);border-block:1px solid var(--line)}
+.filtr{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.zanyatiya{border-top:1px solid var(--line)}
+.den-z{padding:24px 0 8px;font-size:var(--fs);font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.zn{display:grid;grid-template-columns:64px 1fr;gap:8px 16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.zn time{font-size:var(--ft);font-weight:800;letter-spacing:-.02em}
+.zn-o b{display:flex;align-items:center;gap:8px;font-weight:800}
+.zn-o b::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.zn-o span{display:block;font-size:var(--fs);color:var(--muted)}
+.polosa{display:block;height:4px;margin-top:8px;max-width:200px;border-radius:4px;background:var(--surface2);overflow:hidden}
+.polosa i{display:block;height:100%;background:var(--c)}
+.zn .btn{grid-column:2;justify-self:start;min-height:44px;padding:8px 24px;font-size:var(--fs)}
+.zn.vybrano{background:var(--surface2);box-shadow:inset 2px 0 0 var(--c);padding-left:16px;margin-left:-16px;padding-right:16px;margin-right:-16px}
+.vsya{margin-top:24px}
+
+/* запись на пробное */
+.probnoe{padding:80px 0}
+.zapis{display:grid;gap:48px;align-items:start}
+.forma,.gotovo{padding:32px 24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.vybrano-kart{padding:8px 16px;border-left:2px solid var(--c,var(--acc));margin:8px 0}
+.vybrano-kart b{display:block;font-weight:800}
+.vybrano-kart span{font-size:var(--fs);color:var(--muted)}
+label{display:block;font-size:var(--fs);font-weight:600;margin:24px 0 8px}
+input{width:100%;min-height:56px;padding:8px 16px;border:1px solid var(--muted);border-radius:var(--r);background:var(--bg);font:inherit;color:var(--ink)}
+input::placeholder{color:var(--muted);opacity:1}
+input[aria-invalid="true"]{border-color:var(--err);box-shadow:inset 0 0 0 1px var(--err)}
+.oshibka{color:var(--err);font-size:var(--fs);margin-top:8px}
+.cena{margin:24px 0;font-size:var(--fs)}
+.melko{font-size:var(--fs);color:var(--muted);margin-top:16px}
+.gotovo svg{width:40px;height:40px;color:var(--acc);margin-bottom:16px}
+.gotovo h3{margin-bottom:16px}
+.gotovo .ssylka{margin-top:24px}
+.napominanie{display:grid;gap:16px}
+.chat{padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:16px}
+.chat-shapka{display:flex;align-items:center;gap:16px;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+.ava{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--acc);color:var(--on-acc)}
+.chat-shapka b{display:block;font-weight:800;line-height:1.2}
+.chat-shapka small{font-size:var(--fs);color:var(--muted)}
+.puzyr{max-width:46ch;padding:16px;background:var(--surface2);border-radius:4px 16px 16px 16px;font-size:var(--fs);line-height:1.5;white-space:pre-line}
+.chat-knopki{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;max-width:46ch}
+.chat-knopki span{display:grid;place-items:center;min-height:40px;border-radius:8px;background:var(--surface2);font-size:var(--fs);font-weight:600;color:var(--acc)}
+.napominanie .kik:not(:first-child){margin-top:16px}
+
+/* Кристина и отзывы */
+.trener{padding:80px 0;border-top:1px solid var(--line)}
+.trener-setka{display:grid;gap:48px}
+.trener-foto img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:var(--r);filter:grayscale(1)}
+.trener-foto figcaption{margin-top:8px;font-size:var(--fs);color:var(--muted)}
+.trener h2{margin:16px 0 24px}
+.trener .opyt{margin-top:16px;color:var(--muted)}
+.otzyvy{display:grid;gap:16px;margin-top:40px}
+.otz{padding:24px;background:var(--surface);border-radius:var(--r);border-left:2px solid var(--acc)}
+.otz q{display:block;quotes:"«" "»"}
+.otz footer{margin-top:16px;font-size:var(--fs);color:var(--muted)}
+.otz footer b{color:var(--ink);font-weight:600}
+.otz-verh{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin-top:32px;font-weight:600}
+.otz-verh .zv{display:inline-flex;align-items:center;gap:8px}
+.otz-verh svg{color:var(--zumba);fill:var(--zumba)}
+
+/* атмосфера */
+.atm{padding:0 0 80px}
+.atm-setka{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.atm-setka img{width:100%;height:auto;aspect-ratio:15/16;object-fit:cover;border-radius:var(--r)}
+.atm .prim{margin-top:16px}
+
+/* вопросы */
+.voprosy{padding:80px 0;background:var(--surface);border-block:1px solid var(--line)}
+.voprosy-setka{display:grid;gap:40px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;padding:16px 0;font-weight:800;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary svg{transition:transform .3s ease-out}
+details[open] summary svg{transform:rotate(180deg)}
+details p{padding:0 0 24px;color:var(--muted);max-width:60ch}
+details p a{color:var(--ink);border-bottom:1px solid var(--acc)}
+
+/* контакты */
+.kontakty{background:var(--night);padding:80px 0}
+.kontakty h2{margin-bottom:40px}
+.kontakty dl{display:grid;gap:32px}
+.kontakty dt{font-size:var(--fs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--night-muted);margin-bottom:8px}
+.kontakty dd a{border-bottom:1px solid var(--acc)}
+.knopki{display:flex;flex-wrap:wrap;gap:16px;margin-top:48px}
+footer.niz{background:var(--night);color:var(--night-muted);border-top:1px solid var(--line);padding:32px 0 112px;font-size:var(--fs)}
+footer.niz p+p{margin-top:8px}
+footer.niz b{color:var(--ink);font-weight:600}
+
+/* кнопка внизу телефона */
+.lipkaya{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:8px 16px calc(8px + env(safe-area-inset-bottom));background:rgba(20,16,18,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s ease-out}
+.lipkaya.vidno{transform:none}
+.og .lipkaya{display:none}
+
+@media (min-width:600px){
+  .hero-knopki .btn{width:auto}
+  .tri{gap:16px}
+  .tri button:nth-child(2){margin-top:48px}
+  .tri button:nth-child(3){margin-top:16px}
+  .tri b{font-size:var(--fm)}
+  .itog{grid-template-columns:160px 1fr}
+  .zn{grid-template-columns:88px 1fr auto}
+  .zn .btn{grid-column:auto;justify-self:end}
+  .otzyvy{grid-template-columns:1fr 1fr}
+  .otz:first-child{grid-column:1/-1}
+  .atm-setka{gap:16px}
+}
+@media (min-width:768px){
+  .kontakty dl{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:900px){
+  .shapka nav{display:flex}
+  .hero{padding:64px 0 80px}
+  .hero-telo{display:grid;grid-template-columns:6fr 5fr;grid-template-areas:"zag tri" "niz fakty";column-gap:64px;align-items:start}
+  .fakty{grid-area:fakty;margin-top:48px;padding-top:24px;border-top:1px solid var(--line)}
+  .hero-zag{grid-area:zag}
+  .hero h1{margin-bottom:0}
+  .tri{grid-area:tri}
+  .hero-niz{grid-area:niz;margin-top:40px}
+  .podbor-setka{grid-template-columns:1fr 1fr;align-items:start}
+  .zapis{grid-template-columns:1fr 1fr}
+  .trener-setka{grid-template-columns:5fr 7fr;align-items:start}
+  .trener-foto{position:sticky;top:24px}
+  .voprosy-setka{grid-template-columns:4fr 8fr}
+  .np-r{grid-template-columns:6fr 5fr;column-gap:48px;align-items:center}
+  .np-r h3{grid-row:span 3}
+  .lipkaya{display:none}
+  footer.niz{padding-bottom:32px}
+}
+
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SportsActivityLocation", "name": "KrisStyle", "description": "Танцевальное пространство: латина соло, зумба, стретчинг", "telephone": "+7 903 905-27-02", "url": "https://maltode.github.io/chernovik/krisstyle/", "address": {"@type": "PostalAddress", "streetAddress": "Красный проспект, 200, БЦ «Адриатика», 5 этаж, офис 518", "addressLocality": "Новосибирск", "postalCode": "630049", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 55.063342, "longitude": 82.912918}, "openingHours": "Mo-Su 10:00-22:00", "sameAs": ["https://vk.ru/krisstyle.dance", "https://2gis.ru/novosibirsk/firm/70000001116929593"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Где находится KrisStyle?", "acceptedAnswer": {"@type": "Answer", "text": "Новосибирск, Красный проспект, 200, бизнес-центр «Адриатика», 5 этаж, офис 518. Рядом метро «Заельцовская», около 400 метров."}}, {"@type": "Question", "name": "Во сколько работает студия?", "acceptedAnswer": {"@type": "Answer", "text": "Каждый день с 10:00 до 22:00. Время групп смотрите в расписании выше."}}, {"@type": "Question", "name": "Можно прийти, если никогда не танцевали?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Для латины есть группа с нуля, зумба и стретчинг подходят с первого занятия. В отзывах пишут, что стеснения на занятиях нет."}}, {"@type": "Question", "name": "Что взять на первое занятие?", "acceptedAnswer": {"@type": "Answer", "text": "Удобную одежду и воду. На зумбу кроссовки, на латину и стретчинг можно прийти в носках, туфли для латины понадобятся позже."}}, {"@type": "Question", "name": "Мужчинам можно?", "acceptedAnswer": {"@type": "Answer", "text": "Да. На занятия к Кристине ходят и мужчины, один из отзывов в 2ГИС как раз от Дмитрия."}}, {"@type": "Question", "name": "Как записаться?", "acceptedAnswer": {"@type": "Answer", "text": "Выберите занятие в расписании, оставьте имя и телефон. Накануне придёт напоминание. Или позвоните: +7 903 905-27-02."}}]}]</script>
+</head>
+<body>
+<div class="draft"><b>Черновик</b> сайта · подготовлен для KrisStyle · не официальный сайт студии</div>
+
+<header class="shapka"><div class="wrap">
+  <a class="imya" href="#top"><b>Kris</b>Style</a>
+  <nav aria-label="Разделы"><a href="#podbor">Подбор</a><a href="#napravleniya">Направления</a><a href="#raspisanie">Расписание</a><a href="#kristina">Кристина</a><a href="#kontakty">Контакты</a></nav>
+  <a class="btn btn--mal" href="#probnoe">Записаться</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div class="hero-telo">
+    <div class="hero-zag">
+      <p class="kik"><span class="status" id="seychas">Каждый день 10:00–22:00</span> · Новосибирск</p>
+      <h1>Латина, зумба и стретчинг <em>у Кристины</em></h1>
+    </div>
+    <div class="tri" aria-label="Направления"><button type="button" data-tri="latina" style="--c:var(--latina)"><img src="img/ks-latina.webp" width="600" height="899" alt="Латина соло: Кристина"><b>Латина соло</b></button><button type="button" data-tri="zumba" style="--c:var(--zumba)"><img src="img/ks-zumba.webp" width="600" height="899" alt="Зумба: Кристина"><b>Зумба</b></button><button type="button" data-tri="stretch" style="--c:var(--stretch)"><img src="img/ks-stretch.webp" width="600" height="899" alt="Стретчинг: Кристина"><b>Стретчинг</b></button></div>
+    <div class="hero-niz">
+      <p class="lead">Танцевальное пространство на Красном проспекте. Не знаете, с чего начать? Ответьте на два вопроса, и сайт подберёт направление и ближайшее пробное занятие.</p>
+      <div class="hero-knopki"><a class="btn" href="#podbor">Подобрать занятие</a><a class="ssylka" href="#raspisanie">Расписание</a></div>
+    </div>
+    <ul class="fakty">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Красный проспект, 200, БЦ «Адриатика», 5 этаж, офис 518</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.1V7a4 4 0 0 0 8 0V3.1"/><path d="m9 15-1-1"/><path d="m15 15 1-1"/><path d="M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z"/><path d="m8 19-2 3"/><path d="m16 19 2 3"/></svg><span>Метро «Заельцовская», около 400 м</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><span>5,0 в 2ГИС · 6 оценок</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="podbor" id="podbor"><div class="wrap">
+  <div class="zag rv"><div class="schet"><i>5</i><p class="kik">Подбор</p></div><h2>С чего <em>начать?</em></h2>
+    <p class="pod">Два вопроса, и сразу видно, какое занятие ваше и когда ближайшая группа.</p></div>
+  <div class="podbor-setka">
+    <div>
+      <div class="vopros"><p>Чего хочется от занятий?</p><div class="varianty" role="radiogroup" aria-label="Чего хочется"><button type="button" class="var" role="radio" aria-checked="false" data-v1="latina" style="--c:var(--latina)"><span class="t"></span>Хочется двигаться красиво и женственно</button><button type="button" class="var" role="radio" aria-checked="false" data-v1="zumba" style="--c:var(--zumba)"><span class="t"></span>Хочется зарядиться и пропотеть</button><button type="button" class="var" role="radio" aria-checked="false" data-v1="stretch" style="--c:var(--stretch)"><span class="t"></span>Хочется растянуться и снять зажимы</button></div></div>
+      <div class="vopros"><p>Танцевали раньше?</p><div class="varianty" role="radiogroup" aria-label="Опыт"><button type="button" class="var" role="radio" aria-checked="true" data-v2="net">Ни разу</button><button type="button" class="var" role="radio" aria-checked="false" data-v2="nemnogo">Немного</button><button type="button" class="var" role="radio" aria-checked="false" data-v2="davno">Да, давно</button></div></div>
+    </div>
+    <div id="itog" aria-live="polite"></div>
+  </div>
+</div></section>
+
+<section class="napravleniya" id="napravleniya"><div class="wrap">
+  <div class="zag rv"><div class="schet"><i>6</i><p class="kik">Направления</p></div><h2>Три настроения, <em>один зал</em></h2></div>
+  <div class="np"><article class="np-r rv" style="--c:var(--latina)"><h3>Латина соло</h3><p class="komu">Хочется двигаться красиво и женственно</p><p>Латиноамериканские танцы без пары: шаги, вращения, работа бёдер и рук. Учимся чувствовать музыку и своё тело.</p><button type="button" class="ssylka" data-fgo="latina">Расписание: Латина соло</button></article><article class="np-r rv" style="--c:var(--zumba)"><h3>Зумба</h3><p class="komu">Хочется зарядиться и пропотеть</p><p>Танцевальный фитнес под зажигательную музыку: простые связки, много движения, уходите заряженными.</p><button type="button" class="ssylka" data-fgo="zumba">Расписание: Зумба</button></article><article class="np-r rv" style="--c:var(--stretch)"><h3>Стретчинг</h3><p class="komu">Хочется растянуться и снять зажимы</p><p>Растяжка всего тела в спокойном темпе: гибкость, осанка, мышцы отпускает после рабочего дня.</p><button type="button" class="ssylka" data-fgo="stretch">Расписание: Стретчинг</button></article></div>
+  <p class="prim">Описания направлений примерные, в готовой версии будут ваши слова.</p>
+</div></section>
+
+<section class="raspisanie" id="raspisanie"><div class="wrap">
+  <div class="zag rv"><div class="schet"><i>7</i><p class="kik">Расписание</p></div><h2>Ближайшие <em>занятия</em></h2></div>
+  <div class="filtr varianty" id="filtr" role="radiogroup" aria-label="Направление"><button type="button" class="var" role="radio" aria-checked="true" data-f="vse">Все</button><button type="button" class="var" role="radio" aria-checked="false" data-f="latina" style="--c:var(--latina)"><span class=t></span>Латина соло</button><button type="button" class="var" role="radio" aria-checked="false" data-f="zumba" style="--c:var(--zumba)"><span class=t></span>Зумба</button><button type="button" class="var" role="radio" aria-checked="false" data-f="stretch" style="--c:var(--stretch)"><span class=t></span>Стретчинг</button></div>
+  <ol class="zanyatiya" id="zanyatiya" aria-live="polite"></ol>
+  <button type="button" class="ssylka vsya" id="vsya">Показать всю неделю</button>
+  <p class="prim">Дни, время и число мест здесь примерные: полоска показывает, сколько из 12 мест уже занято. Пришлёте своё расписание, поставлю его.</p>
+</div></section>
+
+<section class="probnoe" id="probnoe"><div class="wrap">
+  <div class="zag rv"><div class="schet"><i>8</i><p class="kik">Пробное занятие</p></div><h2>Запись <em>без звонка</em></h2></div>
+  <div class="zapis">
+    <div>
+      <form class="forma" id="forma" novalidate>
+        <p class="kik">Ваше занятие</p>
+        <div class="vybrano-kart" id="vybrano"></div>
+        <a class="ssylka" href="#raspisanie">Выбрать другое</a>
+        <label for="imya">Как вас зовут</label>
+        <input id="imya" name="name" autocomplete="given-name" aria-describedby="o-imya">
+        <p class="oshibka" id="o-imya" hidden>Напишите имя, чтобы Кристина знала, кого ждать</p>
+        <label for="tel">Телефон</label>
+        <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" aria-describedby="o-tel">
+        <p class="oshibka" id="o-tel" hidden>Проверьте номер: нужно 11 цифр, например +7 900 000-00-00</p>
+        <p class="cena">Пробное занятие: <span class="zaglushka">[цена]</span></p>
+        <button class="btn btn--shir" type="submit" id="go">Записаться на пробное</button>
+        <p class="melko">Это демонстрация: заявка никуда не отправляется.</p>
+      </form>
+      <div class="gotovo" id="gotovo" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+        <h3>Пять, шесть, семь, восемь: вы записаны!</h3>
+        <p id="itog-zap"></p>
+        <button type="button" class="ssylka" id="snova">Записаться на другое занятие</button>
+      </div>
+    </div>
+    <aside class="napominanie" aria-label="Пример сообщений">
+      <p class="kik">Накануне придёт напоминание</p>
+      <div class="chat">
+        <div class="chat-shapka"><span class="ava"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg></span><div><b>KrisStyle</b><small>бот студии в Telegram</small></div></div>
+        <div class="puzyr" id="puzyr"></div>
+        <div class="chat-knopki"><span>Приду</span><span>Перенести</span></div>
+      </div>
+      <p class="kik">А Кристине сразу приходит</p>
+      <div class="chat"><div class="puzyr" id="puzyr2"></div></div>
+    </aside>
+  </div>
+</div></section>
+
+<section class="trener" id="kristina"><div class="wrap trener-setka">
+  <figure class="trener-foto rv"><img src="img/ks-kristina.webp" width="800" height="1080" loading="lazy" alt="Кристина, хореограф KrisStyle"><figcaption>Фото из карточки KrisStyle в 2ГИС</figcaption></figure>
+  <div>
+    <p class="kik">Кто ведёт</p>
+    <h2>Кристина, <em>хореограф</em></h2>
+    <p>Основательница танцевального пространства KrisStyle.</p>
+    <p class="opyt"><span class="zaglushka">[здесь пара строк о вашем опыте, учёбе и выступлениях]</span></p>
+    <div class="otz-verh"><span class="zv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>5,0 в 2ГИС</span><span>6 оценок, 5 отзывов</span><a class="ssylka" href="https://2gis.ru/novosibirsk/firm/70000001116929593/tab/reviews" target="_blank" rel="noopener">Все отзывы <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+    <div class="otzyvy"><blockquote class="otz"><q>Мы не просто учим движения — мы проживаем их)) И постепенно начинаешь лучше чувствовать музыку, своё тело и сам танец.</q><footer><b>Городской житель</b>, 2ГИС, 13 сентября 2026, хожу на Латина Соло больше 3 лет</footer></blockquote><blockquote class="otz"><q>Не всегда получается с первого раза, но атмосфера на занятии такая, что стеснения нет. Наоборот, и поддержат и растолкуют</q><footer><b>Lola Bunny</b>, 2ГИС, 15 сентября 2026, первые занятия танцами во взрослом возрасте</footer></blockquote><blockquote class="otz"><q>Объясняет понятно, показывает как надо и что важно. Всегда следит за тем чтобы ты делал правильно, а не просто повторял движения.</q><footer><b>Дмитрий</b>, 2ГИС, 18 сентября 2026</footer></blockquote><blockquote class="otz"><q>В раздевалке хохочем, а в зале работаем на результат.</q><footer><b>Городской житель</b>, 2ГИС, 14 сентября 2026</footer></blockquote><blockquote class="otz"><q>С ней вы научитесь прекрасно танцевать, у вас будет хорошая растяжка, гибкость, а также отличное настроение!!</q><footer><b>Юлия Нилова</b>, 2ГИС, 14 сентября 2026</footer></blockquote></div>
+  </div>
+</div></section>
+
+<section class="atm"><div class="wrap">
+  <div class="atm-setka">
+    <img src="img/ks-atm-1.webp" width="720" height="768" loading="lazy" alt="Три танцовщицы в костюмах для латины">
+    <img src="img/ks-atm-2.webp" width="720" height="768" loading="lazy" alt="Выступление у новогодней ёлки">
+    <img src="img/ks-atm-3.webp" width="720" height="768" loading="lazy" alt="Группа после занятия в зале">
+  </div>
+  <p class="prim">Фото из карточки KrisStyle в 2ГИС. В готовой версии подберём вместе.</p>
+</div></section>
+
+<section class="voprosy" id="voprosy"><div class="wrap voprosy-setka">
+  <div class="zag rv"><p class="kik">Коротко о главном</p><h2>Вопросы <em>и ответы</em></h2></div>
+  <div><details><summary>Где находится KrisStyle?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Новосибирск, Красный проспект, 200, бизнес-центр «Адриатика», 5 этаж, офис 518. Рядом метро «Заельцовская», около 400 метров.</p></details><details><summary>Во сколько работает студия?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Каждый день с 10:00 до 22:00. Время групп смотрите в расписании выше.</p></details><details><summary>Можно прийти, если никогда не танцевали?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Да. Для латины есть группа с нуля, зумба и стретчинг подходят с первого занятия. В отзывах пишут, что стеснения на занятиях нет.</p></details><details><summary>Сколько стоит пробное занятие?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Пробное: <span class="zaglushka">[цена]</span>. Разовое и абонементы: <span class="zaglushka">[цены]</span>.</p></details><details><summary>Что взять на первое занятие?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Удобную одежду и воду. На зумбу кроссовки, на латину и стретчинг можно прийти в носках, туфли для латины понадобятся позже.</p></details><details><summary>Мужчинам можно?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Да. На занятия к Кристине ходят и мужчины, один из отзывов в 2ГИС как раз от Дмитрия.</p></details><details><summary>Как записаться?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Выберите занятие в расписании, оставьте имя и телефон. Накануне придёт напоминание. Или позвоните: <a href="tel:+79039052702">+7 903 905-27-02</a>.</p></details></div>
+</div></section>
+
+<section class="kontakty" id="kontakty"><div class="wrap">
+  <h2><em>Kris</em>Style</h2>
+  <dl>
+    <div><dt>Адрес</dt><dd>Новосибирск, Красный проспект, 200<br>БЦ «Адриатика», 5 этаж, офис 518</dd></div>
+    <div><dt>Часы</dt><dd>Каждый день 10:00–22:00</dd></div>
+    <div><dt>Телефон</dt><dd><a href="tel:+79039052702">+7 903 905-27-02</a></dd></div>
+  </dl>
+  <div class="knopki">
+    <a class="btn" href="https://vk.ru/krisstyle.dance" target="_blank" rel="noopener">Написать ВКонтакте</a>
+    <a class="btn btn--kontur" href="https://2gis.ru/novosibirsk/firm/70000001116929593" target="_blank" rel="noopener">Маршрут в 2ГИС <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+  </div>
+</div></section>
+</main>
+
+<footer class="niz"><div class="wrap">
+  <p><b>KrisStyle</b> · танцевальное пространство в Новосибирске</p>
+  <p>Это черновик сайта, подготовленный для KrisStyle по открытым данным 2ГИС: адрес, часы работы, телефон, направления, отзывы и фото. Он не является официальным сайтом студии.</p>
+  <p>Описания, расписание, число мест и цены здесь примерные, в готовой версии будут ваши. Запись работает как демонстрация и никуда не отправляется. Обновлено 16 ноября 2026.</p>
+</div></footer>
+
+<div class="lipkaya" id="lipkaya"><a class="btn btn--shir" href="#podbor">Подобрать занятие</a></div>
+
+<script type="application/json" id="dannye">{"nedelya": {"1": [["19:00", "latina", "с нуля"], ["20:15", "stretch", "все уровни"]], "2": [["10:30", "stretch", "все уровни"], ["19:00", "zumba", "все уровни"], ["20:15", "latina", "продолжающие"]], "3": [["19:00", "latina", "с нуля"], ["20:15", "stretch", "все уровни"]], "4": [["19:00", "zumba", "все уровни"], ["20:15", "latina", "продолжающие"]], "5": [["10:30", "stretch", "все уровни"], ["19:00", "zumba", "все уровни"]], "6": [["11:00", "zumba", "все уровни"], ["12:15", "latina", "с нуля"]], "0": [["12:00", "stretch", "все уровни"], ["13:15", "latina", "продолжающие"]]}, "mest": 12, "napr": {"latina": {"imya": "Латина соло", "foto": "img/ks-latina.webp", "opis": "Латиноамериканские танцы без пары: шаги, вращения, работа бёдер и рук. Учимся чувствовать музыку и своё тело.", "komu": "Хочется двигаться красиво и женственно"}, "zumba": {"imya": "Зумба", "foto": "img/ks-zumba.webp", "opis": "Танцевальный фитнес под зажигательную музыку: простые связки, много движения, уходите заряженными.", "komu": "Хочется зарядиться и пропотеть"}, "stretch": {"imya": "Стретчинг", "foto": "img/ks-stretch.webp", "opis": "Растяжка всего тела в спокойном темпе: гибкость, осанка, мышцы отпускает после рабочего дня.", "komu": "Хочется растянуться и снять зажимы"}}}</script>
+<script>
+(function(){
+  var $ = function(s){ return document.querySelector(s); }, $$ = function(s){ return [].slice.call(document.querySelectorAll(s)); };
+  var html = document.documentElement;
+  if (location.search.indexOf('og') > -1) html.classList.add('og');
+  // ?vse — показать все блоки сразу (для скриншотов-проверок)
+  if (location.search.indexOf('vse') > -1) html.classList.add('vse');
+
+  // плавное появление блоков
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
+  }, {threshold: .1}) : null;
+  $$('.rv').forEach(function(el){ io ? io.observe(el) : el.classList.add('in'); });
+
+  var D = JSON.parse($('#dannye').textContent);
+  var DN = ['вс','пн','вт','ср','чт','пт','сб'];
+  var MES = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+
+  // время Новосибирска (UTC+7), где бы ни открыли страницу
+  var NOW = new Date(Date.now() + (new Date().getTimezoneOffset() + 420) * 60000);
+  var nowMin = NOW.getHours() * 60 + NOW.getMinutes();
+  function minuty(t){ var p = t.split(':'); return +p[0] * 60 + +p[1]; }
+
+  // значок «открыто сейчас» по часам из 2ГИС
+  var st = $('#seychas');
+  if (nowMin >= 600 && nowMin < 1320) { st.textContent = 'Открыто до 22:00'; st.classList.add('on'); }
+  else { st.textContent = 'Откроемся в 10:00'; }
+
+  // занятия на 7 дней вперёд, начиная с сегодняшнего
+  function hesh(s){ var x = 7; for (var i = 0; i < s.length; i++) x = (x * 31 + s.charCodeAt(i)) % 1009; return x; }
+  var ZANYATO = [4, 6, 7, 8, 9, 5, 10, 11, 6, 3];  // пример: сколько мест уже занято
+  var moi = {};
+  function vseZanyatiya(){
+    var out = [];
+    for (var i = 0; i < 7; i++) {
+      var d = new Date(NOW.getFullYear(), NOW.getMonth(), NOW.getDate() + i);
+      (D.nedelya[d.getDay()] || []).forEach(function(z){
+        if (i === 0 && minuty(z[0]) <= nowMin + 60) return;
+        var id = i + '|' + z[0];
+        var zan = Math.min(ZANYATO[hesh(d.getDate() + '.' + d.getMonth() + ' ' + z[0]) % ZANYATO.length] + (moi[id] ? 1 : 0), D.mest);
+        out.push({i: i, d: d, t: z[0], napr: z[1], ur: z[2], zan: zan, ost: D.mest - zan, id: id});
+      });
+    }
+    return out;
+  }
+  function data(d){ return DN[d.getDay()] + ', ' + d.getDate() + ' ' + MES[d.getMonth()]; }
+  function kogda(z){ return z.i === 0 ? 'сегодня, ' + z.t : z.i === 1 ? 'завтра, ' + z.t : data(z.d) + ', ' + z.t; }
+  function mest(n){ var a = n % 10, b = n % 100; return (a === 1 && b !== 11) ? 'место' : (a >= 2 && a <= 4 && (b < 12 || b > 14)) ? 'места' : 'мест'; }
+  function ostalos(n){ return n ? (n === 1 ? 'осталось 1 место' : 'осталось ' + n + ' ' + mest(n)) : 'мест нет'; }
+  function cvet(napr){ return 'var(--' + napr + ')'; }
+  function najti(id){ return vseZanyatiya().filter(function(z){ return z.id === id; })[0]; }
+
+  // ---------- подбор: два вопроса ----------
+  var otvet = {hochu: null, opyt: 'net'};
+  function uroven(){ return otvet.hochu === 'latina' ? (otvet.opyt === 'davno' ? 'продолжающие' : 'с нуля') : 'все уровни'; }
+  function podhodit(z){ return z.napr === otvet.hochu && z.ur === uroven() && z.ost > 0; }
+  var itog = $('#itog');
+  function risovatItog(){
+    $$('[data-v1]').forEach(function(b){ b.setAttribute('aria-checked', b.dataset.v1 === otvet.hochu); });
+    $$('[data-v2]').forEach(function(b){ b.setAttribute('aria-checked', b.dataset.v2 === otvet.opyt); });
+    if (!otvet.hochu) {
+      itog.innerHTML = '<div class="itog itog-pusto"><p><b>Выберите, чего хочется,</b> и здесь появится ваше направление и ближайшее занятие со свободными местами.</p></div>';
+      return;
+    }
+    var n = D.napr[otvet.hochu], ur = uroven();
+    var sovet = otvet.hochu === 'latina'
+      ? (otvet.opyt === 'davno' ? 'Вы уже танцевали, поэтому подойдёт группа продолжающих: техника, вращения, связки под музыку.' : 'Начните с группы с нуля: базовые шаги и работа корпуса, без спешки.')
+      : (otvet.opyt === 'net' ? 'Опыт не нужен: темп подстраивается под группу, можно начать с первого занятия.' : 'Группа общая для всех уровней, нагрузку каждый выбирает сам.');
+    var z = vseZanyatiya().filter(podhodit)[0];
+    itog.innerHTML = '<div class="itog" style="--c:' + cvet(otvet.hochu) + '"><img src="' + n.foto + '" width="600" height="899" alt="">' +
+      '<div><p class="kik">Вам подойдёт</p><h3>' + n.imya + '</h3><p>' + sovet + '</p>' +
+      (z ? '<p class="blizh">Ближайшая группа (' + ur + '): ' + kogda(z) + ', ' + ostalos(z.ost) + '</p>' +
+           '<button type="button" class="btn" data-id="' + z.id + '">Записаться на пробное</button>'
+         : '<p class="blizh">На этой неделе мест нет, напишите нам.</p>') +
+      '</div></div>';
+  }
+
+  // ---------- расписание ----------
+  var filtr = 'vse', vsyaNedelya = false, vybor = null;
+  var spisok = $('#zanyatiya');
+  function risovatRaspisanie(){
+    $$('[data-f]').forEach(function(b){ b.setAttribute('aria-checked', b.dataset.f === filtr); });
+    var zz = vseZanyatiya().filter(function(z){ return filtr === 'vse' || z.napr === filtr; });
+    var pokaz = vsyaNedelya ? zz : zz.slice(0, 6);
+    var den = -1, h = '';
+    pokaz.forEach(function(z){
+      if (z.i !== den) { den = z.i; h += '<li class="den-z">' + (z.i === 0 ? 'Сегодня' : z.i === 1 ? 'Завтра' : '') + (z.i < 2 ? ', ' : '') + data(z.d) + '</li>'; }
+      var moya = vybor && vybor.id === z.id;
+      h += '<li class="zn' + (moya ? ' vybrano' : '') + '" style="--c:' + cvet(z.napr) + '"><time>' + z.t + '</time>' +
+        '<div class="zn-o"><b>' + D.napr[z.napr].imya + '</b><span>' + z.ur + ' · ' + ostalos(z.ost) + '</span>' +
+        '<span class="polosa" aria-hidden="true"><i style="width:' + Math.round(z.zan / D.mest * 100) + '%"></i></span></div>' +
+        '<button type="button" class="btn' + (z.ost ? '' : ' btn--kontur') + '" data-id="' + z.id + '"' + (z.ost ? '' : ' disabled') + '>' + (moya ? 'Выбрано' : z.ost ? 'Записаться' : 'Мест нет') + '</button></li>';
+    });
+    spisok.innerHTML = h || '<li class="den-z">На этой неделе занятий нет</li>';
+    $('#vsya').hidden = zz.length <= 6;
+    $('#vsya').textContent = vsyaNedelya ? 'Свернуть' : 'Показать всю неделю';
+  }
+
+  // ---------- выбранное занятие и два сообщения-примера ----------
+  var imyaEl = $('#imya'), telEl = $('#tel');
+  function risovatVybor(){
+    var kart = $('#vybrano');
+    if (!vybor) { kart.style.removeProperty('--c'); kart.innerHTML = '<b>Занятие не выбрано</b><span>Выберите его в подборе или в расписании</span>'; return; }
+    var z = najti(vybor.id) || vybor, n = D.napr[z.napr];
+    kart.style.setProperty('--c', cvet(z.napr));
+    kart.innerHTML = '<b>' + n.imya + ', ' + z.ur + '</b><span>' + data(z.d) + ', ' + z.t + ' · ' + ostalos(z.ost) + '</span>';
+    var imya = imyaEl.value.trim(), tel = telEl.value.trim();
+    $('#puzyr').textContent = 'Здравствуйте' + (imya ? ', ' + imya : '') + '! Напоминаем: ' + (z.i === 0 ? 'сегодня' : 'завтра') + ', ' + z.d.getDate() + ' ' + MES[z.d.getMonth()] + ', в ' + z.t +
+      ' пробное занятие: ' + n.imya + ' (' + z.ur + ').\nКрасный проспект, 200, БЦ «Адриатика», 5 этаж, офис 518.\nВозьмите удобную одежду и воду.';
+    $('#puzyr2').textContent = 'Новая запись на пробное\n' + (imya || '[имя]') + ' · ' + (tel || '[телефон]') +
+      '\n' + data(z.d) + ', ' + z.t + ' · ' + n.imya + ', ' + z.ur + '\nСвободно мест: ' + Math.max(z.ost - 1, 0) + ' из ' + D.mest;
+  }
+
+  function vybrat(id){
+    vybor = najti(id);
+    risovatRaspisanie(); risovatVybor(); pokazatFormu();
+    $('#probnoe').scrollIntoView({behavior: 'smooth'});
+    setTimeout(function(){ imyaEl.focus({preventScroll: true}); }, 600);
+  }
+
+  document.addEventListener('click', function(ev){
+    var t = ev.target.closest('[data-v1],[data-v2],[data-tri],[data-f],[data-fgo],[data-id]');
+    if (!t) return;
+    if (t.dataset.v1) { otvet.hochu = t.dataset.v1; risovatItog(); }
+    else if (t.dataset.v2) { otvet.opyt = t.dataset.v2; risovatItog(); }
+    else if (t.dataset.tri) { otvet.hochu = t.dataset.tri; risovatItog(); $('#podbor').scrollIntoView({behavior: 'smooth'}); }
+    else if (t.dataset.f) { filtr = t.dataset.f; risovatRaspisanie(); }
+    else if (t.dataset.fgo) { filtr = t.dataset.fgo; risovatRaspisanie(); $('#raspisanie').scrollIntoView({behavior: 'smooth'}); }
+    else if (t.dataset.id) vybrat(t.dataset.id);
+  });
+  $('#vsya').addEventListener('click', function(){ vsyaNedelya = !vsyaNedelya; risovatRaspisanie(); });
+
+  // проверка полей и экран «записаны»
+  function oshibka(pole, id, est){ pole.setAttribute('aria-invalid', est); $(id).hidden = !est; }
+  function cifry(){ var c = telEl.value.replace(/\D/g, ''); if (c.length === 10 && c[0] === '9') c = '7' + c; return c; }
+  imyaEl.addEventListener('input', function(){ if (imyaEl.value.trim()) oshibka(imyaEl, '#o-imya', false); risovatVybor(); });
+  telEl.addEventListener('input', function(){ if (/^[78]\d{10}$/.test(cifry())) oshibka(telEl, '#o-tel', false); risovatVybor(); });
+  $('#forma').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var okImya = !!imyaEl.value.trim(), okTel = /^[78]\d{10}$/.test(cifry());
+    oshibka(imyaEl, '#o-imya', !okImya); oshibka(telEl, '#o-tel', !okTel);
+    if (!okImya) { imyaEl.focus(); return; }
+    if (!okTel) { telEl.focus(); return; }
+    if (!vybor) { $('#podbor').scrollIntoView({behavior: 'smooth'}); return; }
+    var z = najti(vybor.id) || vybor;
+    moi[z.id] = true;
+    $('#itog-zap').textContent = D.napr[z.napr].imya + ', ' + data(z.d) + ', ' + z.t + '. Накануне пришлём напоминание, Кристина уже знает, что вы придёте.';
+    $('#forma').hidden = true; $('#gotovo').hidden = false;
+    document.body.classList.add('zapisan'); lipkaya();
+    risovatRaspisanie(); risovatItog();
+  });
+  function pokazatFormu(){ $('#forma').hidden = false; $('#gotovo').hidden = true; document.body.classList.remove('zapisan'); }
+  $('#snova').addEventListener('click', function(){ pokazatFormu(); $('#raspisanie').scrollIntoView({behavior: 'smooth'}); });
+
+  // кнопка внизу телефона: видна между первым экраном и записью
+  var lip = $('#lipkaya'), vidHero = true, vidZap = false;
+  function lipkaya(){ lip.classList.toggle('vidno', !vidHero && !vidZap && !document.body.classList.contains('zapisan')); }
+  if ('IntersectionObserver' in window) {
+    var heroKn = $('.hero-knopki'), zap = $('#probnoe'), pod = $('#podbor');
+    var io2 = new IntersectionObserver(function(es){
+      es.forEach(function(x){ if (x.target === heroKn) vidHero = x.isIntersecting; else if (x.target === zap) vidZap = x.isIntersecting; });
+      lipkaya();
+    });
+    io2.observe(heroKn); io2.observe(zap);
+  }
+
+  // по умолчанию выбрано ближайшее занятие с местами
+  vybor = vseZanyatiya().filter(function(z){ return z.ost > 0; })[0] || null;
+  risovatItog(); risovatRaspisanie(); risovatVybor();
+})();
+</script>
+</body>
+</html>
