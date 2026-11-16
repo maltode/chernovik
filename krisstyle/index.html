@@ -156,7 +156,11 @@ input[aria-invalid="true"]{border-color:var(--err);box-shadow:inset 0 0 0 1px va
 .oshibka{color:var(--err);font-size:var(--fs);margin-top:8px}
 .cena{margin:24px 0;font-size:var(--fs)}
 .melko{font-size:var(--fs);color:var(--muted);margin-top:16px}
-.gotovo svg{width:40px;height:40px;color:var(--acc);margin-bottom:16px}
+.gotovo>svg{width:40px;height:40px;color:var(--acc);margin-bottom:16px}
+.tg-shag{margin-top:24px}
+.tg-ok{display:flex;gap:8px;align-items:flex-start;margin-top:24px;font-weight:600}
+.tg-ok[hidden]{display:none}
+.tg-ok svg{color:var(--ok);margin-top:2px}
 .gotovo h3{margin-bottom:16px}
 .gotovo .ssylka{margin-top:24px}
 .napominanie{display:grid;gap:16px}
@@ -336,6 +340,11 @@ footer.niz b{color:var(--ink);font-weight:600}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
         <h3>Пять, шесть, семь, восемь: вы записаны!</h3>
         <p id="itog-zap"></p>
+        <div class="tg-shag" id="tg-shag">
+          <button type="button" class="btn btn--shir" id="tg-vkl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>Получать напоминания в Telegram</button>
+          <p class="melko">Откроется бот студии: нажмите «Старт», и накануне придёт напоминание. Здесь это демонстрация.</p>
+        </div>
+        <p class="tg-ok" id="tg-ok" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Напоминания в Telegram включены. Кристина видит ваш ник и может написать вам в Telegram.</span></p>
         <button type="button" class="ssylka" id="snova">Записаться на другое занятие</button>
       </div>
     </div>
@@ -347,7 +356,9 @@ footer.niz b{color:var(--ink);font-weight:600}
         <div class="chat-knopki"><span>Приду</span><span>Перенести</span></div>
       </div>
       <p class="kik">А Кристине сразу приходит</p>
-      <div class="chat"><div class="puzyr" id="puzyr2"></div></div>
+      <div class="chat"><div class="puzyr" id="puzyr2"></div>
+        <div class="chat-knopki"><span>Написать в Telegram</span><span>WhatsApp</span></div></div>
+      <p class="melko">Кнопки открывают чат с клиентом, звонить не обязательно.</p>
     </aside>
   </div>
 </div></section>
@@ -501,6 +512,7 @@ footer.niz b{color:var(--ink);font-weight:600}
 
   // ---------- выбранное занятие и два сообщения-примера ----------
   var imyaEl = $('#imya'), telEl = $('#tel');
+  var tgVkl = false;  // клиент нажал «Старт» в боте студии (в черновике — демонстрация)
   function risovatVybor(){
     var kart = $('#vybrano');
     if (!vybor) { kart.style.removeProperty('--c'); kart.innerHTML = '<b>Занятие не выбрано</b><span>Выберите его в подборе или в расписании</span>'; return; }
@@ -511,7 +523,9 @@ footer.niz b{color:var(--ink);font-weight:600}
     $('#puzyr').textContent = 'Здравствуйте' + (imya ? ', ' + imya : '') + '! Напоминаем: ' + (z.i === 0 ? 'сегодня' : 'завтра') + ', ' + z.d.getDate() + ' ' + MES[z.d.getMonth()] + ', в ' + z.t +
       ' пробное занятие: ' + n.imya + ' (' + z.ur + ').\nКрасный проспект, 200, БЦ «Адриатика», 5 этаж, офис 518.\nВозьмите удобную одежду и воду.';
     $('#puzyr2').textContent = 'Новая запись на пробное\n' + (imya || '[имя]') + ' · ' + (tel || '[телефон]') +
-      '\n' + data(z.d) + ', ' + z.t + ' · ' + n.imya + ', ' + z.ur + '\nСвободно мест: ' + Math.max(z.ost - 1, 0) + ' из ' + D.mest;
+      '\n' + data(z.d) + ', ' + z.t + ' · ' + n.imya + ', ' + z.ur +
+      '\nTelegram: ' + (tgVkl ? '@ник_клиента, напоминания включены' : 'появится @ник, когда клиент нажмёт «Старт» в боте') +
+      '\nСвободно мест: ' + Math.max(document.body.classList.contains('zapisan') ? z.ost : z.ost - 1, 0) + ' из ' + D.mest;
   }
 
   function vybrat(id){
@@ -548,11 +562,15 @@ footer.niz b{color:var(--ink);font-weight:600}
     var z = najti(vybor.id) || vybor;
     moi[z.id] = true;
     $('#itog-zap').textContent = D.napr[z.napr].imya + ', ' + data(z.d) + ', ' + z.t + '. Накануне пришлём напоминание, Кристина уже знает, что вы придёте.';
+    $('#tg-shag').hidden = tgVkl; $('#tg-ok').hidden = !tgVkl;
     $('#forma').hidden = true; $('#gotovo').hidden = false;
     document.body.classList.add('zapisan'); lipkaya();
     risovatRaspisanie(); risovatItog();
   });
   function pokazatFormu(){ $('#forma').hidden = false; $('#gotovo').hidden = true; document.body.classList.remove('zapisan'); }
+  $('#tg-vkl').addEventListener('click', function(){
+    tgVkl = true; $('#tg-shag').hidden = true; $('#tg-ok').hidden = false; risovatVybor();
+  });
   $('#snova').addEventListener('click', function(){ pokazatFormu(); $('#raspisanie').scrollIntoView({behavior: 'smooth'}); });
 
   // кнопка внизу телефона: видна между первым экраном и записью
