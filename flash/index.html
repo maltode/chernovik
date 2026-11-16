@@ -222,6 +222,18 @@ h2{font:800 var(--fl)/1.1 Unbounded,sans-serif;letter-spacing:-.02em;text-wrap:b
 .podval h3{font-size:var(--fs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mark);margin-bottom:8px}
 .podval li{padding:8px 0;border-top:1px solid var(--ln);max-width:70ch}
 
+/* окно с календарём студии на «Уголке»: бронь и оплата, не уходя с сайта */
+dialog#kal{inset:0;width:100%;max-width:none;height:100%;max-height:none;margin:0;padding:0}
+.kal{display:flex;flex-direction:column;height:100%}
+.kal-gol{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:4px 4px 4px 16px;font-weight:600;border-bottom:1px solid var(--ln)}
+.kal-gol button{display:grid;place-items:center;width:48px;height:48px;border:0;background:none;color:inherit;cursor:pointer}
+.kal-ram{position:relative;flex:1;background:#fff}
+.kal-zhd{position:absolute;inset:0;display:grid;place-items:center;padding:16px;text-align:center;color:var(--fg2);font-size:var(--fs)}
+.kal-ram iframe{position:relative;display:block;width:100%;height:100%;border:0;background:transparent}
+.kal-niz{padding:12px 16px calc(12px + env(safe-area-inset-bottom));font-size:var(--fs);color:var(--fg2);border-top:1px solid var(--ln)}
+.kal-niz a{color:var(--mark);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.zamok,.zamok body{overflow:hidden}
+
 /* кнопка внизу экрана на телефоне и выбор студии */
 .niz{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:8px 16px calc(8px + env(safe-area-inset-bottom));background:rgba(30,26,24,.94);border-top:1px solid var(--ln)}
 .niz .btn{width:100%}
@@ -241,6 +253,7 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
   .seg{grid-template-columns:1fr 1fr}
   .seg label>span{display:grid;gap:4px;justify-content:start;min-height:72px}
   dialog{inset:0;margin:auto;height:fit-content}
+  dialog#kal{margin:auto;width:min(760px,100% - 48px);height:min(880px,100% - 48px)}
 }
 @media (min-width:900px){
   body{padding-bottom:0}
@@ -324,7 +337,7 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
           <h2 class="adr">Заводская, 1/1</h2>
           <p class="chto">Дневной свет, окна в пол, белые шторы</p>
           <p class="cena"><b>1 000 ₽</b> / час <small>в любой день, до конца года</small></p>
-          <a class="btn" href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener">Выбрать время<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          <a class="btn" href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener" data-okno="zv">Выбрать время<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
         </article>
       </div>
       <div class="fon fon--kr">
@@ -335,7 +348,7 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
           <h2 class="adr">Железнодорожная, 265</h2>
           <p class="chto">Циклорама, импульсный и постоянный свет</p>
           <p class="cena"><b>1 500 ₽</b> / час <small>в цену входит весь зал</small></p>
-          <a class="btn" href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener">Выбрать время<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          <a class="btn" href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener" data-okno="zh">Выбрать время<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
         </article>
       </div>
     </div>
@@ -373,7 +386,7 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
     </ul>
     <div class="vzale-cena">
       <p class="cena"><b>1 000 ₽</b> / час <small>в любой день, до конца года</small></p>
-      <a class="btn" href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener">Выбрать время на Заводской<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+      <a class="btn" href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener" data-okno="zv">Выбрать время на Заводской<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
     </div>
   </div>
 </div></section>
@@ -416,7 +429,7 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
     </div>
     <div class="noch-cena rv">
       <p class="cena"><b>1 500 ₽</b> / час <small>в цену входит весь зал</small></p>
-      <a class="btn btn--bel" href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener" aria-label="Выбрать время в студии на Железнодорожной">Выбрать время<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+      <a class="btn btn--bel" href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener" data-okno="zh" aria-label="Выбрать время в студии на Железнодорожной">Выбрать время<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
     </div>
     <p class="otkuda">Список света и реквизита из анонса студии от 7 октября.</p>
   </div>
@@ -448,7 +461,7 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
       <p class="summa" id="summa">2 000 ₽</p>
       <p class="razbor" id="razbor">Аренда: 2 ч × 1 000 ₽</p>
     </div>
-    <a class="btn" id="kalk-go" href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener">Выбрать время в календаре<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    <a class="btn" id="kalk-go" href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener" data-okno="zv">Выбрать время в календаре<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
   </div>
 </div></section>
 
@@ -494,8 +507,8 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
   </div>
   <div class="svyaz-setka">
     <div class="bron rv">
-      <a href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener"><span>Заводская, 1/1<small>дневной свет · 1 000 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
-      <a href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener"><span>Железнодорожная, 265<small>циклорама · 1 500 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+      <a href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener" data-okno="zv"><span>Заводская, 1/1<small>дневной свет · 1 000 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+      <a href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener" data-okno="zh"><span>Железнодорожная, 265<small>циклорама · 1 500 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
     </div>
     <ul class="kont rv">
       <li><a href="https://t.me/angelina_vestnik" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>Telegram: @angelina_vestnik</a></li>
@@ -530,13 +543,19 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
 <dialog id="vybor" aria-labelledby="vybor-t"><div class="vybor">
   <div class="vybor-gol"><span id="vybor-t">В какую студию?</span><button type="button" id="zakryt" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div>
   <div class="bron">
-    <a href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener"><span>Заводская, 1/1<small>дневной свет · 1 000 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
-    <a href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener"><span>Железнодорожная, 265<small>циклорама · 1 500 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    <a href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener" data-okno="zv"><span>Заводская, 1/1<small>дневной свет · 1 000 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    <a href="https://pro.ugoloc.ru/flash_zh" target="_blank" rel="noopener" data-okno="zh"><span>Железнодорожная, 265<small>циклорама · 1 500 ₽ / час</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
   </div>
-  <p>Откроется календарь студии со свободными часами.</p>
+  <p>Откроется календарь студии: свободные часы и оплата онлайн.</p>
 </div></dialog>
 
-<script type="application/json" id="dannye">{"zv": {"cena": 1000, "bron": "https://pro.ugoloc.ru/flash_zv"}, "zh": {"cena": 1500, "bron": "https://pro.ugoloc.ru/flash_zh"}, "fotograf": 5000}</script>
+<dialog id="kal" aria-labelledby="kal-t"><div class="kal">
+  <div class="kal-gol"><span id="kal-t">Бронь и оплата</span><button type="button" id="kal-zakryt" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div>
+  <div class="kal-ram"><p class="kal-zhd">Загружаем календарь студии…</p><iframe id="kal-fr" title="Календарь брони студии FLASH" allow="payment"></iframe></div>
+  <p class="kal-niz">Свободные часы и оплата онлайн в сервисе брони студии. <a id="kal-tab" href="https://pro.ugoloc.ru/flash_zv" target="_blank" rel="noopener">Открыть в новой вкладке</a></p>
+</div></dialog>
+
+<script type="application/json" id="dannye">{"zv": {"cena": 1000, "bron": "https://pro.ugoloc.ru/flash_zv", "imya": "Заводская, 1/1"}, "zh": {"cena": 1500, "bron": "https://pro.ugoloc.ru/flash_zh", "imya": "Железнодорожная, 265"}, "fotograf": 5000}</script>
 <script>
 (function(){
   var d = document, $ = function(s){ return d.querySelector(s); }, $$ = function(s){ return [].slice.call(d.querySelectorAll(s)); };
@@ -604,6 +623,7 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
     $('#summa').textContent = rub(st.cena * chasov + (foto ? D.fotograf * chasov : 0));
     $('#razbor').textContent = 'Аренда: ' + chasov + ' ч × ' + rub(st.cena) + (foto ? '. Фотограф: ' + chasov + ' ч × ' + rub(D.fotograf) : '');
     $('#kalk-go').href = st.bron;
+    $('#kalk-go').dataset.okno = $('input[name=st]:checked').value;
   }
   $('#minus').addEventListener('click', function(){ if (chasov > 1) { chasov--; schitat(); } });
   $('#plus').addEventListener('click', function(){ if (chasov < MAKS) { chasov++; schitat(); } });
@@ -615,6 +635,25 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
   $$('[data-vybor]').forEach(function(b){ b.addEventListener('click', function(){ okno.showModal ? okno.showModal() : (location.hash = '#svyaz'); }); });
   $('#zakryt').addEventListener('click', function(){ okno.close(); });
   okno.addEventListener('click', function(ev){ if (ev.target === okno) okno.close(); });
+
+  // календарь «Уголка» окном прямо на сайте: человек выбирает час и платит, не уходя со страницы
+  var kal = $('#kal'), fr = $('#kal-fr');
+  function otkrytKal(kl, url){
+    $('#kal-t').textContent = D[kl].imya + ': бронь и оплата';
+    $('#kal-tab').href = url;
+    if (fr.getAttribute('src') !== url) fr.setAttribute('src', url);
+    if (okno.open) okno.close();
+    document.documentElement.classList.add('zamok');
+    kal.showModal();
+  }
+  $$('a[data-okno]').forEach(function(a){ a.addEventListener('click', function(ev){
+    if (!kal.showModal) return;  // старый браузер без окон: календарь просто откроется во вкладке
+    ev.preventDefault();
+    otkrytKal(a.dataset.okno, a.href);
+  }); });
+  $('#kal-zakryt').addEventListener('click', function(){ kal.close(); });
+  kal.addEventListener('click', function(ev){ if (ev.target === kal) kal.close(); });
+  kal.addEventListener('close', function(){ document.documentElement.classList.remove('zamok'); });
 })();
 </script>
 </body>
