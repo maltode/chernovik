@@ -423,9 +423,9 @@ function ZapisDemo(o){
     var akt = shest.querySelector('.hvat[data-ur="' + ur + '"]'); koltso.style.top = (parseFloat(akt.dataset.y) + akt.offsetHeight / 2 - 11) + 'px';
   }
   function podbor(){
-    var spisok = D.napr.filter(function(x){ return x.ur.indexOf(ur) > -1 && (kto === 'reb' ? x.deti : x.k !== 'kids'); });
-    if (kto === 'reb') spisok.sort(function(a, b){ return (b.k === 'kids') - (a.k === 'kids'); });
-    spisok = spisok.slice(0, 3);
+    // порядок карточек совпадает с подсказкой уровня
+    var PRIOR = {1: ['stretch', 'strip', 'exotic'], 2: ['exotic', 'sport', 'stretch'], 3: ['exotic', 'sport', 'ring'], 4: ['sport', 'ring', 'exotic'], reb: ['kids', 'stretch', 'ring']};
+    var spisok = PRIOR[kto === 'reb' ? 'reb' : ur].map(function(k){ return D.napr.filter(function(x){ return x.k === k; })[0]; });
     document.getElementById('sovet').textContent = kto === 'reb' ? 'Для детей: детский пилон, растяжка и воздушное кольцо, группы для начинающих и продолжающих.' : D.urovni[ur];
     document.getElementById('podbor').innerHTML = spisok.map(function(x){
       var img = x.f ? '<img src="' + x.f + '" alt="' + x.n + '" loading="lazy">' : '<span class="bez">' + x.n + '</span>';
