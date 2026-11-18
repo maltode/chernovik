@@ -42,7 +42,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 
 img{height:auto}
-.zp{display:grid;gap:20px}
+.zp{display:grid;gap:20px;min-width:0}
+.zp>*{min-width:0}
 .zp-dni{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
 .zp-den{flex:1 0 64px;min-width:64px;display:grid;justify-items:center;gap:2px;padding:10px 6px;border:1px solid var(--zp-lin);border-radius:12px;background:var(--zp-kart);color:var(--zp-ink)}
 .zp-den small{font-size:12px;color:var(--zp-muted);text-transform:uppercase;letter-spacing:.06em}
@@ -150,9 +151,9 @@ section{padding:72px 0}
 .pusto span{font-size:13px}
 @media (max-width:820px){.galereya{grid-template-columns:repeat(2,1fr)}}
 
-.zap-s{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+.zap-s{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:start}
 .zap-box{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:28px}
-@media (max-width:820px){.zap-s{grid-template-columns:1fr}.zap-box{padding:20px}}
+@media (max-width:820px){.zap-s{grid-template-columns:minmax(0,1fr)}.zap-box{padding:20px}}
 
 .kak{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .kak .kart{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;display:grid;gap:10px;align-content:start}
