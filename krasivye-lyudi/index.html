@@ -24,7 +24,7 @@
 @font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
 @font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
-:root{ --bg:#11131B;--surface:#181B25;--surface2:#232736;--ink:#F4EFE8;--muted:#AEB0BC;--line:rgba(244,239,232,.12);--line2:rgba(244,239,232,.28);--acc:#FF7A63;--acc-d:#F0624A;--on-acc:#11131B;--acc-t:#FF9A86;--lampa:#FFD9A0;--lampa-glow:rgba(255,217,160,.55);--lampa-off:#3A3B44;--rama:#262A38;--steklo1:#262B3B;--steklo2:#12151E;--sil:rgba(255,233,200,.18);--sil-v:rgba(255,233,200,.34);--sil-l:rgba(255,217,160,.5);--ok:#9FD3B0;--err:#FF9A85;--draft-bg:#0B0D12;--draft-ink:#F4EFE8;--r:8px;--fs:14px;--fm:16px;--ft:24px;--fl:clamp(48px,7.4vw,104px) }
+:root{ --bg:#11131B;--surface:#181B25;--surface2:#232736;--ink:#F4EFE8;--muted:#AEB0BC;--line:rgba(244,239,232,.12);--line2:rgba(244,239,232,.28);--acc:#FF7A63;--acc-d:#F0624A;--on-acc:#11131B;--acc-t:#FF9A86;--lampa:#FFD9A0;--lampa-glow:rgba(255,217,160,.55);--lampa-off:#3A3B44;--rama:#262A38;--steklo1:#262B3B;--steklo2:#12151E;--tile:rgba(255,233,200,.06);--tile-h:rgba(255,233,200,.12);--ok:#9FD3B0;--err:#FF9A85;--draft-bg:#0B0D12;--draft-ink:#F4EFE8;--r:8px;--fs:14px;--fm:16px;--ft:24px;--fl:clamp(48px,7.4vw,104px) }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 html,body{overflow-x:clip}
@@ -112,18 +112,34 @@ section{padding:96px 0}
 .js .lampa{opacity:.25;box-shadow:none}
 .js .zerkalo.in .lampa,.og .lampa,.vse .lampa{opacity:1;box-shadow:0 0 16px 4px var(--lampa-glow);transition-delay:calc(var(--i) * 60ms)}
 .og .lampa,.vse .lampa{transition:none}
-.steklo{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:16px;aspect-ratio:4/3.2;padding:24px 24px 0;border-radius:12px;overflow:hidden;background:radial-gradient(80% 60% at 50% 0%,rgba(255,217,160,.14),transparent 70%),linear-gradient(165deg,var(--steklo1),var(--steklo2))}
+.steklo{position:relative;display:flex;flex-direction:column;gap:16px;padding:24px;border-radius:12px;overflow:hidden;background:radial-gradient(80% 60% at 50% 0%,rgba(255,217,160,.14),transparent 70%),linear-gradient(165deg,var(--steklo1),var(--steklo2))}
 .steklo::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.07) 38%,transparent 46%,transparent 60%,rgba(255,255,255,.04) 64%,transparent 68%);pointer-events:none}
-.zk-verh{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px}
+.steklo>*{position:relative;z-index:1}
+.zk-verh{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px}
 .zk-verh h2{font-size:var(--ft)}
 .zk-verh span{font-size:var(--fs);color:var(--muted)}
-.lyudi{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:center;gap:0;min-height:0;flex:1}
-.chel{flex:1 1 0;min-width:0;max-width:140px;margin:0 -8px;transform-origin:50% 100%;animation:poyav .4s ease-out both}
-.chel svg{display:block;width:100%;height:auto}
-.chel .k{fill:var(--sil);stroke:var(--sil-l);stroke-width:1}
-.chel .v{fill:var(--sil-v)}
-@keyframes poyav{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.og .chel,.vse .chel{animation:none}
+.zk-dni{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.zk-den{display:grid;place-items:center;min-height:56px;padding:4px;border:1px solid var(--line2);border-radius:var(--r);background:transparent;line-height:1.2;transition:background-color .3s ease-out,border-color .3s ease-out,color .3s ease-out}
+.zk-den small{font-size:12px;color:var(--muted)}
+.zk-den b{font-weight:600}
+.zk-den:hover{border-color:var(--lampa)}
+.zk-den[aria-selected="true"]{background:var(--lampa);border-color:var(--lampa);color:var(--on-acc)}
+.zk-den[aria-selected="true"] small{color:var(--on-acc)}
+.zk-sloty{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.zk-slot{min-height:48px;border:1px solid var(--line);border-radius:var(--r);background:var(--tile);font-weight:600;transition:background-color .3s ease-out,border-color .3s ease-out,transform .3s ease-out}
+.zk-slot:hover{background:var(--tile-h);border-color:var(--acc-t)}
+.zk-slot:active{transform:scale(.97)}
+.zk-pusto{grid-column:1/-1;font-size:var(--fs);color:var(--muted)}
+.zk-pod{display:flex;align-items:center;gap:8px;font-size:var(--fs);color:var(--muted)}
+.zk-pod svg{width:16px;height:16px;color:var(--lampa)}
+.js .zk-slot{opacity:0}
+.js .zerkalo.in .zk-slot{animation:poyav .4s ease-out calc(var(--i) * 40ms + 300ms) both}
+.js .zk-sloty.gotov .zk-slot{animation-duration:.3s;animation-delay:calc(var(--i) * 24ms)}
+@keyframes poyav{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+.og .zk-slot,.vse .zk-slot{opacity:1;animation:none!important}
+.pult-zag{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:8px}
+.pult-zag h3{font-size:var(--ft)}
+.pult-zag span{font-size:var(--fs);color:var(--muted)}
 .pult{display:grid;gap:8px;padding:24px;border:1px solid var(--line);border-radius:24px;background:var(--surface)}
 .sch{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px}
 .sch+.sch{border-top:1px solid var(--line)}
@@ -143,7 +159,8 @@ section{padding:96px 0}
 .primer{font-size:var(--fs);color:var(--muted)}
 @media (max-width:640px){
   .rama{padding:32px;border-radius:16px}
-  .steklo{padding:16px 16px 0}
+  .steklo{padding:16px}
+  .zk-slot{font-size:var(--fs)}
   .pult{padding:16px}
 }
 
@@ -279,10 +296,10 @@ footer b{color:var(--ink)}
 .lipkaya.vidno{opacity:1;transform:none;pointer-events:auto}
 @media (min-width:1000px){.lipkaya{display:none}}
 @media (max-width:640px){section{padding:72px 0}.hero{padding:40px 0 72px}.hero-knopki .btn{width:100%}.kont,.reklama,.gotovo,.semya{padding:24px}.dom img{border-radius:16px}}
-@media (prefers-reduced-motion:reduce){.js .lampa{opacity:1;box-shadow:0 0 16px 4px var(--lampa-glow)}.js .otr{opacity:.5}.chel{animation:none}}
+@media (prefers-reduced-motion:reduce){.js .lampa{opacity:1;box-shadow:0 0 16px 4px var(--lampa-glow)}.js .otr{opacity:.45}.js .zk-slot{opacity:1;transform:none}}
 
 </style>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "HairSalon", "name": "Красивые люди", "description": "Салон-парикмахерская в Омске на улице Виталия Суровикина: женские, мужские и детские стрижки, онлайн-запись", "telephone": "+7 913 678-25-99", "url": "https://maltode.github.io/chernovik/krasivye-lyudi/", "address": {"@type": "PostalAddress", "streetAddress": "ул. Виталия Суровикина, 3, цокольный этаж", "addressLocality": "Омск", "postalCode": "644030", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 54.917846, "longitude": 73.426234}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "20:00"}], "paymentAccepted": "Наличные, перевод с карты", "makesOffer": [{"@type": "Offer", "name": "Женская стрижка", "price": "700", "priceCurrency": "RUB", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 700, "priceCurrency": "RUB"}}, {"@type": "Offer", "name": "Мужская стрижка", "price": "600", "priceCurrency": "RUB", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 600, "priceCurrency": "RUB"}}], "sameAs": ["https://2gis.ru/omsk/firm/70000001119284370"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Где находится салон «Красивые люди» в Омске?", "acceptedAnswer": {"@type": "Answer", "text": "Омск, ул. Виталия Суровикина, 3, цокольный этаж. Это Чередовый микрорайон, Ленинский округ. Ближайшая остановка «10-я Чередовая», около 750 метров."}}, {"@type": "Question", "name": "Когда открывается салон?", "acceptedAnswer": {"@type": "Answer", "text": "Салон открывается 20 ноября 2026 года. Записаться на первые дни можно уже сейчас."}}, {"@type": "Question", "name": "Во сколько работает салон?", "acceptedAnswer": {"@type": "Answer", "text": "Каждый день с 10:00 до 20:00, без выходных. Приём по предварительной записи."}}, {"@type": "Question", "name": "Можно записать всю семью сразу?", "acceptedAnswer": {"@type": "Answer", "text": "Да. В зеркале вверху страницы отметьте, кто идёт, и нажмите «Записать всех подряд»: стрижки встанут одна за другой, без ожидания между ними."}}, {"@type": "Question", "name": "Как оплатить?", "acceptedAnswer": {"@type": "Answer", "text": "Наличными или переводом с карты."}}, {"@type": "Question", "name": "Как записаться?", "acceptedAnswer": {"@type": "Answer", "text": "Онлайн на этом сайте: выберите стрижку, день и свободное время. Или позвоните: +7 913 678-25-99."}}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "HairSalon", "name": "Красивые люди", "description": "Салон-парикмахерская в Омске на улице Виталия Суровикина: женские, мужские и детские стрижки, онлайн-запись", "telephone": "+7 913 678-25-99", "url": "https://maltode.github.io/chernovik/krasivye-lyudi/", "address": {"@type": "PostalAddress", "streetAddress": "ул. Виталия Суровикина, 3, цокольный этаж", "addressLocality": "Омск", "postalCode": "644030", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 54.917846, "longitude": 73.426234}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "20:00"}], "paymentAccepted": "Наличные, перевод с карты", "makesOffer": [{"@type": "Offer", "name": "Женская стрижка", "price": "700", "priceCurrency": "RUB", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 700, "priceCurrency": "RUB"}}, {"@type": "Offer", "name": "Мужская стрижка", "price": "600", "priceCurrency": "RUB", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 600, "priceCurrency": "RUB"}}], "sameAs": ["https://2gis.ru/omsk/firm/70000001119284370"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Где находится салон «Красивые люди» в Омске?", "acceptedAnswer": {"@type": "Answer", "text": "Омск, ул. Виталия Суровикина, 3, цокольный этаж. Это Чередовый микрорайон, Ленинский округ. Ближайшая остановка «10-я Чередовая», около 750 метров."}}, {"@type": "Question", "name": "Когда открывается салон?", "acceptedAnswer": {"@type": "Answer", "text": "Салон открывается 20 ноября 2026 года. Записаться на первые дни можно уже сейчас."}}, {"@type": "Question", "name": "Во сколько работает салон?", "acceptedAnswer": {"@type": "Answer", "text": "Каждый день с 10:00 до 20:00, без выходных. Приём по предварительной записи."}}, {"@type": "Question", "name": "Можно записать всю семью сразу?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Вверху страницы отметьте, кто идёт, и выберите время в зеркале: стрижки встанут одна за другой, без ожидания между ними."}}, {"@type": "Question", "name": "Как оплатить?", "acceptedAnswer": {"@type": "Answer", "text": "Наличными или переводом с карты."}}, {"@type": "Question", "name": "Как записаться?", "acceptedAnswer": {"@type": "Answer", "text": "Онлайн на этом сайте: выберите стрижку, день и свободное время. Или позвоните: +7 913 678-25-99."}}]}]</script>
 </head>
 <body>
 <div class="draft"><b>Черновик</b> сайта · подготовлен для салона «Красивые люди» · не официальный сайт</div>
@@ -298,7 +315,7 @@ footer b{color:var(--ink)}
   <div>
     <p class="otkrytie" id="otkrytie">Открытие 20 ноября</p>
     <h1 class="nazv" id="nazv"><span class="n1">Красивые</span><span class="n2">люди<span class="otr" aria-hidden="true">люди</span></span><span class="gran" aria-hidden="true"></span></h1>
-    <p class="lead">Салон-парикмахерская у дома на Суровикина. <b>Женская стрижка от 700 ₽, мужская от 600 ₽.</b> Отметьте в зеркале, кто идёт, и запишитесь на свободное время сами, без звонка. Всю семью можно поставить подряд.</p>
+    <p class="lead">Салон-парикмахерская у дома на Суровикина. <b>Женская стрижка от 700 ₽, мужская от 600 ₽.</b> Свободное время видно прямо здесь: выберите окошко и запишитесь сами, без звонка. Всю семью можно поставить подряд.</p>
     <div class="hero-knopki"><a class="btn" href="#zapis">Записаться онлайн</a><a class="ssylka" href="#strizhki">Стрижки и цены</a></div>
     <ul class="fakty">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Омск, ул. Виталия Суровикина, 3, цокольный этаж</span></li>
@@ -312,11 +329,14 @@ footer b{color:var(--ink)}
     <div class="rama">
       <i class="lampa" style="left:10%;top:16px;--i:0"></i><i class="lampa" style="left:24%;top:16px;--i:1"></i><i class="lampa" style="left:38%;top:16px;--i:2"></i><i class="lampa" style="left:50%;top:16px;--i:3"></i><i class="lampa" style="left:62%;top:16px;--i:4"></i><i class="lampa" style="left:76%;top:16px;--i:5"></i><i class="lampa" style="left:90%;top:16px;--i:6"></i><i class="lampa" style="left:16px;top:30%;--i:7"></i><i class="lampa" style="left:calc(100% - 16px);top:30%;--i:7"></i><i class="lampa" style="left:16px;top:52%;--i:8"></i><i class="lampa" style="left:calc(100% - 16px);top:52%;--i:8"></i><i class="lampa" style="left:16px;top:74%;--i:9"></i><i class="lampa" style="left:calc(100% - 16px);top:74%;--i:9"></i>
       <div class="steklo">
-        <div class="zk-verh"><h2>Кто идёт стричься?</h2><span id="z-skolko">2 человека</span></div>
-        <div class="lyudi" id="lyudi" aria-live="polite"></div>
+        <div class="zk-verh"><h2>Свободное время</h2><span id="z-dlya">на 1 ч 45 мин подряд</span></div>
+        <div class="zk-dni" id="zk-dni" role="tablist" aria-label="День"></div>
+        <div class="zk-sloty" id="zk-sloty" aria-live="polite"></div>
+        <p class="zk-pod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg><span>Нажмите на время, останется имя и телефон</span></p>
       </div>
     </div>
     <div class="pult">
+      <div class="pult-zag"><h3>Кто идёт</h3><span id="z-skolko">2 человека</span></div>
       <div class="sch"><span><b>Женская стрижка</b><small>от 700 ₽</small></span><div class="kn"><button type="button" data-minus="zh" aria-label="Убрать: женская стрижка"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><output id="c-zh">1</output><button type="button" data-plus="zh" aria-label="Добавить: женская стрижка"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div><div class="sch"><span><b>Мужская стрижка</b><small>от 600 ₽</small></span><div class="kn"><button type="button" data-minus="m" aria-label="Убрать: мужская стрижка"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><output id="c-m">1</output><button type="button" data-plus="m" aria-label="Добавить: мужская стрижка"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div><div class="sch"><span><b>Детская стрижка</b><small><span class="zaglushka">[цена]</span></small></span><div class="kn"><button type="button" data-minus="d" aria-label="Убрать: детская стрижка"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><output id="c-d">0</output><button type="button" data-plus="d" aria-label="Добавить: детская стрижка"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div>
       <div class="itog" aria-live="polite">
         <div class="itog-cifry"><b id="z-summa">от 1 300 ₽</b><span id="z-vremya">около 1 ч 45 мин подряд</span></div>
@@ -335,11 +355,11 @@ footer b{color:var(--ink)}
     <div class="semya rv">
       <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Вся семья за один заход</h3>
       <ol>
-        <li>Отметьте в зеркале, кто идёт: вы, муж, ребёнок.</li>
+        <li>Отметьте, кто идёт: вы, муж, ребёнок.</li>
         <li>Выберите время для первого.</li>
         <li>Остальные встанут следом, без ожидания между стрижками.</li>
       </ol>
-      <a class="ssylka" href="#zerkalo">Отметить в зеркале</a>
+      <a class="ssylka" href="#zerkalo">Отметить, кто идёт</a>
     </div>
   </div>
   <div class="spisok"><button type="button" class="stroka" data-book="zh"><b>Женская стрижка</b><span class="cena"><small>от</small>700 ₽</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button><button type="button" class="stroka" data-book="m"><b>Мужская стрижка</b><span class="cena"><small>от</small>600 ₽</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button><button type="button" class="stroka" data-book="d"><b>Детская стрижка</b><span class="zaglushka">[цена]</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
@@ -361,7 +381,7 @@ footer b{color:var(--ink)}
     <div>
       <form class="forma" id="forma" novalidate>
         <p class="shag"><i>1</i>Стрижка</p>
-        <div class="vybor-sp"><select id="usl" aria-label="Стрижка"><optgroup label="Из зеркала"><option value="semya" id="opt-semya" selected>Подряд: женская + мужская</option></optgroup><optgroup label="Одна стрижка"><option value="zh">Женская стрижка</option><option value="m">Мужская стрижка</option><option value="d">Детская стрижка</option></optgroup></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="vybor-sp"><select id="usl" aria-label="Стрижка"><optgroup label="Кто идёт"><option value="semya" id="opt-semya" selected>Подряд: женская + мужская</option></optgroup><optgroup label="Одна стрижка"><option value="zh">Женская стрижка</option><option value="m">Мужская стрижка</option><option value="d">Детская стрижка</option></optgroup></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
         <a class="ssylka izm" href="#zerkalo">Изменить, кто идёт</a>
         <p class="shag"><i>2</i>День</p>
         <ul class="legenda" aria-label="Обозначения">
@@ -374,7 +394,7 @@ footer b{color:var(--ink)}
         <p class="zametka">Салон открывается 20 ноября и работает каждый день с 10:00 до 20:00.</p>
         <p class="shag"><i>3</i>Время</p>
         <div class="vremya" id="vremya" role="radiogroup" aria-label="Время"></div>
-        <p class="shag"><i>4</i>Имя и телефон</p>
+        <p class="shag" id="shag-imya"><i>4</i>Имя и телефон</p>
         <label for="imya">Как вас зовут</label>
         <input id="imya" name="name" autocomplete="given-name" aria-describedby="o-imya">
         <p class="oshibka" id="o-imya" hidden>Напишите имя, чтобы мастер знал, кого ждать</p>
@@ -414,7 +434,7 @@ footer b{color:var(--ink)}
 
 <section class="voprosy" id="voprosy"><div class="wrap voprosy-setka">
   <div class="zag rv"><p class="kik">Коротко о главном</p><h2>Вопросы <em>и ответы</em></h2></div>
-  <div><details><summary>Где находится салон «Красивые люди» в Омске?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Омск, ул. Виталия Суровикина, 3, цокольный этаж. Это Чередовый микрорайон, Ленинский округ. Ближайшая остановка «10-я Чередовая», около 750 метров.</p></details><details><summary>Когда открывается салон?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Салон открывается 20 ноября 2026 года. Записаться на первые дни можно уже сейчас.</p></details><details><summary>Во сколько работает салон?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Каждый день с 10:00 до 20:00, без выходных. Приём по предварительной записи.</p></details><details><summary>Сколько стоит стрижка?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Женская стрижка от 700 ₽, мужская от 600 ₽. Детская: <span class="zaglushka">[цена]</span>.</p></details><details><summary>Можно записать всю семью сразу?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Да. В зеркале вверху страницы отметьте, кто идёт, и нажмите «Записать всех подряд»: стрижки встанут одна за другой, без ожидания между ними.</p></details><details><summary>Как оплатить?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Наличными или переводом с карты.</p></details><details><summary>Как записаться?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Онлайн на этом сайте: выберите стрижку, день и свободное время. Или позвоните: <a href="tel:+79136782599">+7 913 678-25-99</a>.</p></details></div>
+  <div><details><summary>Где находится салон «Красивые люди» в Омске?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Омск, ул. Виталия Суровикина, 3, цокольный этаж. Это Чередовый микрорайон, Ленинский округ. Ближайшая остановка «10-я Чередовая», около 750 метров.</p></details><details><summary>Когда открывается салон?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Салон открывается 20 ноября 2026 года. Записаться на первые дни можно уже сейчас.</p></details><details><summary>Во сколько работает салон?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Каждый день с 10:00 до 20:00, без выходных. Приём по предварительной записи.</p></details><details><summary>Сколько стоит стрижка?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Женская стрижка от 700 ₽, мужская от 600 ₽. Детская: <span class="zaglushka">[цена]</span>.</p></details><details><summary>Можно записать всю семью сразу?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Да. Вверху страницы отметьте, кто идёт, и выберите время в зеркале: стрижки встанут одна за другой, без ожидания между ними.</p></details><details><summary>Как оплатить?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Наличными или переводом с карты.</p></details><details><summary>Как записаться?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Онлайн на этом сайте: выберите стрижку, день и свободное время. Или позвоните: <a href="tel:+79136782599">+7 913 678-25-99</a>.</p></details></div>
 </div></section>
 
 <section class="kontakty" id="kontakty"><div class="wrap">
@@ -454,7 +474,7 @@ footer b{color:var(--ink)}
 
 <a class="btn lipkaya" id="lipkaya" href="#zapis">Записаться онлайн</a>
 
-<script type="application/json" id="dannye">{"strizhki": [{"k": "zh", "n": "Женская стрижка", "cena": 700, "min": 60, "sil": "zh"}, {"k": "m", "n": "Мужская стрижка", "cena": 600, "min": 45, "sil": "m"}, {"k": "d", "n": "Детская стрижка", "cena": null, "min": 30, "sil": "d"}], "poUmolch": {"zh": 1, "m": 1, "d": 0}, "maks": 4, "chasy": {"0": [600, 1200], "1": [600, 1200], "2": [600, 1200], "3": [600, 1200], "4": [600, 1200], "5": [600, 1200], "6": [600, 1200]}, "adres": "Омск, ул. Виталия Суровикина, 3, цокольный этаж", "otkr": [2026, 11, 20], "sil": {"zh": "<path class=\"v\" d=\"M30 64C30 32 45 18 60 18C75 18 90 32 90 64C90 86 94 101 99 113L21 113C26 101 30 86 30 64Z\"/><path class=\"k\" d=\"M14 150C16 125 34 112 60 112C86 112 104 125 106 150Z\"/><rect class=\"k\" x=\"52\" y=\"84\" width=\"16\" height=\"28\" rx=\"6\"/><ellipse class=\"k\" cx=\"60\" cy=\"62\" rx=\"19\" ry=\"23\"/><path class=\"v\" d=\"M40 60C41 41 51 34 62 35C73 36 80 45 80 60C73 50 59 46 40 60Z\"/>", "m": "<path class=\"k\" d=\"M8 150C10 122 31 109 60 109C89 109 110 122 112 150Z\"/><rect class=\"k\" x=\"50\" y=\"80\" width=\"20\" height=\"30\" rx=\"7\"/><ellipse class=\"k\" cx=\"60\" cy=\"58\" rx=\"21\" ry=\"25\"/><path class=\"v\" d=\"M38 56C37 39 48 30 61 30C74 30 84 38 82 56C78 46 69 43 60 43C51 43 43 47 38 56Z\"/>", "d": "<g transform=\"translate(60 150) scale(.74) translate(-60 -150)\"><path class=\"k\" d=\"M18 150C20 126 36 114 60 114C84 114 100 126 102 150Z\"/><rect class=\"k\" x=\"52\" y=\"88\" width=\"16\" height=\"26\" rx=\"6\"/><circle class=\"k\" cx=\"60\" cy=\"62\" r=\"27\"/><path class=\"v\" d=\"M33 60C32 38 45 30 60 30C76 30 89 39 87 60C82 49 72 45 60 46C50 46 39 50 33 60Z\"/><circle class=\"v\" cx=\"84\" cy=\"46\" r=\"7\"/><\/g>"}, "silImya": {"zh": "женская стрижка", "m": "мужская стрижка", "d": "детская стрижка"}}</script>
+<script type="application/json" id="dannye">{"strizhki": [{"k": "zh", "n": "Женская стрижка", "cena": 700, "min": 60}, {"k": "m", "n": "Мужская стрижка", "cena": 600, "min": 45}, {"k": "d", "n": "Детская стрижка", "cena": null, "min": 30}], "poUmolch": {"zh": 1, "m": 1, "d": 0}, "maks": 4, "chasy": {"0": [600, 1200], "1": [600, 1200], "2": [600, 1200], "3": [600, 1200], "4": [600, 1200], "5": [600, 1200], "6": [600, 1200]}, "adres": "Омск, ул. Виталия Суровикина, 3, цокольный этаж", "otkr": [2026, 11, 20]}</script>
 <script>
 (function(){
   var $ = function(s){ return document.querySelector(s); }, $$ = function(s){ return [].slice.call(document.querySelectorAll(s)); };
@@ -473,6 +493,7 @@ footer b{color:var(--ink)}
   // время Омска (UTC+6)
   var NOW = new Date(Date.now() + (new Date().getTimezoneOffset() + 360) * 60000), nowMin = NOW.getHours() * 60 + NOW.getMinutes();
   var OTKR = new Date(D.otkr[0], D.otkr[1] - 1, D.otkr[2]);
+  var MES_K = ['янв','фев','мар','апр','мая','июн','июл','авг','сен','окт','ноя','дек'];
   var DN = ['вс','пн','вт','ср','чт','пт','сб'], MES = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
   function hhmm(m){ return ('0' + Math.floor(m / 60) % 24).slice(-2) + ':' + ('0' + m % 60).slice(-2); }
   function rub(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽'; }
@@ -504,18 +525,11 @@ footer b{color:var(--ink)}
     D.strizhki.forEach(function(s){ if (kto[s.k]) chasti.push(s.n.toLowerCase().replace(' стрижка', '') + (kto[s.k] > 1 ? ' ×' + kto[s.k] : '')); });
     return 'Подряд: ' + chasti.join(' + ');
   }
+  var zkI = null;
   function risovatZerkalo(){
-    var n = vsego(), r = raschet(), lyudi = $('#lyudi');
-    // перерисовываем силуэты: новые появляются плавно
-    var est = lyudi.children.length, nado = r.o.map(function(s){ return s.sil; });
-    var tek = [].slice.call(lyudi.children).map(function(c){ return c.dataset.sil; });
-    if (tek.join() !== nado.join()) {
-      lyudi.innerHTML = nado.map(function(k, i){
-        var stary = tek[i] === k;
-        return '<div class="chel" data-sil="' + k + '"' + (stary ? ' style="animation:none"' : '') + '><svg viewBox="0 0 120 150" role="img" aria-label="' + D.silImya[k] + '">' + D.sil[k] + '</svg></div>';
-      }).join('');
-    }
+    var n = vsego(), r = raschet();
     $('#z-skolko').textContent = lyudejSlovom(n);
+    $('#z-dlya').textContent = 'на ' + dlitSlovom(r.mi) + (n > 1 ? ' подряд' : '');
     $('#z-summa').textContent = r.summa ? 'от ' + rub(r.summa) : (r.bezCeny ? 'цену сверим' : '0 ₽');
     $('#z-vremya').textContent = 'около ' + dlitSlovom(r.mi) + (n > 1 ? ' подряд' : '');
     $('#z-dop').hidden = !r.bezCeny;
@@ -525,7 +539,22 @@ footer b{color:var(--ink)}
       $('[data-minus="' + s.k + '"]').disabled = kto[s.k] === 0 || n === 1;
       $('[data-plus="' + s.k + '"]').disabled = n >= D.maks;
     });
-    $('#opt-semya').textContent = n > 1 ? opisSemi() : 'Из зеркала: ' + r.o[0].n.toLowerCase();
+    $('#opt-semya').textContent = n > 1 ? opisSemi() : r.o[0].n;
+    // ближайшие три дня, где есть окошко на всех подряд
+    var dni = [];
+    for (var i = 0; i < DNEJ && dni.length < 3; i++) if (!doOtkr(i) && sloty(i, r.mi).some(function(x){ return x.svob; })) dni.push(i);
+    if (dni.indexOf(zkI) < 0) zkI = dni.length ? dni[0] : null;
+    $('#zk-dni').innerHTML = dni.map(function(i){
+      var d = den(i), pod = d.getTime() === OTKR.getTime() ? 'открытие' : i === 0 ? 'сегодня' : i === 1 ? 'завтра' : DN[d.getDay()];
+      return '<button type="button" class="zk-den" role="tab" aria-selected="' + (i === zkI) + '" data-zk-den="' + i + '"><small>' + pod + '</small><b>' +
+        d.getDate() + ' ' + MES_K[d.getMonth()] + '</b></button>';
+    }).join('');
+    var box = $('#zk-sloty');
+    if (zkI === null) { box.innerHTML = '<p class="zk-pusto">На две недели вперёд окошка на всех подряд нет, позвоните в салон.</p>'; return; }
+    box.innerHTML = sloty(zkI, r.mi).filter(function(x){ return x.svob; }).slice(0, 8).map(function(x, k){
+      return '<button type="button" class="zk-slot" style="--i:' + k + '" data-zk-slot="' + x.t + '" aria-label="' + data(den(zkI)) + ', ' + x.t + '">' + x.t + '</button>';
+    }).join('');
+    setTimeout(function(){ box.classList.add('gotov'); }, 1200);
   }
 
   // ---------- запись ----------
@@ -540,8 +569,9 @@ footer b{color:var(--ink)}
   // занятость придумана: окошко занято, если занят хоть один получасовой кусок внутри
   function kusokZanyat(i, m){ var d = den(i); return hesh(d.getDate() + '.' + d.getMonth() + '.' + m) % 9 === 0; }
   function zanyat(i, start, mi){ for (var m = start; m < start + mi; m += SHAG) if (kusokZanyat(i, m)) return true; return false; }
-  function sloty(i){
-    var c = D.chasy[den(i).getDay()], out = [], mi = dlit();
+  function sloty(i, mi){
+    var c = D.chasy[den(i).getDay()], out = [];
+    if (mi === undefined) mi = dlit();
     if (!c || doOtkr(i)) return out;
     for (var m = c[0]; m + mi <= c[1]; m += SHAG) {
       if (i === 0 && m <= nowMin + 60) continue;
@@ -615,7 +645,7 @@ footer b{color:var(--ink)}
 
   // ---------- все нажатия ----------
   document.addEventListener('click', function(ev){
-    var t = ev.target.closest('[data-plus],[data-minus],[data-book],[data-den],[data-slot]');
+    var t = ev.target.closest('[data-plus],[data-minus],[data-book],[data-den],[data-slot],[data-zk-den],[data-zk-slot]');
     if (!t || t.disabled) return;
     var ds = t.dataset;
     if ('plus' in ds) { if (vsego() < D.maks) kto[ds.plus]++; risovatZerkalo(); if (vyb.usl === 'semya') vseZapis(); }
@@ -623,6 +653,13 @@ footer b{color:var(--ink)}
     else if ('book' in ds) kZapisi(ds.book);
     else if ('den' in ds) { vyb.i = +ds.den; risovatDni(); risovatVremya(); risovatItogo(); }
     else if ('slot' in ds) { vyb.t = ds.slot; risovatVremya(); risovatItogo(); }
+    else if ('zkDen' in ds) { zkI = +ds.zkDen; $('#zk-sloty').classList.add('gotov'); risovatZerkalo(); }
+    else if ('zkSlot' in ds) {
+      // время из зеркала: в записи остаются имя и телефон
+      vyb.usl = 'semya'; uslEl.value = 'semya'; vyb.i = zkI; vyb.t = ds.zkSlot;
+      pokazatFormu(); vseZapis(); lipkaya();
+      $('#shag-imya').scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
   });
   $('#na-zapis').addEventListener('click', function(){ kZapisi('semya'); });
 
