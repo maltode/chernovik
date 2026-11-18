@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Pro Sugar Laser · шугаринг, воск и лазер в Мытищах · черновик сайта</title>
+<meta name="description" content="Студия эпиляции Pro Sugar Laser в Мытищах, Шараповский проезд: шугаринг, воск, лазерная эпиляция и ногти. Отметьте зоны, узнайте цену и запишитесь онлайн. Черновик сайта.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Черновик сайта для Pro Sugar Laser">
+<meta property="og:description" content="Шугаринг и лазер в Мытищах: отметьте зоны, увидьте цену и запишитесь без звонка">
+<meta property="og:image" content="https://maltode.github.io/chernovik/pro-sugar-laser/og.png">
+<meta name="theme-color" content="#15100C">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="icon" href="data:,">
+<style>
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/unbounded-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/unbounded-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/unbounded-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/unbounded-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/manrope-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/manrope-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/manrope-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(../fonts/manrope-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+:root{ --bg:#15100C;--surface:#1E1712;--surface2:#291F18;--ink:#F5EDE2;--muted:#B8A996;--line:rgba(245,237,226,.12);--line2:rgba(245,237,226,.28);--acc:#E9A23B;--acc-d:#CF8A25;--on-acc:#15100C;--acc-t:#F2B661;--sugar:#E9A23B;--vosk:#F0D58C;--laser:#F08FA8;--telo:#2E241C;--zona:#3D3025;--zona-h:#54422F;--zona-mal:rgba(245,237,226,.16);--zona-mal-l:rgba(245,237,226,.4);--glow-sugar:rgba(233,162,59,.12);--glow-vosk:rgba(240,213,140,.1);--glow-laser:rgba(240,143,168,.12);--acc-line:rgba(233,162,59,.4);--ok:#B5C77E;--err:#FF9A85;--draft-bg:#0F0B08;--draft-ink:#F5EDE2;--r:8px;--fs:14px;--fm:16px;--ft:24px;--fl:clamp(36px,6vw,76px) }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+.draft{position:relative;z-index:50;font:500 12.5px/1.4 Manrope,system-ui,sans-serif;text-align:center;padding:7px 16px;background:var(--draft-bg,#111);color:var(--draft-ink,#fff)}
+.draft b{letter-spacing:.12em;text-transform:uppercase;margin-right:6px}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}*{animation:none!important}}
+.og .rv,.vse .rv{opacity:1!important;transform:none!important;transition:none!important}
+.hidden-x{display:none!important}
+
+
+body{background:var(--bg);color:var(--ink);font:400 var(--fm)/1.6 Manrope,system-ui,sans-serif}
+ul,ol{list-style:none}
+svg{width:20px;height:20px;flex:none}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--acc-t);outline-offset:4px}
+[hidden]{display:none!important}
+h1,h2,h3{font-family:Unbounded,system-ui,sans-serif;font-weight:600;line-height:1.08;letter-spacing:-.03em;text-wrap:balance}
+h1,h2{font-size:var(--fl)}
+h2{font-size:clamp(32px,4.4vw,56px)}
+h1 em,h2 em{font-style:normal;color:var(--acc-t)}
+h3{font-size:var(--ft);line-height:1.2;letter-spacing:-.02em}
+.kik{font-size:var(--fs);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:8px 32px;border:0;border-radius:999px;background:var(--acc);color:var(--on-acc);font-weight:800;font-size:var(--fm);line-height:1.2;text-align:center;transition:background-color .3s ease-out,transform .3s ease-out}
+.btn:hover{background:var(--acc-d)}
+.btn:active{transform:scale(.98)}
+.btn[aria-disabled="true"]{background:var(--surface2);color:var(--muted);cursor:default}
+.btn--mal{min-height:44px;padding:8px 24px;font-size:var(--fs)}
+.btn--shir{width:100%}
+.ssylka{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0;border:0;border-bottom:1px solid var(--acc-t);background:none;font-weight:600;font-size:var(--fm);color:var(--ink)}
+.zaglushka{display:inline-block;padding:0 8px;border:1px dashed var(--muted);border-radius:4px;font-weight:600;font-size:var(--fs);color:var(--muted);white-space:nowrap}
+.prim{font-size:var(--fs);color:var(--muted);margin-top:24px;max-width:65ch}
+.zametka{font-size:var(--fs);color:var(--muted);margin-top:8px}
+.melko{font-size:var(--fs);color:var(--muted);margin-top:16px}
+section{padding:96px 0}
+.zag{margin-bottom:48px;max-width:760px}
+.zag h2{margin-top:16px}
+.pod{margin-top:16px;color:var(--muted);max-width:56ch}
+
+/* шапка */
+.shapka{border-bottom:1px solid var(--line)}
+.shapka .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.imya{display:grid}
+.imya b{font:600 var(--fm)/1.2 Unbounded,system-ui,sans-serif;letter-spacing:-.01em;white-space:nowrap}
+.imya span{font-size:var(--fs);line-height:1.3;color:var(--muted)}
+.shapka nav{display:none;gap:32px;font-size:var(--fs);font-weight:600}
+.shapka nav a{padding:8px 0;border-bottom:1px solid transparent;transition:border-color .3s ease-out}
+.shapka nav a:hover{border-color:var(--acc-t)}
+@media (min-width:1000px){.shapka nav{display:flex}}
+
+/* первый экран */
+.hero{padding:56px 0 96px}
+.hero-setka{display:grid;gap:48px;align-items:center}
+@media (min-width:1000px){.hero-setka{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px}}
+.hero h1{margin-top:24px;font-size:clamp(36px,5vw,64px)}
+.kapli{position:relative;display:inline-block;white-space:nowrap;color:var(--acc-t)}
+.kapli svg{position:absolute;left:0;top:100%;width:100%;height:.36em;margin-top:-.06em;transform-origin:50% 0}
+.js .kapli svg{transform:scaleY(0);transition:transform .5s ease-out}
+.js .kapli.in svg,.og .kapli svg,.vse .kapli svg{transform:none}
+.lead{margin-top:40px;font-size:var(--fm);color:var(--muted);max-width:46ch}
+.lead b{color:var(--ink);font-weight:600}
+.hero-knopki{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;margin-top:32px}
+.fakty{display:grid;gap:8px;margin-top:40px;font-size:var(--fs);color:var(--muted)}
+.fakty li{display:flex;align-items:center;gap:8px}
+.fakty svg{width:16px;height:16px;color:var(--acc-t)}
+.status{font-weight:600;color:var(--muted)}
+.status.on{color:var(--ok)}
+.status::before{content:"";display:inline-block;width:8px;height:8px;margin-right:8px;border-radius:50%;background:currentColor;vertical-align:1px}
+
+/* карта зон */
+.karta{position:relative;padding:32px;border:1px solid var(--line);border-radius:24px;background:radial-gradient(120% 80% at 30% 0%,var(--glow-sugar),transparent 60%),var(--surface)}
+.karta[data-m="vosk"]{background:radial-gradient(120% 80% at 30% 0%,var(--glow-vosk),transparent 60%),var(--surface)}
+.karta[data-m="laser"]{background:radial-gradient(120% 80% at 30% 0%,var(--glow-laser),transparent 60%),var(--surface)}
+.karta-verh{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px}
+.karta-verh h2{font-size:var(--ft)}
+.metody{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:24px;padding:4px;border-radius:999px;background:var(--bg)}
+.metod{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:8px;border:0;border-radius:999px;background:transparent;font-weight:600;font-size:var(--fs);color:var(--muted);transition:background-color .3s ease-out,color .3s ease-out}
+.metod svg{width:16px;height:16px}
+.metod[aria-pressed="true"]{background:var(--m);color:var(--on-acc)}
+.karta{--m:var(--sugar)}
+.karta[data-m="vosk"]{--m:var(--vosk)}
+.karta[data-m="laser"]{--m:var(--laser)}
+.karta-setka{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:24px;align-items:center;margin-top:24px}
+.figura{display:block;width:100%;height:auto;max-height:440px;overflow:visible}
+.figura .telo{fill:var(--telo);stroke:var(--line2);stroke-width:1}
+.figura .zona{fill:var(--zona);stroke:var(--line2);stroke-width:1;cursor:pointer;transition:fill .3s ease-out}
+.figura .zona:hover{fill:var(--zona-h)}
+.figura .zona--mal{fill:var(--zona-mal);stroke:var(--zona-mal-l);stroke-dasharray:3 3}
+.figura .zona.on{fill:var(--m);stroke:var(--m);stroke-dasharray:none;filter:drop-shadow(0 0 8px var(--m))}
+.zony{display:grid;gap:8px}
+.zona-kn{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;padding:8px 16px;border:1px solid var(--line2);border-radius:var(--r);background:transparent;font-size:var(--fs);font-weight:600;text-align:left;transition:background-color .3s ease-out,border-color .3s ease-out,color .3s ease-out}
+.zona-kn span{color:var(--muted);font-weight:400;white-space:nowrap;transition:color .3s ease-out}
+.zona-kn:hover{border-color:var(--m)}
+.zona-kn[aria-pressed="true"]{background:var(--m);border-color:var(--m);color:var(--on-acc)}
+.zona-kn[aria-pressed="true"] span{color:var(--on-acc)}
+.itog{display:grid;gap:16px;margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
+.itog-cifry{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px}
+.itog-cifry b{font:600 var(--ft)/1.2 Unbounded,system-ui,sans-serif;letter-spacing:-.02em;color:var(--m)}
+.itog-cifry span{font-size:var(--fs);color:var(--muted)}
+.itog-chto{font-size:var(--fs);color:var(--ink)}
+.paket{font-size:var(--fs);color:var(--ok)}
+.primer{display:inline-block;margin-top:8px;font-size:var(--fs);color:var(--muted)}
+.podskazka{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:var(--fs);color:var(--muted)}
+.podskazka svg{width:16px;height:16px;color:var(--acc-t)}
+@media (max-width:640px){
+  .karta{padding:24px 16px;border-radius:16px}
+  .karta-setka{grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px}
+  .zona-kn{padding:8px}
+  .metod svg{display:none}
+}
+
+/* что выбрать */
+.vybor-setka{display:grid;gap:24px}
+@media (min-width:900px){.vybor-setka{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.metod-k{display:flex;flex-direction:column;gap:16px;padding:32px;border-radius:24px;background:var(--surface);border-top:4px solid var(--c)}
+.metod-k[data-c="sugar"]{--c:var(--sugar)}
+.metod-k[data-c="vosk"]{--c:var(--vosk)}
+.metod-k[data-c="laser"]{--c:var(--laser)}
+.metod-k .znak{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--surface2);color:var(--c)}
+.metod-k p{color:var(--muted)}
+.metod-k ul{display:grid;gap:8px;margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:var(--fs)}
+.metod-k li{display:flex;gap:8px}
+.metod-k li svg{width:16px;height:16px;margin-top:4px;color:var(--c)}
+.metod-k .ssylka{align-self:flex-start;border-color:var(--c)}
+
+/* ногти */
+.nogti{background:var(--surface)}
+.nogti-setka{display:grid;gap:48px}
+@media (min-width:900px){.nogti-setka{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start}}
+.spisok{display:grid;gap:0;border-top:1px solid var(--line)}
+.stroka{display:flex;align-items:center;gap:16px;min-height:64px;padding:16px 0;border:0;border-bottom:1px solid var(--line);background:none;text-align:left;font-weight:600;transition:color .3s ease-out}
+.stroka b{flex:1;font-weight:600}
+.stroka svg{color:var(--muted);transition:transform .3s ease-out}
+.stroka:hover{color:var(--acc-t)}
+.stroka:hover svg{transform:translateX(4px)}
+
+/* мастер */
+.master{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;align-items:center}
+.master>*{min-width:0}
+.zaglushka--blok{white-space:normal}
+@media (min-width:900px){.master{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px}}
+.foto-zagl{display:grid;place-items:center;aspect-ratio:4/5;max-width:360px;border:1px dashed var(--line2);border-radius:24px;background:var(--surface);color:var(--muted);font-size:var(--fs);text-align:center;padding:24px}
+.master blockquote{margin-top:24px;font-size:var(--ft);line-height:1.4;max-width:30ch}
+
+/* запись */
+.zapis{background:var(--surface)}
+.zapis-setka{display:grid;gap:48px}
+@media (min-width:1000px){.zapis-setka{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:start}}
+.forma{display:grid;gap:8px}
+.shag{display:flex;align-items:center;gap:8px;margin-top:24px;font-weight:600}
+.shag:first-child{margin-top:0}
+.shag i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--acc);color:var(--on-acc);font-style:normal;font-size:var(--fs);font-weight:800}
+.vybor{position:relative}
+.vybor select{width:100%;min-height:56px;padding:8px 48px 8px 16px;border:1px solid var(--line2);border-radius:var(--r);background:var(--bg);color:var(--ink);font:inherit;appearance:none}
+.vybor svg{position:absolute;right:16px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--muted)}
+.izm{justify-self:start;font-size:var(--fs)}
+.legenda{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:var(--fs);color:var(--muted)}
+.legenda li{display:flex;align-items:center;gap:8px}
+.obr{display:grid;place-items:center;min-width:32px;height:24px;padding:0 4px;border-radius:4px;font-size:12px;font-weight:600}
+.obr.svob{border:1px solid var(--line2);color:var(--ink)}
+.obr.zan{border:1px solid var(--line);color:var(--muted);text-decoration:line-through}
+.obr.vyb{background:var(--acc);color:var(--on-acc)}
+.obr.vyh{border:1px dashed var(--line);color:var(--muted)}
+.dni{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.den{display:grid;place-items:center;gap:0;min-height:64px;padding:8px 0;border:1px solid var(--line2);border-radius:var(--r);background:transparent;transition:background-color .3s ease-out,border-color .3s ease-out}
+.den small{font-size:12px;color:var(--muted)}
+.den b{font-size:var(--fm)}
+.den.zan{border-color:var(--line);color:var(--muted);text-decoration:line-through;cursor:default}
+.den.vyh{border-style:dashed;border-color:var(--line);color:var(--muted);cursor:default}
+.den.vyh b{font-size:12px;font-weight:600}
+.den[aria-checked="true"]{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.den[aria-checked="true"] small{color:var(--on-acc)}
+.vremya{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:8px}
+.slot{min-height:48px;border:1px solid var(--line2);border-radius:var(--r);background:transparent;font-weight:600;transition:background-color .3s ease-out}
+.slot.zan{border-color:var(--line);color:var(--muted);text-decoration:line-through;cursor:default}
+.slot[aria-checked="true"]{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+label{margin-top:8px;font-size:var(--fs);font-weight:600}
+input{width:100%;min-height:56px;padding:8px 16px;border:1px solid var(--line2);border-radius:var(--r);background:var(--bg);color:var(--ink);font:inherit}
+input[aria-invalid="true"]{border-color:var(--err)}
+.oshibka{font-size:var(--fs);color:var(--err)}
+.itogo{display:grid;gap:4px;margin:24px 0 8px;padding:16px;border-radius:var(--r);background:var(--bg)}
+.itogo b{font-weight:600}
+.itogo span{font-size:var(--fs);color:var(--muted)}
+.gotovo{display:grid;gap:16px;justify-items:start;padding:32px;border-radius:24px;background:var(--bg)}
+.gotovo>svg{width:48px;height:48px;color:var(--ok)}
+.tg-shag{display:grid;gap:8px;width:100%}
+.tg-ok{display:flex;gap:8px;color:var(--ok);font-size:var(--fs)}
+.chat{margin-top:16px;padding:16px;border-radius:16px;background:var(--bg);border:1px solid var(--line)}
+.chat-shapka{display:flex;align-items:center;gap:8px;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+.ava{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--acc);color:var(--on-acc)}
+.chat-shapka small{display:block;font-size:12px;color:var(--muted)}
+.puzyr{white-space:pre-line;padding:16px;border-radius:16px 16px 16px 4px;background:var(--surface2);font-size:var(--fs);line-height:1.5}
+.chat-knopki{display:flex;gap:8px;margin-top:8px}
+.chat-knopki>*{flex:1;display:grid;place-items:center;min-height:44px;border-radius:var(--r);border:1px solid var(--line2);font-size:var(--fs);font-weight:600}
+.napominanie .kik{margin-top:32px}
+.napominanie .kik:first-child{margin-top:0}
+
+/* вопросы */
+.voprosy-setka{display:grid;gap:48px}
+@media (min-width:1000px){.voprosy-setka{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}}
+details{border-bottom:1px solid var(--line)}
+summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:16px 0;font-weight:600;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary svg{transition:transform .3s ease-out;color:var(--muted)}
+details[open] summary svg{transform:rotate(180deg)}
+details p{padding:0 0 24px;color:var(--muted);max-width:65ch}
+details a{color:var(--ink);border-bottom:1px solid var(--acc-t)}
+
+/* как найти */
+.kontakty{background:var(--surface)}
+.kont-setka{display:grid;gap:24px}
+@media (min-width:900px){.kont-setka{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.kont{display:grid;gap:8px;align-content:start;padding:32px;border-radius:24px;background:var(--bg)}
+.kont svg{color:var(--acc-t)}
+.kont b{font-size:var(--fm)}
+.kont p,.kont a.mel{color:var(--muted);font-size:var(--fs)}
+.kont a.mel{border-bottom:1px solid var(--line2);justify-self:start}
+
+/* для Анны: в самом конце */
+.dlya{border-top:1px solid var(--line)}
+.dlya-setka{display:grid;gap:48px}
+@media (min-width:1000px){.dlya-setka{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}}
+.reklama{padding:32px;border-radius:24px;background:var(--surface);border:1px solid var(--acc-line)}
+.reklama h3{margin-top:8px}
+.reklama ul{display:grid;gap:16px;margin-top:24px}
+.reklama li{display:flex;gap:8px}
+.reklama li svg{margin-top:4px;color:var(--acc-t)}
+.sverim{display:grid;gap:16px;counter-reset:s}
+.sverim li{display:flex;gap:16px;font-size:var(--fs);color:var(--muted)}
+.sverim li::before{counter-increment:s;content:counter(s);flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;border:1px solid var(--line2);color:var(--ink);font-weight:600}
+.sverim b{color:var(--ink)}
+
+footer{padding:48px 0 120px;border-top:1px solid var(--line);font-size:var(--fs);color:var(--muted)}
+footer p+p{margin-top:8px}
+footer b{color:var(--ink)}
+
+/* кнопка внизу телефона */
+.lipkaya{position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s ease-out,transform .3s ease-out}
+.lipkaya.vidno{opacity:1;transform:none;pointer-events:auto}
+@media (min-width:1000px){.lipkaya{display:none}}
+@media (max-width:640px){section{padding:72px 0}.hero{padding:40px 0 72px}.hero-knopki .btn{width:100%}.metod-k,.kont,.reklama,.gotovo{padding:24px}}
+
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BeautySalon", "name": "Pro Sugar Laser", "description": "Студия эпиляции в Мытищах: шугаринг, восковая и лазерная эпиляция, фотоэпиляция, маникюр, педикюр и наращивание ногтей", "telephone": "+7 926 656-77-15", "url": "https://maltode.github.io/chernovik/pro-sugar-laser/", "address": {"@type": "PostalAddress", "streetAddress": "Шараповский проезд, вл. 2, стр. 3, 7 этаж, офис 192", "addressLocality": "Мытищи", "addressRegion": "Московская область", "addressCountry": "RU"}, "geo": {"@type": "GeoCoordinates", "latitude": 55.915658, "longitude": 37.756745}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "21:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "10:00", "closes": "16:00"}], "paymentAccepted": "Наличные, перевод с карты", "employee": {"@type": "Person", "name": "Анна Колодина", "jobTitle": "Мастер шугаринга и лазерной депиляции"}, "sameAs": ["https://2gis.ru/mytishchi/firm/70000001119003040", "https://t.me/an_imperatrice"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Где находится студия Pro Sugar Laser?", "acceptedAnswer": {"@type": "Answer", "text": "Мытищи, Шараповский проезд, вл. 2, стр. 3, 7 этаж, офис 192. Приём по предварительной записи."}}, {"@type": "Question", "name": "Во сколько работает студия?", "acceptedAnswer": {"@type": "Answer", "text": "С понедельника по пятницу с 10:00 до 21:00, в субботу с 10:00 до 16:00, воскресенье выходной. Приём по предварительной записи."}}, {"@type": "Question", "name": "Какие процедуры есть в студии?", "acceptedAnswer": {"@type": "Answer", "text": "Шугаринг, восковая эпиляция, лазерная эпиляция и фотоэпиляция. А ещё ногти: аппаратный маникюр, гель-лак, наращивание гелем и акрилом, женский педикюр и парафиновые ванночки."}}, {"@type": "Question", "name": "Что выбрать: шугаринг или лазер?", "acceptedAnswer": {"@type": "Answer", "text": "Шугаринг бережный, его выбирают для чувствительной кожи и деликатных зон. Лазер нужен, чтобы надолго сократить рост волос, курс подбирается индивидуально. Если сомневаетесь, Анна подскажет на консультации."}}, {"@type": "Question", "name": "Как подготовиться к процедуре?", "acceptedAnswer": {"@type": "Answer", "text": "Перед шугарингом и воском зону не бреют: волоскам нужно немного отрасти. Перед лазером, наоборот, зону обычно бреют накануне. Точные правила Анна пришлёт в напоминании."}}, {"@type": "Question", "name": "Как оплатить?", "acceptedAnswer": {"@type": "Answer", "text": "Наличными или переводом с карты."}}, {"@type": "Question", "name": "Как записаться?", "acceptedAnswer": {"@type": "Answer", "text": "Онлайн на этом сайте: отметьте зоны, выберите день и свободное время. Или позвоните: +7 926 656-77-15, или напишите Анне в Telegram @an_imperatrice."}}]}]</script>
+</head>
+<body>
+<div class="draft"><b>Черновик</b> сайта · подготовлен для Pro Sugar Laser · не официальный сайт студии</div>
+
+<header class="shapka"><div class="wrap">
+  <a class="imya" href="#top"><b>Pro Sugar Laser</b><span>студия эпиляции · Мытищи</span></a>
+  <nav aria-label="Разделы"><a href="#karta">Зоны и цены</a><a href="#vybor">Что выбрать</a><a href="#nogti">Ногти</a><a href="#zapis">Запись</a><a href="#kontakty">Как найти</a></nav>
+  <a class="btn btn--mal" href="#zapis">Записаться</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-setka">
+  <div>
+    <p class="kik">Мытищи · Шараповский проезд · 7 этаж</p>
+    <h1>Шугаринг и лазер <span class="kapli">в Мытищах<svg viewBox="0 0 240 40" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="kg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--acc-t)"/><stop offset="1" style="stop-color:var(--acc-d)"/></linearGradient></defs><path d="M2 6C60 3 180 3 238 6L238 11C226 12 214 12 206 13C204 13 203 15 203 20C203 26 200 30 197 30C194 30 191 26 191 20C191 15 190 13 186 13L140 13C136 13 135 15 135 24C135 32 132 37 128 37C124 37 121 32 121 24C121 15 120 13 116 13L62 13C58 13 57 15 57 18C57 22 55 25 52 25C49 25 47 22 47 18C47 15 46 13 42 13C28 13 14 12 2 11Z" fill="url(#kg)"/></svg></span></h1>
+    <p class="lead">Отметьте зоны на силуэте, и сразу видно, <b>сколько это стоит и сколько длится</b>. Свободное время Анны тоже здесь: запись в пару нажатий, без звонка и ожидания ответа.</p>
+    <div class="hero-knopki"><a class="btn" href="#zapis">Записаться онлайн</a><a class="ssylka" href="#vybor">Шугаринг, воск или лазер?</a></div>
+    <ul class="fakty">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Мытищи, Шараповский проезд, вл. 2, стр. 3, 7 этаж, офис 192</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Пн–пт 10:00–21:00 · сб 10:00–16:00 · вс выходной</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg><span>Наличные или перевод с карты</span></li>
+      <li class="status" id="seychas">По предварительной записи</li>
+    </ul>
+  </div>
+
+  <div class="karta" id="karta" data-m="sugar">
+    <div class="karta-verh"><h2>Карта зон</h2><span class="kik">цена за процедуру</span></div>
+    <div class="metody" role="group" aria-label="Метод"><button type="button" class="metod" data-metod="sugar" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg><span>Шугаринг</span></button><button type="button" class="metod" data-metod="vosk" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg><span>Воск</span></button><button type="button" class="metod" data-metod="laser" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg><span>Лазер</span></button></div>
+    <div class="karta-setka">
+      <svg class="figura" viewBox="0 0 220 460" role="img" aria-label="Силуэт: нажмите на зону, чтобы добавить её в расчёт"><g class="zona" data-zona="ruki"><title>Руки полностью</title><path d="M72 100 C60 104 57 118 56 136 L51 204 C50 222 48 238 46 252 C49 257 56 257 58 252 C61 236 63 220 65 204 L72 150 Z"/><path d="M148 100 C160 104 163 118 164 136 L169 204 C170 222 172 238 174 252 C171 257 164 257 162 252 C159 236 157 220 155 204 L148 150 Z"/></g><g class="zona" data-zona="bedra"><title>Бёдра</title><path d="M78 244 L109 244 L106 326 C105 334 104 340 104 346 L86 346 C85 338 84 330 83 322 C80 296 78 270 78 244 Z"/><path d="M142 244 L111 244 L114 326 C115 334 116 340 116 346 L134 346 C135 338 136 330 137 322 C140 296 142 270 142 244 Z"/></g><g class="zona" data-zona="goleni"><title>Голени</title><path d="M86 352 L104 352 C104 372 103 396 101 420 C100 428 99 434 99 438 L90 438 C90 432 89 426 88 418 C87 396 86 372 86 352 Z"/><path d="M134 352 L116 352 C116 372 117 396 119 420 C120 428 121 434 121 438 L130 438 C130 432 131 426 132 418 C133 396 134 372 134 352 Z"/></g><ellipse class="telo" cx="110" cy="46" rx="24" ry="28"/><rect class="telo" x="101" y="70" width="18" height="22" rx="8"/><path class="telo" d="M72 96 C88 88 132 88 148 96 C152 112 150 128 146 142 C140 162 135 178 134 194 C140 210 144 226 144 244 L76 244 C76 226 80 210 86 194 C85 178 80 162 74 142 C70 128 68 112 72 96 Z"/><ellipse class="telo" cx="51" cy="262" rx="8" ry="11"/><ellipse class="telo" cx="169" cy="262" rx="8" ry="11"/><ellipse class="telo" cx="94" cy="446" rx="10" ry="7"/><ellipse class="telo" cx="126" cy="446" rx="10" ry="7"/><g class="zona zona--mal" data-zona="guba"><title>Верхняя губа</title><ellipse cx="110" cy="60" rx="10" ry="4.5"/></g><g class="zona zona--mal" data-zona="podmyshki"><title>Подмышки</title><ellipse cx="80" cy="114" rx="6" ry="10"/><ellipse cx="140" cy="114" rx="6" ry="10"/></g><g class="zona zona--mal" data-zona="zhivot"><title>Полоска на животе</title><ellipse cx="110" cy="176" rx="5" ry="22"/></g><g class="zona zona--mal" data-zona="bikini"><title>Бикини</title><path d="M90 224 L130 224 L110 252 Z"/></g></svg>
+      <div class="zony" role="group" aria-label="Зоны"><button type="button" class="zona-kn" data-zona="guba" aria-pressed="false">Верхняя губа<span>400 ₽</span></button><button type="button" class="zona-kn" data-zona="podmyshki" aria-pressed="true">Подмышки<span>700 ₽</span></button><button type="button" class="zona-kn" data-zona="ruki" aria-pressed="false">Руки полностью<span>1100 ₽</span></button><button type="button" class="zona-kn" data-zona="zhivot" aria-pressed="false">Полоска на животе<span>400 ₽</span></button><button type="button" class="zona-kn" data-zona="bikini" aria-pressed="false">Бикини<span>1500 ₽</span></button><button type="button" class="zona-kn" data-zona="bedra" aria-pressed="false">Бёдра<span>1100 ₽</span></button><button type="button" class="zona-kn" data-zona="goleni" aria-pressed="true">Голени<span>1100 ₽</span></button></div>
+    </div>
+    <div class="itog" aria-live="polite">
+      <div class="itog-cifry"><b id="summa">0 ₽</b><span id="vremya-k">около 0 мин</span></div>
+      <p class="itog-chto" id="chto"></p>
+      <p class="paket" id="paket" hidden>Бёдра и голени вместе посчитаны как «ноги целиком»: так дешевле, чем по частям.</p>
+      <button type="button" class="btn btn--shir" id="na-zapis">Записаться на эти зоны</button>
+      <span class="primer">Цены и время для примера: Анна поставит свои.</span>
+    </div>
+    <p class="podskazka"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg><span>Нажимайте на зоны на силуэте или в списке.</span></p>
+  </div>
+</div></section>
+
+<section class="sravn" id="vybor"><div class="wrap">
+  <div class="zag rv"><p class="kik">Методы</p><h2>Шугаринг, воск <em>или лазер</em></h2>
+    <p class="pod">Если не знаете, что выбрать, Анна подскажет на консультации. Коротко о каждом методе:</p></div>
+  <div class="vybor-setka"><article class="metod-k rv" data-c="sugar"><span class="znak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span><h3>Шугаринг</h3><p>Удаление волос сахарной пастой. Бережный способ для чувствительной кожи и деликатных зон.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Подходит для всех типов кожи и волос</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Перед процедурой зону не брить: волоскам нужно немного отрасти</span></li></ul><a class="ssylka" href="#karta" data-metod="sugar">Посчитать зоны</a></article><article class="metod-k rv" data-c="vosk"><span class="znak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg></span><h3>Воск</h3><p>Быстрое удаление волос с корнем. Ноги, руки, подмышки, бикини и другие зоны тела.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Консультация и подготовка кожи перед процедурой</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Перед процедурой зону не брить: волоскам нужно немного отрасти</span></li></ul><a class="ssylka" href="#karta" data-metod="vosk">Посчитать зоны</a></article><article class="metod-k rv" data-c="laser"><span class="znak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span><h3>Лазерная эпиляция</h3><p>Современный способ долговременного сокращения роста волос. Подходит для лица и тела.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Курс подбирается индивидуально</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Накануне зону обычно бреют, точные правила Анна пришлёт заранее</span></li></ul><a class="ssylka" href="#karta" data-metod="laser">Посчитать зоны</a></article></div>
+</div></section>
+
+<section class="nogti" id="nogti"><div class="wrap nogti-setka">
+  <div class="zag rv"><p class="kik">В той же студии</p><h2>Ногти <em>после эпиляции</em></h2>
+    <p class="pod">Маникюр, педикюр и наращивание. Нажмите на услугу, и она окажется в записи.</p></div>
+  <div class="spisok"><button type="button" class="stroka" data-book="Аппаратный маникюр"><b>Аппаратный маникюр</b><span class="zaglushka">[цена]</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button><button type="button" class="stroka" data-book="Маникюр с гель-лаком"><b>Маникюр с гель-лаком</b><span class="zaglushka">[цена]</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button><button type="button" class="stroka" data-book="Наращивание гелем"><b>Наращивание гелем</b><span class="zaglushka">[цена]</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button><button type="button" class="stroka" data-book="Наращивание акрилом"><b>Наращивание акрилом</b><span class="zaglushka">[цена]</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button><button type="button" class="stroka" data-book="Женский педикюр"><b>Женский педикюр</b><span class="zaglushka">[цена]</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button><button type="button" class="stroka" data-book="Парафиновые ванночки"><b>Парафиновые ванночки</b><span class="zaglushka">[цена]</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+</div></section>
+
+<section class="o-mastere" id="master"><div class="wrap master">
+  <div class="foto-zagl rv">[ваше фото<br>в студии]</div>
+  <div class="rv">
+    <p class="kik">Мастер</p>
+    <h2>Анна <em>Колодина</em></h2>
+    <p class="pod">Мастер шугаринга и лазерной депиляции. Принимает сама, по предварительной записи, в студии на 7 этаже на Шараповском проезде.</p>
+    <p class="zaglushka zaglushka--blok" style="margin-top:24px">[пара слов о себе: опыт, аппарат, как проходит первый визит]</p>
+  </div>
+</div></section>
+
+<section class="zapis" id="zapis"><div class="wrap">
+  <div class="zag rv"><p class="kik">Онлайн-запись</p><h2>Запись <em>без звонка</em></h2>
+    <p class="pod">Процедура, день и время. Накануне придёт напоминание с правилами подготовки.</p></div>
+  <div class="zapis-setka">
+    <div>
+      <form class="forma" id="forma" novalidate>
+        <p class="shag"><i>1</i>Процедура</p>
+        <div class="vybor"><select id="usl" aria-label="Процедура"><optgroup label="Эпиляция"><option value="karta" id="opt-karta" selected>Шугаринг: зоны из карты</option></optgroup><optgroup label="Ногти"><option value="Аппаратный маникюр" data-min="90">Аппаратный маникюр</option><option value="Маникюр с гель-лаком" data-min="120">Маникюр с гель-лаком</option><option value="Наращивание гелем" data-min="180">Наращивание гелем</option><option value="Наращивание акрилом" data-min="180">Наращивание акрилом</option><option value="Женский педикюр" data-min="90">Женский педикюр</option><option value="Парафиновые ванночки" data-min="30">Парафиновые ванночки</option></optgroup></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+        <a class="ssylka izm" href="#karta">Изменить зоны</a>
+        <p class="shag"><i>2</i>День</p>
+        <ul class="legenda" aria-label="Обозначения">
+          <li><span class="obr svob">12</span>свободно</li>
+          <li><span class="obr zan">12</span>всё занято</li>
+          <li><span class="obr vyb">12</span>выбрано</li>
+          <li><span class="obr vyh">вых.</span>выходной</li>
+        </ul>
+        <div class="dni" id="dni" role="radiogroup" aria-label="День"></div>
+        <p class="zametka">Анна работает пн–пт 10:00–21:00 и в субботу 10:00–16:00, воскресенье выходной.</p>
+        <p class="shag"><i>3</i>Время</p>
+        <div class="vremya" id="vremya" role="radiogroup" aria-label="Время"></div>
+        <p class="shag"><i>4</i>Имя и телефон</p>
+        <label for="imya">Как вас зовут</label>
+        <input id="imya" name="name" autocomplete="given-name" aria-describedby="o-imya">
+        <p class="oshibka" id="o-imya" hidden>Напишите имя, чтобы Анна знала, кого ждать</p>
+        <label for="tel">Телефон</label>
+        <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" aria-describedby="o-tel">
+        <p class="oshibka" id="o-tel" hidden>Проверьте номер: нужно 11 цифр, например +7 900 000-00-00</p>
+        <div class="itogo" id="itogo" aria-live="polite"></div>
+        <button class="btn btn--shir" type="submit" id="go">Записаться</button>
+        <p class="melko">Это демонстрация: заявка никуда не отправляется.</p>
+      </form>
+      <div class="gotovo" id="gotovo" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+        <h3>Вы записаны!</h3>
+        <p id="itog-zap"></p>
+        <div class="tg-shag" id="tg-shag">
+          <button type="button" class="btn btn--shir" id="tg-vkl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>Получать напоминания в Telegram</button>
+          <p class="melko">Откроется бот студии: нажмите «Старт», и накануне придёт напоминание. Здесь это демонстрация.</p>
+        </div>
+        <p class="tg-ok" id="tg-ok" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Напоминания в Telegram включены. Анна видит ваш ник и может написать вам в Telegram.</span></p>
+        <button type="button" class="ssylka" id="snova">Записаться ещё на одну процедуру</button>
+      </div>
+    </div>
+    <aside class="napominanie" aria-label="Пример сообщений">
+      <p class="kik">Накануне придёт напоминание</p>
+      <div class="chat">
+        <div class="chat-shapka"><span class="ava"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg></span><div><b>Pro Sugar Laser</b><small>бот записи в Telegram</small></div></div>
+        <div class="puzyr" id="puzyr"></div>
+        <div class="chat-knopki"><span>Приду</span><span>Перенести</span></div>
+      </div>
+      <p class="kik">А Анне сразу приходит</p>
+      <div class="chat"><div class="puzyr" id="puzyr2"></div>
+        <div class="chat-knopki"><a id="n-tg" href="https://t.me/+79266567715" target="_blank" rel="noopener">Написать в Telegram</a><a id="n-wa" href="https://wa.me/79266567715" target="_blank" rel="noopener">WhatsApp</a></div></div>
+      <p class="melko">Кнопки открывают чат с клиенткой по номеру из записи, звонить не нужно.</p>
+    </aside>
+  </div>
+</div></section>
+
+<section class="voprosy" id="voprosy"><div class="wrap voprosy-setka">
+  <div class="zag rv"><p class="kik">Коротко о главном</p><h2>Вопросы <em>и ответы</em></h2></div>
+  <div><details><summary>Где находится студия Pro Sugar Laser?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Мытищи, Шараповский проезд, вл. 2, стр. 3, 7 этаж, офис 192. Приём по предварительной записи.</p></details><details><summary>Во сколько работает студия?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>С понедельника по пятницу с 10:00 до 21:00, в субботу с 10:00 до 16:00, воскресенье выходной. Приём по предварительной записи.</p></details><details><summary>Какие процедуры есть в студии?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Шугаринг, восковая эпиляция, лазерная эпиляция и фотоэпиляция. А ещё ногти: аппаратный маникюр, гель-лак, наращивание гелем и акрилом, женский педикюр и парафиновые ванночки.</p></details><details><summary>Что выбрать: шугаринг или лазер?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Шугаринг бережный, его выбирают для чувствительной кожи и деликатных зон. Лазер нужен, чтобы надолго сократить рост волос, курс подбирается индивидуально. Если сомневаетесь, Анна подскажет на консультации.</p></details><details><summary>Сколько стоит шугаринг и лазерная эпиляция?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Шугаринг подмышек: <span class="zaglushka">[цена]</span>, лазер подмышек: <span class="zaglushka">[цена]</span>. Свои зоны можно посчитать в «Карте зон» вверху страницы.</p></details><details><summary>Как подготовиться к процедуре?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Перед шугарингом и воском зону не бреют: волоскам нужно немного отрасти. Перед лазером, наоборот, зону обычно бреют накануне. Точные правила Анна пришлёт в напоминании.</p></details><details><summary>Как оплатить?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Наличными или переводом с карты.</p></details><details><summary>Как записаться?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Онлайн на этом сайте: отметьте зоны, выберите день и свободное время. Или позвоните: <a href="tel:+79266567715">+7 926 656-77-15</a>, или напишите Анне в <a href="https://t.me/an_imperatrice">Telegram @an_imperatrice</a>.</p></details></div>
+</div></section>
+
+<section class="kontakty" id="kontakty"><div class="wrap">
+  <div class="zag rv"><p class="kik">Как найти</p><h2>Студия <em>на 7 этаже</em></h2></div>
+  <div class="kont-setka">
+    <div class="kont rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><b>Адрес</b><p>Мытищи, Шараповский проезд, вл. 2, стр. 3, 7 этаж, офис 192</p><a class="mel" href="https://2gis.ru/mytishchi/firm/70000001119003040" target="_blank" rel="noopener">Открыть в 2ГИС</a></div>
+    <div class="kont rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><b>Часы</b><p>Пн–пт 10:00–21:00<br>Сб 10:00–16:00<br>Вс выходной<br>По предварительной записи</p></div>
+    <div class="kont rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg><b>Связь</b><p><a href="tel:+79266567715">+7 926 656-77-15</a></p><a class="mel" href="https://t.me/an_imperatrice" target="_blank" rel="noopener">Telegram @an_imperatrice</a></div>
+  </div>
+</div></section>
+
+<section class="dlya" id="dlya"><div class="wrap dlya-setka">
+  <div class="reklama rv">
+    <p class="kik">Для Анны</p>
+    <h3>Почему такой сайт лучше для рекламы в Директе</h3>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Девушка из объявления сразу видит цену по своим зонам. Без цены многие уходят сравнивать на другие сайты.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Записывается сама на свободное время, а не оставляет телефон и ждёт звонка.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Каждая запись сразу приходит вам в Telegram. Можно видеть, сколько записей принесла реклама: к ссылке в объявлении добавляется метка.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Ответы на частые вопросы размечены так, чтобы Алиса и ChatGPT могли пересказывать их, когда люди ищут эпиляцию рядом.</span></li>
+    </ul>
+  </div>
+  <div class="rv">
+    <p class="kik">Что сверим перед запуском</p>
+    <ol class="sverim" style="margin-top:24px"><li><span><b>Цены и время.</b> Нигде нет, поэтому в «Карте зон» стоят примерные цены, а в ответах и у ногтей заглушки [цена]. Пришлёте прайс, поставлю ваши.</span></li><li><span><b>Зоны.</b> Сейчас 7 зон и пакет «ноги целиком». Добавлю ваши: глубокое бикини, лицо полностью, спина, руки до локтя и другие.</span></li><li><span><b>Методы.</b> На вашем сайте шугаринг, воск и лазер, в 2ГИС ещё фотоэпиляция. Оставить ли её отдельным пунктом.</span></li><li><span><b>Фото и отзывы.</b> В 2ГИС их нет, а на текущем сайте стоят фото и отзывы из шаблона, поэтому здесь их нет. Пришлёте свои, поставлю.</span></li><li><span><b>Адрес.</b> В 2ГИС «вл2, 7 этаж, офис 192», на сайте «Шараповский проезд 2, вл 2, стр 3». Здесь объединил, проверьте.</span></li><li><span><b>Часы.</b> По 2ГИС пн–пт 10:00–21:00, сб 10:00–16:00, воскресенье выходной.</span></li><li><span><b>Подготовка.</b> Советы перед процедурами общие, поправьте под свои правила.</span></li><li><span><b>Запись и напоминания.</b> Сейчас это демонстрация: занятость придумана, заявка никуда не уходит. В готовой версии запись придёт вам в Telegram, а клиентке накануне напоминание с правилами подготовки.</span></li></ol>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p><b>Pro Sugar Laser</b> · студия эпиляции · Мытищи</p>
+  <p>Это черновик сайта, подготовленный для Pro Sugar Laser по открытым данным: карточка в 2ГИС и текущий сайт студии. Он не является официальным сайтом студии.</p>
+  <p>Цены и время в «Карте зон» для примера. Онлайн-запись работает как демонстрация.</p>
+</div></footer>
+
+<a class="btn lipkaya" id="lipkaya" href="#zapis">Записаться онлайн</a>
+
+<script type="application/json" id="dannye">{"zony": [{"k": "guba", "n": "Верхняя губа"}, {"k": "podmyshki", "n": "Подмышки"}, {"k": "ruki", "n": "Руки полностью"}, {"k": "zhivot", "n": "Полоска на животе"}, {"k": "bikini", "n": "Бикини"}, {"k": "bedra", "n": "Бёдра"}, {"k": "goleni", "n": "Голени"}], "metody": [{"k": "sugar", "n": "Шугаринг"}, {"k": "vosk", "n": "Воск"}, {"k": "laser", "n": "Лазер"}], "ceny": {"sugar": {"guba": [400, 10], "podmyshki": [700, 15], "ruki": [1100, 30], "zhivot": [400, 10], "bikini": [1500, 40], "bedra": [1100, 30], "goleni": [1100, 30], "nogi": [1900, 50]}, "vosk": {"guba": [350, 10], "podmyshki": [600, 15], "ruki": [1000, 25], "zhivot": [350, 10], "bikini": [1400, 35], "bedra": [1000, 25], "goleni": [1000, 25], "nogi": [1700, 45]}, "laser": {"guba": [800, 10], "podmyshki": [1300, 10], "ruki": [2200, 20], "zhivot": [800, 10], "bikini": [2500, 20], "bedra": [2500, 25], "goleni": [2500, 25], "nogi": [4200, 45]}}, "poUmolch": ["podmyshki", "goleni"], "chasy": {"1": [600, 1260], "2": [600, 1260], "3": [600, 1260], "4": [600, 1260], "5": [600, 1260], "6": [600, 960], "0": null}, "adres": "Мытищи, Шараповский проезд, вл. 2, стр. 3, 7 этаж, офис 192"}</script>
+<script>
+(function(){
+  var $ = function(s){ return document.querySelector(s); }, $$ = function(s){ return [].slice.call(document.querySelectorAll(s)); };
+  var html = document.documentElement;
+  if (location.search.indexOf('og') > -1) html.classList.add('og');
+  if (location.search.indexOf('vse') > -1) html.classList.add('vse');
+  var D = JSON.parse($('#dannye').textContent);
+
+  // плавное появление блоков и капли под заголовком
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
+  }, {threshold: .1}) : null;
+  $$('.rv').forEach(function(el){ io ? io.observe(el) : el.classList.add('in'); });
+  setTimeout(function(){ $$('.kapli').forEach(function(k){ k.classList.add('in'); }); }, 200);
+
+  // время Мытищ (Москва)
+  var NOW = new Date(Date.now() + (new Date().getTimezoneOffset() + 180) * 60000), nowMin = NOW.getHours() * 60 + NOW.getMinutes();
+  var DN = ['вс','пн','вт','ср','чт','пт','сб'], MES = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+  function hhmm(m){ return ('0' + Math.floor(m / 60) % 24).slice(-2) + ':' + ('0' + m % 60).slice(-2); }
+  function chasy(d){ return D.chasy[d.getDay()]; }
+  var st = $('#seychas'), hs = D.chasy[NOW.getDay()];
+  if (hs && nowMin >= hs[0] && nowMin < hs[1]) { st.textContent = 'Сейчас открыто, до ' + hhmm(hs[1]); st.classList.add('on'); }
+  else st.textContent = 'Сейчас закрыто · запись онлайн круглосуточно';
+  function rub(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽'; }
+
+  // ---------- карта зон ----------
+  var metod = 'sugar', vybr = {};
+  D.poUmolch.forEach(function(z){ vybr[z] = true; });
+  function raschet(){
+    var c = D.ceny[metod], s = 0, mi = 0, imena = [], paket = vybr.bedra && vybr.goleni;
+    D.zony.forEach(function(z){
+      if (!vybr[z.k]) return;
+      if (paket && (z.k === 'bedra' || z.k === 'goleni')) return;
+      s += c[z.k][0]; mi += c[z.k][1]; imena.push(z.n.toLowerCase());
+    });
+    if (paket) { s += c.nogi[0]; mi += c.nogi[1]; imena.push('ноги целиком'); }
+    return {s: s, mi: mi, imena: imena, paket: paket};
+  }
+  function nazvMetoda(){ return D.metody.filter(function(m){ return m.k === metod; })[0].n; }
+  function risovatKartu(){
+    var c = D.ceny[metod], r = raschet();
+    $('#karta').dataset.m = metod;
+    $$('[data-metod]').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.metod === metod); });
+    $$('.zona-kn').forEach(function(b){ var k = b.dataset.zona; b.setAttribute('aria-pressed', !!vybr[k]); b.querySelector('span').textContent = rub(c[k][0]); });
+    $$('.figura .zona').forEach(function(g){ g.classList.toggle('on', !!vybr[g.dataset.zona]); });
+    $('#summa').textContent = r.imena.length ? rub(r.s) : '0 ₽';
+    $('#vremya-k').textContent = r.imena.length ? 'около ' + r.mi + ' мин' : 'выберите зоны';
+    $('#chto').textContent = r.imena.length ? nazvMetoda() + ': ' + r.imena.join(', ') : 'Отметьте хотя бы одну зону';
+    $('#paket').hidden = !r.paket;
+    $('#na-zapis').setAttribute('aria-disabled', !r.imena.length);
+    // процедура из карты в записи
+    var op = $('#opt-karta');
+    op.textContent = r.imena.length ? nazvMetoda() + ': ' + r.imena.join(', ') : nazvMetoda() + ': зоны не выбраны';
+  }
+
+  // ---------- запись ----------
+  var DNEJ = 14, vyb = {usl: 'karta', i: null, t: null}, tgVkl = false;
+  var uslEl = $('#usl'), imyaEl = $('#imya'), telEl = $('#tel');
+  function hesh(s){ var x = 7; for (var i = 0; i < s.length; i++) x = (x * 31 + s.charCodeAt(i)) % 1009; return x; }
+  function den(i){ return new Date(NOW.getFullYear(), NOW.getMonth(), NOW.getDate() + i); }
+  function dlit(){ if (vyb.usl === 'karta') { var r = raschet(); return Math.max(r.mi, 15); } return +uslEl.selectedOptions[0].dataset.min; }
+  function nazvUsl(){ return uslEl.selectedOptions[0].textContent; }
+  // третий день целиком занят: видно, как это выглядит
+  function zanyat(i, t){ if (i === 2) return true; var d = den(i); return hesh(d.getDate() + '.' + d.getMonth() + t) % 5 < 2; }
+  function sloty(i){
+    var d = den(i), c = chasy(d), out = [], mi = dlit();
+    if (!c) return out;
+    for (var m = c[0]; m + mi <= c[1]; m += 60) {
+      if (i === 0 && m <= nowMin + 60) continue;
+      var t = hhmm(m); out.push({t: t, svob: !zanyat(i, t)});
+    }
+    return out;
+  }
+  function estSvob(i){ return sloty(i).some(function(s){ return s.svob; }); }
+  function data(d){ return DN[d.getDay()] + ', ' + d.getDate() + ' ' + MES[d.getMonth()]; }
+  function denSlovom(i){ return i === 0 ? 'сегодня' : i === 1 ? 'завтра' : data(den(i)); }
+  function risovatDni(){
+    var h = '', first = null;
+    for (var i = 0; i < DNEJ; i++) {
+      var d = den(i), vy = !chasy(d), est = !vy && estSvob(i), sost = vy ? 'vyh' : est ? 'svob' : 'zan';
+      if (est && first === null) first = i;
+      h += '<button type="button" class="den ' + sost + '" role="radio" aria-checked="false" data-den="' + i + '"' + (est ? '' : ' disabled') +
+        ' aria-label="' + data(d) + (vy ? ', выходной' : est ? '' : ', всё занято') + '"><small>' + (i === 0 ? 'сег' : DN[d.getDay()]) +
+        '</small><b>' + (vy ? 'вых.' : d.getDate()) + '</b></button>';
+    }
+    $('#dni').innerHTML = h;
+    if (vyb.i === null || !estSvob(vyb.i)) vyb.i = first;
+    $$('.den').forEach(function(b){ b.setAttribute('aria-checked', +b.dataset.den === vyb.i); });
+  }
+  function risovatVremya(){
+    var vr = $('#vremya');
+    if (vyb.i === null) { vr.innerHTML = '<p class="zametka">В ближайшие две недели окошек нет, напишите Анне в Telegram.</p>'; vyb.t = null; return; }
+    var ss = sloty(vyb.i);
+    if (!ss.some(function(s){ return s.t === vyb.t && s.svob; })) { var f = ss.filter(function(s){ return s.svob; })[0]; vyb.t = f ? f.t : null; }
+    vr.innerHTML = ss.map(function(s){
+      return '<button type="button" class="slot ' + (s.svob ? 'svob' : 'zan') + '" role="radio" data-slot="' + s.t + '" aria-checked="' + (s.t === vyb.t) + '"' +
+        (s.svob ? '' : ' disabled aria-label="' + s.t + ', занято"') + '>' + s.t + '</button>';
+    }).join('');
+  }
+  function cifry(){ var c = telEl.value.replace(/\D/g, ''); if (c.length === 10 && c[0] === '9') c = '7' + c; return c; }
+  function sovet(){
+    if (vyb.usl !== 'karta') return '';
+    return metod === 'laser' ? '\nНакануне побрейте зоны, точные правила подготовки ниже.' : '\nЗоны не брейте: волоскам нужно немного отрасти.';
+  }
+  function cena(){ if (vyb.usl === 'karta') { var r = raschet(); return r.imena.length ? '≈ ' + rub(r.s) + ' (пример)' : ''; } return '[цена]'; }
+  function risovatItogo(){
+    var imya = imyaEl.value.trim(), tel = telEl.value.trim(), est = !!vyb.t, d = est ? den(vyb.i) : null;
+    $('#itogo').innerHTML = est ? '<b>' + nazvUsl() + '</b><span>' + denSlovom(vyb.i) + ', ' + vyb.t + ' · мастер Анна · ' + cena() + '</span>'
+                                : '<b>Выберите время</b><span>Свободные окошки выше</span>';
+    $('#puzyr').textContent = est ? 'Здравствуйте' + (imya ? ', ' + imya : '') + '! Напоминаем: ' + (vyb.i === 0 ? 'сегодня' : 'завтра') + ', ' +
+      d.getDate() + ' ' + MES[d.getMonth()] + ', в ' + vyb.t + ' у Анны: ' + nazvUsl().toLowerCase() + '.\n' + D.adres + '.' + sovet() : '';
+    $('#puzyr2').textContent = est ? 'Новая запись\n' + (imya || '[имя]') + ' · ' + (tel || '[телефон]') + '\n' + data(d) + ', ' + vyb.t + ' · ' + nazvUsl() +
+      (cena() && cena() !== '[цена]' ? '\n' + cena() : '') +
+      '\nTelegram: ' + (tgVkl ? '@ник_клиентки, напоминания включены' : 'появится @ник, когда клиентка нажмёт «Старт» в боте') : '';
+    var c = cifry(), nomer = /^[78]\d{10}$/.test(c) ? '7' + c.slice(1) : '79266567715';
+    $('#n-tg').href = 'https://t.me/+' + nomer; $('#n-wa').href = 'https://wa.me/' + nomer;
+  }
+  function vseZapis(){ risovatDni(); risovatVremya(); risovatItogo(); }
+  function pokazatFormu(){ $('#forma').hidden = false; $('#gotovo').hidden = true; document.body.classList.remove('zapisan'); }
+  function kZapisi(usl){
+    vyb.usl = usl; uslEl.value = usl;
+    pokazatFormu(); vseZapis(); lipkaya();
+    $('#zapis').scrollIntoView({behavior: 'smooth'});
+  }
+  uslEl.addEventListener('change', function(){ vyb.usl = uslEl.value; vseZapis(); });
+
+  // ---------- все нажатия ----------
+  document.addEventListener('click', function(ev){
+    var t = ev.target.closest('[data-zona],[data-metod],[data-book],[data-den],[data-slot]');
+    if (!t || t.disabled) return;
+    var ds = t.dataset;
+    if ('zona' in ds) { if (vybr[ds.zona]) delete vybr[ds.zona]; else vybr[ds.zona] = true; risovatKartu(); if (vyb.usl === 'karta') vseZapis(); }
+    else if ('metod' in ds) { metod = ds.metod; risovatKartu(); if (vyb.usl === 'karta') vseZapis(); }
+    else if ('book' in ds) kZapisi(ds.book);
+    else if ('den' in ds) { vyb.i = +ds.den; risovatDni(); risovatVremya(); risovatItogo(); }
+    else if ('slot' in ds) { vyb.t = ds.slot; risovatVremya(); risovatItogo(); }
+  });
+  $('#na-zapis').addEventListener('click', function(){ if (raschet().imena.length) kZapisi('karta'); });
+
+  // ---------- проверка полей и экран «записаны» ----------
+  function oshibka(pole, id, est){ pole.setAttribute('aria-invalid', est); $(id).hidden = !est; }
+  imyaEl.addEventListener('input', function(){ if (imyaEl.value.trim()) oshibka(imyaEl, '#o-imya', false); risovatItogo(); });
+  telEl.addEventListener('input', function(){ if (/^[78]\d{10}$/.test(cifry())) oshibka(telEl, '#o-tel', false); risovatItogo(); });
+  $('#forma').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if (vyb.usl === 'karta' && !raschet().imena.length) { $('#karta').scrollIntoView({behavior: 'smooth'}); return; }
+    if (!vyb.t) { $('#vremya').scrollIntoView({behavior: 'smooth', block: 'center'}); return; }
+    var okImya = !!imyaEl.value.trim(), okTel = /^[78]\d{10}$/.test(cifry());
+    oshibka(imyaEl, '#o-imya', !okImya); oshibka(telEl, '#o-tel', !okTel);
+    if (!okImya) { imyaEl.focus(); return; }
+    if (!okTel) { telEl.focus(); return; }
+    $('#itog-zap').textContent = nazvUsl() + ', ' + denSlovom(vyb.i) + ', ' + vyb.t + '. Анна ждёт вас: ' + D.adres + '. Накануне пришлём напоминание.';
+    $('#tg-shag').hidden = tgVkl; $('#tg-ok').hidden = !tgVkl;
+    $('#forma').hidden = true; $('#gotovo').hidden = false;
+    document.body.classList.add('zapisan'); lipkaya();
+  });
+  $('#tg-vkl').addEventListener('click', function(){ tgVkl = true; $('#tg-shag').hidden = true; $('#tg-ok').hidden = false; risovatItogo(); });
+  $('#snova').addEventListener('click', function(){ pokazatFormu(); $('#forma').scrollIntoView({behavior: 'smooth'}); });
+
+  // кнопка внизу телефона: видна между первым экраном и записью
+  var lip = $('#lipkaya'), vidHero = true, vidZap = false;
+  function lipkaya(){ lip.classList.toggle('vidno', !vidHero && !vidZap && !document.body.classList.contains('zapisan')); }
+  if ('IntersectionObserver' in window) {
+    var heroKn = $('.hero-knopki'), zap = $('#zapis');
+    var io2 = new IntersectionObserver(function(es){
+      es.forEach(function(x){ if (x.target === heroKn) vidHero = x.isIntersecting; else if (x.target === zap) vidZap = x.isIntersecting; });
+      lipkaya();
+    });
+    io2.observe(heroKn); io2.observe(zap);
+  }
+
+  risovatKartu(); vseZapis();
+})();
+</script>
+</body>
+</html>
