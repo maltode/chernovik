@@ -339,7 +339,7 @@ section{padding-block:var(--s7) 0}
     <p class="lid">Начинка, вес и оформление. Цена считается сразу, заявка придёт кондитеру с вашей датой.</p>
   </div>
   <div class="calc">
-    <aside class="vitr" aria-label="Ваш торт">
+    <aside class="vitr" id="vitr" aria-label="Ваш торт">
       <div class="razrez" data-n="snikers" aria-hidden="true">
         <div class="dekor">
           <i class="ya" style="left:6%"></i><i class="ya" style="left:24%"></i><i class="ya" style="left:62%"></i><i class="ya" style="left:84%"></i>
@@ -402,7 +402,7 @@ section{padding-block:var(--s7) 0}
         </div>
       </form>
 
-      <div class="ok" hidden>
+      <div class="ok" id="zayavka" hidden>
         <h3 tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Заявка отправлена</span></h3>
         <p class="lid">Кондитер напишет вам, чтобы уточнить детали и подтвердить дату.</p>
         <button type="button" class="btn ok-tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>Узнать о готовности в Telegram</button>
@@ -631,6 +631,30 @@ section{padding-block:var(--s7) 0}
   });
   ok.querySelector('.ok-tg').addEventListener('click', function(){ this.hidden = true; ok.querySelector('.ok-tg-ok').hidden = false; });
   ok.querySelector('.ok-snova').addEventListener('click', function(){ ok.hidden = true; forma.hidden = false; ok.querySelector('.ok-tg').hidden = false; ok.querySelector('.ok-tg-ok').hidden = true; });
+
+  // для скриншотов: ?vse — без анимаций и сразу к якорю, ?demo=1 — собранный торт, ?demo=2 — ещё и отправленная заявка
+  if (vse) document.documentElement.style.scrollBehavior = 'auto';
+  var demo = location.search.match(/demo=(\d)/);
+  if (demo){
+    forma.querySelector('input[name="nach"][value="malina"]').checked = true;
+    ves.value = '4.5';
+    forma.querySelector('input[name="dek"][value="ya"]').checked = true;
+    var t = torty.filter(function(x){ return x.dataset.imya === 'Малина с бантом'; })[0];
+    st.foto = t.dataset.imya; st.src = t.querySelector('img').getAttribute('src');
+    pokazRef(); obnovit();
+    if (demo[1] === '2'){
+      var d9 = new Date(); d9.setDate(d9.getDate() + 9);
+      data.value = d9.getFullYear() + '-' + String(d9.getMonth() + 1).padStart(2, '0') + '-' + String(d9.getDate()).padStart(2, '0');
+      forma.querySelector('input[name="imya"]').value = 'Анна';
+      forma.querySelector('input[name="tel"]').value = '+7 900 123-45-67';
+      forma.querySelector('textarea[name="nadpis"]').value = 'Маше 5 лет';
+      forma.requestSubmit ? forma.requestSubmit() : forma.dispatchEvent(new Event('submit', {cancelable: true}));
+    }
+  }
+  if (vse){
+    var yak = location.hash && document.querySelector(location.hash);
+    if (yak) setTimeout(function(){ yak.scrollIntoView(); }, 300);
+  }
 })();
 </script>
 </body>
