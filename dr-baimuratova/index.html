@@ -543,7 +543,7 @@ function ZapisDemo(o){
   var selUsl = document.getElementById('usl');
   var Z = ZapisDemo({koren:'#zap', chasy:{0:[540,1200],1:[540,1200],2:[540,1200],3:[540,1200],4:[540,1200],5:[540,1200],6:[540,1200]},
     shag:60, dlit:function(){ return 60; }, dney:7, sol:selUsl.value,
-    opisanie:function(){ var t = selUsl.options[selUsl.selectedIndex].text; return t + (raschet && selUsl.value !== 'konsult' ? ', ' + raschet : ''); }});
+    opisanie:function(){ var t = selUsl.options[selUsl.selectedIndex].text; return t + (raschet ? ', ' + raschet : ''); }});
   selUsl.onchange = function(){ Z.nastroit({sol: selUsl.value}); };
   document.querySelector('.v-zapis').addEventListener('click', function(){
     var k = vyb.guby && !Object.keys(vyb.zony).some(function(z){ return vyb.zony[z] != null; }) ? 'guby'
