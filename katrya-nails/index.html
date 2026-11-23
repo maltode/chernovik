@@ -142,9 +142,9 @@ svg{width:20px;height:20px;flex:none}
 .galki label{display:flex;align-items:center;gap:var(--s1);min-height:44px;font-size:15px;color:var(--mut);cursor:pointer}
 .galki input{width:20px;height:20px;accent-color:var(--acc)}
 .abon-r{display:grid;gap:var(--s2);align-content:start}
-.stolb{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s2);align-items:end;height:220px;padding:var(--s2);border-radius:16px;background:rgba(0,0,0,.25);border:1px solid var(--lin)}
+.stolb{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s2);align-items:end;min-height:200px;padding:var(--s2);border-radius:16px;background:rgba(0,0,0,.25);border:1px solid var(--lin)}
 .stolb div{display:grid;gap:6px;align-content:end;height:100%}
-.stolb i{display:block;height:var(--h,50%);border-radius:10px 10px 4px 4px;background:rgba(246,234,240,.18);transition:height .45s cubic-bezier(.2,.7,.2,1)}
+.stolb i{display:block;height:120px;border-radius:10px 10px 4px 4px;background:rgba(246,234,240,.18);transition:height .45s cubic-bezier(.2,.7,.2,1)}
 .stolb div:last-child i{background:linear-gradient(180deg,var(--acc),#D9789F)}
 .stolb span{font-size:13px;color:var(--mut)}
 .stolb b{font:700 22px/1 Oswald,sans-serif;letter-spacing:.02em}
@@ -251,7 +251,7 @@ svg{width:20px;height:20px;flex:none}
  .geroj-txt{padding:var(--s3)}
  .abon,.zapis,.pk,.gde-kart,.otz{padding:var(--s3)}
  .seg{grid-template-columns:minmax(0,1fr)}
- .stolb{height:180px}
+ .stolb{height:auto}
  .raboty{gap:var(--s1)}
  .skidki{grid-template-columns:minmax(0,1fr)}
  .abt{grid-template-columns:minmax(0,1fr)}
@@ -574,8 +574,8 @@ function ZapisDemo(o){
     document.getElementById('dl-gr').hidden = usl !== 'nar';
     var r = razovo() * n, a = D.abon[usl][n], v = r - a;
     var mx = Math.max(r, a);
-    document.getElementById('st-r').style.setProperty('--h', (r / mx * 100) + '%');
-    document.getElementById('st-a').style.setProperty('--h', (a / mx * 100) + '%');
+    document.getElementById('st-r').style.height = Math.round(r / mx * 130) + 'px';
+    document.getElementById('st-a').style.height = Math.round(a / mx * 130) + 'px';
     document.getElementById('sum-r').textContent = fmt(r);
     document.getElementById('sum-a').textContent = fmt(a);
     document.getElementById('vyg').textContent = v > 0 ? fmt(v) : '0 ₽';
