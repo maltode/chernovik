@@ -208,10 +208,14 @@ fieldset.gr{min-width:0;margin:0}
  .znak small{display:none}
  .geroj{gap:var(--s4)}
  .geroj-txt .knopki,.geroj-txt .knopki .btn{width:100%}
- .gr,.itog,.pro-t,.ocenka,.gde-kart{padding:var(--s3)}
- .itog{position:sticky;bottom:calc(var(--s1) + env(safe-area-inset-bottom));top:auto;z-index:5;box-shadow:0 -12px 40px -20px #000}
- .itog ol{display:none}
- .itog-sum{font-size:34px}
+ .gr,.pro-t,.ocenka,.gde-kart{padding:var(--s3)}
+ .itog{position:sticky;bottom:calc(var(--s1) + env(safe-area-inset-bottom));top:auto;z-index:5;box-shadow:0 -12px 40px -20px #000;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 12px;padding:12px 14px;align-items:center}
+ .itog ol,.itog .nadp,.itog .pusto,.itog .melko{display:none}
+ .itog-sum{font-size:26px;grid-column:1}
+ .itog-vr{font-size:13px;grid-column:2;justify-self:end}
+ .itog .btn{min-height:44px;font-size:14px;padding:8px 12px}
+ .itog .btn svg{width:16px;height:16px}
  .podval-vn{grid-template-columns:minmax(0,1fr)}
 }
 @media (prefers-reduced-motion:reduce){.btn,.gr label,.faq summary svg{transition:none!important}}
@@ -265,7 +269,7 @@ fieldset.gr{min-width:0;margin:0}
       <p class="pusto" id="it-pusto">Например: женская стрижка и окрашивание в тон.</p>
       <ol id="it-sp"></ol>
       <a class="btn" id="it-dk" href="https://dikidi.ru/2177520" target="_blank" rel="noopener" aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>Записаться в DIKIDI</a>
-      <a class="btn btn--kontur" id="it-wa" href="https://wa.me/79143814773" target="_blank" rel="noopener" aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Отправить в WhatsApp</a>
+      <a class="btn btn--kontur" id="it-wa" href="https://wa.me/79143814773" target="_blank" rel="noopener" aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>В WhatsApp</a>
       <p class="melko">«От» значит, что цена зависит от длины и густоты волос.</p>
     </aside>
   </div>
